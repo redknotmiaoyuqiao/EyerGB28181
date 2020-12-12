@@ -1,0 +1,6 @@
+.DS_Store
+Eyer3rdpart/
+Lib/
+
+.idea/
+cmake-build-debug/

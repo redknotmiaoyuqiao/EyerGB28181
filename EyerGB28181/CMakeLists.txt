@@ -1,0 +1,51 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+
+PROJECT(EyerGB28181
+        VERSION 1.0.0.0
+        )
+
+message( STATUS "CMAKE_PROJECT_NAME    = ${CMAKE_PROJECT_NAME}" )
+message( STATUS "PROJECT_VERSION_MAJOR = ${PROJECT_VERSION_MAJOR}" )
+message( STATUS "PROJECT_VERSION_MINOR = ${PROJECT_VERSION_MINOR}" )
+message( STATUS "PROJECT_VERSION_PATCH = ${PROJECT_VERSION_PATCH}" )
+message( STATUS "PROJECT_VERSION_TWEAK = ${PROJECT_VERSION_TWEAK}" )
+message( STATUS "PROJECT_HOMEPAGE_URL = ${PROJECT_HOMEPAGE_URL}")
+message( STATUS "CMAKE_PROJECT_DESCRIPTION = ${CMAKE_PROJECT_DESCRIPTION}" )
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+MESSAGE(STATUS "operation system is ${CMAKE_SYSTEM}")
+
+SET(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/)
+
+include_directories (${CMAKE_SOURCE_DIR}/../Lib/libexosip2_install/include)
+include_directories (${CMAKE_SOURCE_DIR}/../Lib/libosip2_install/include)
+link_directories    (${CMAKE_SOURCE_DIR}/../Lib/libexosip2_install/lib)
+link_directories    (${CMAKE_SOURCE_DIR}/../Lib/libosip2_install/lib)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+
+IF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+    MESSAGE(STATUS "current platform: Linux ")
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Windows")
+    MESSAGE(STATUS "current platform: Windows")
+    ADD_DEFINITIONS(-D EYER_PLATFORM_WINDOWS)
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Android")
+    MESSAGE(STATUS "current platform: Android")
+    ADD_DEFINITIONS(-D EYER_PLATFORM_ANDROID)
+ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Darwin")
+    MESSAGE(STATUS "current platform: Darwin")
+    set(CMAKE_EXE_LINKER_FLAGS
+        "-framework IOKit -framework AudioToolbox -framework CoreGraphics -framework CoreMedia -framework Cocoa -framework VideoToolbox -framework AVFoundation -framework Security -framework CoreFoundation -framework CoreVideo -framework OpenGL -framework AppKit -framework CoreImage -framework VideoDecodeAcceleration"
+    )
+ELSE ()
+    MESSAGE(STATUS "other platform: ${CMAKE_SYSTEM_NAME}")
+ENDIF (CMAKE_SYSTEM_NAME MATCHES "Linux")
+
+
+ADD_SUBDIRECTORY(EyerCore)
+ADD_SUBDIRECTORY(EyerThread)
+ADD_SUBDIRECTORY(EyerSIP)
+ADD_SUBDIRECTORY(EyerGB28181)
+ADD_SUBDIRECTORY(EyerGB28181Test)

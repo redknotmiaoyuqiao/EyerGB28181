@@ -11,4 +11,12 @@
 
     <artifactId>eyer-gb28181-java-demo</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.zzsin.eyer</groupId>
+            <artifactId>eyer-gb28181-java-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

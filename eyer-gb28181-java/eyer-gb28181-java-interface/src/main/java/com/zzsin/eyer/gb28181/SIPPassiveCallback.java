@@ -1,8 +1,8 @@
 package com.zzsin.eyer.gb28181;
 
-public class SIPPassiveCallback extends JNIObject {
-    public SIPPassiveCallback(int port){
-        objId = CInterface.eyer_gb_sipserver_passive_callback_init(this);
+public abstract class SIPPassiveCallback extends JNIObject {
+    public SIPPassiveCallback(){
+        objId = CInterface.eyer_gb_sipserver_passive_callback_init();
     }
 
     public int destory() {
@@ -12,4 +12,6 @@ public class SIPPassiveCallback extends JNIObject {
         }
         return 0;
     }
+
+    public abstract int UserRegister(String deviceId);
 }

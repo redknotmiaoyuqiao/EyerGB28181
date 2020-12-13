@@ -2,6 +2,15 @@
 #include "EyerGB28181/EyerGB28181.hpp"
 #include "JNIPassiveCallback.hpp"
 
+JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved)
+{
+    EyerLog("JavaVM GetEnv Success\n");
+
+
+
+    return JNI_VERSION_1_6;
+}
+
 JNIEXPORT jstring JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1get_1version
 (JNIEnv * env, jclass)
 {

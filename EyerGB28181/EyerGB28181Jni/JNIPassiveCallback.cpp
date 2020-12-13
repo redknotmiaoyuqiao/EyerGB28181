@@ -2,7 +2,11 @@
 
 namespace Eyer
 {
-    int JNIPassiveCallback::UserRegister(EyerString deviceId)
+    JNIPassiveCallback::JNIPassiveCallback()
+    {
+    }
+
+    int JNIPassiveCallback::UserRegister(EyerString _deviceId)
     {
         return 0;
     }

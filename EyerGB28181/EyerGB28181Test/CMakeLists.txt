@@ -13,6 +13,7 @@ target_link_libraries (EyerGB28181Test EyerThread)
 target_link_libraries (EyerGB28181Test eXosip2)
 target_link_libraries (EyerGB28181Test osip2)
 target_link_libraries (EyerGB28181Test osipparser2)
+target_link_libraries (EyerGB28181Test resolv)
 
 INSTALL(
         TARGETS EyerGB28181Test

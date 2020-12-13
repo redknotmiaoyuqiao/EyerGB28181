@@ -4,7 +4,7 @@ import com.zzsin.eyer.gb28181.SIPServer;
 
 public class Main {
     public static void main(String[] args){
-        System.out.println("Hello World\n");
+        System.out.println(SIPServer.getVersion());
 
         SIPServer sipServer = new SIPServer(5060);
         sipServer.Start();

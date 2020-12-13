@@ -6,14 +6,14 @@
 
 namespace Eyer
 {
-    class SIPDevice {
+    class GBDevice {
     public:
-        SIPDevice();
-        SIPDevice(EyerString & deviceID, EyerString & ip, EyerString & port);
-        ~SIPDevice();
+        GBDevice();
+        GBDevice(EyerString & deviceID, EyerString & ip, EyerString & port);
+        ~GBDevice();
 
-        SIPDevice(const SIPDevice & device);
-        SIPDevice & operator = (const SIPDevice & device);
+        GBDevice(const GBDevice & device);
+        GBDevice & operator = (const GBDevice & device);
 
         EyerString & GetDeviceID();
         EyerString & GetIP();

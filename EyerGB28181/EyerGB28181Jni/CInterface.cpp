@@ -2,6 +2,7 @@
 #include "EyerGB28181/EyerGB28181.hpp"
 #include "JNIPassiveCallback.hpp"
 #include "EyerJNI/EyerJNI.hpp"
+#include "EyerGB28181/GBDeviceList.hpp"
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM * vm, void * reserved)
 {
@@ -59,6 +60,14 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserve
     return sipserver->Stop();
 }
 
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1query_1devices
+(JNIEnv *, jclass, jlong sipserverJNI, jlong deviceListJNI)
+{
+    Eyer::SIPServer * sipserver = (Eyer::SIPServer *)sipserverJNI;
+    Eyer::GBDeviceList * deviceList = (Eyer::GBDeviceList *)deviceListJNI;
+
+    return sipserver->GetDeviceList(*deviceList);
+}
 
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1set_1passive_1callback
 (JNIEnv *, jclass, jlong sipserverJni, jlong passiveCallbackJNI)

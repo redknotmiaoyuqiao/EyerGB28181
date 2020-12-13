@@ -47,6 +47,12 @@ namespace Eyer
         return 0;
     }
 
+    int SIPServer::GetDeviceList(GBDeviceList & gbDeviceList)
+    {
+        
+        return 0;
+    }
+
     int SIPServer::StartStream(
             EyerString & streamServerIp,
             int streamServerPort,

@@ -17,6 +17,13 @@ public class CInterface {
 
     public static native int    eyer_gb_sipserver_set_passive_callback          (long sipserver, long callback);
 
+    public static native int    eyer_gb_sipserver_query_devices                 (long sipserver, long list);
+
+
+    public static native long   eyer_gb_device_list_init                ();
+    public static native int    eyer_gb_device_list_uninit              (long list);
+    public static native int    eyer_gb_device_list_size                (long list);
+
 
 
     public static native long   eyer_gb_sipserver_passive_callback_init         (SIPPassiveCallback passiveCallback);
@@ -24,8 +31,7 @@ public class CInterface {
 
     public static int eyer_gb_sipserver_passive_callback_UserRegister           (SIPPassiveCallback passiveCallback, String deviceId)
     {
-        System.out.println("eyer_gb_sipserver_passive_callback_UserRegister: " + deviceId);
-        System.out.println("eyer_gb_sipserver_passive_callback_UserRegister: " + passiveCallback.toString());
+        passiveCallback.UserRegister(deviceId);
         return 0;
     }
 }

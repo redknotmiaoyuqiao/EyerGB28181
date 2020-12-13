@@ -1,7 +1,7 @@
 #include <EyerJNI/EyerJNIEnvManager.hpp>
 #include "JNIPassiveCallback.hpp"
 
-#include "jni.h"
+#include "EyerJNI/JNIHeader.hpp"
 
 namespace Eyer
 {
@@ -14,14 +14,8 @@ namespace Eyer
     {
         EyerLog("UserRegister UserRegister: %s\n", _deviceId.str);
 
-
-        JNIEnv * env = nullptr;
-        int status = Eyer::EyerJNIEnvManager::vm->GetEnv((void **) &env, JNI_VERSION_1_6);
-        if (status < 0) {
-            Eyer::EyerJNIEnvManager::vm->AttachCurrentThread((void **)&env, NULL);
-        }
-        if(env == nullptr) {
-            EyerLog("AttachCurrentThread Fail\n");
+        JNIEnv * env = EyerJNIEnvManager::GetInstance()->AttachCurrentThread();
+        if(env == nullptr){
             return -1;
         }
 
@@ -37,12 +31,10 @@ namespace Eyer
             return -1;
         }
 
-
-
         jstring deviceId = env->NewStringUTF(_deviceId.str);
         jint ret = env->CallStaticIntMethod(classLoaderClass, callbackMethodId, jPassiveCallback, deviceId);
 
-        Eyer::EyerJNIEnvManager::vm->DetachCurrentThread();
+        EyerJNIEnvManager::GetInstance()->DetachCurrentThread();
 
         return ret;
     }

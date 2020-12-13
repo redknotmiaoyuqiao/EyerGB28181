@@ -57,6 +57,38 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserve
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_sipserver_query_devices
+ * Signature: (JJ)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1query_1devices
+  (JNIEnv *, jclass, jlong, jlong);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_device_list_init
+ * Signature: ()J
+ */
+JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1device_1list_1init
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_device_list_uninit
+ * Signature: (J)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1device_1list_1uninit
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_device_list_size
+ * Signature: (J)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1device_1list_1size
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
  * Method:    eyer_gb_sipserver_passive_callback_init
  * Signature: (Lcom/zzsin/eyer/gb28181/SIPPassiveCallback;)J
  */

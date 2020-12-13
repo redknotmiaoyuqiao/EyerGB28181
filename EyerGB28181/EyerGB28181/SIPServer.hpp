@@ -6,6 +6,7 @@
 #include "EyerCore/EyerCore.hpp"
 #include "SIPEventThread.hpp"
 #include "ActiveCallbackList.hpp"
+#include "GBDeviceList.hpp"
 
 namespace Eyer
 {
@@ -19,6 +20,8 @@ namespace Eyer
         int Stop();
 
         int SetCallback(PassiveCallback * callback);
+
+        int GetDeviceList(GBDeviceList & gbDeviceList);
 
         int StartStream(
                 EyerString & streamServerIp,

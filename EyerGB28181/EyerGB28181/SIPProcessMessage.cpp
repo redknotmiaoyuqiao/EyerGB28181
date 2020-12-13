@@ -11,7 +11,7 @@ namespace Eyer
         EyerSIPMessgae sipMessgae(je->request);
         EyerString deviceID = sipMessgae.GetDeviceId();
 
-        SIPDevice device;
+        GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceID);
         if(ret){
             // 尚未注册

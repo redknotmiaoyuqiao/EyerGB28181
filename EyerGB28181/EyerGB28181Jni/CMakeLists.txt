@@ -1,11 +1,15 @@
 include_directories (../)
 include_directories (./)
+include_directories (../EyerJNI)
 
 add_library(
         EyerGB28181Jni
         SHARED
         CInterface.cpp
-        JNIPassiveCallback.cpp JNIPassiveCallback.hpp)
+        JNIPassiveCallback.cpp
+        JNIPassiveCallback.hpp
+        CInterfaceDeviceList.cpp
+)
 
 target_link_libraries (EyerGB28181Jni EyerGB28181)
 target_link_libraries (EyerGB28181Jni EyerSIP)

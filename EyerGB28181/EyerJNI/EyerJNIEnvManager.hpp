@@ -1,7 +1,7 @@
 #ifndef EYERGB28181_EYERJNIENVMANAGER_HPP
 #define EYERGB28181_EYERJNIENVMANAGER_HPP
 
-#include "jni.h"
+#include "JNIHeader.hpp"
 
 namespace Eyer
 {
@@ -12,7 +12,8 @@ namespace Eyer
         static EyerJNIEnvManager * instance;
         static EyerJNIEnvManager * GetInstance();
 
-
+        JNIEnv * AttachCurrentThread();
+        int DetachCurrentThread();
     };
 }
 

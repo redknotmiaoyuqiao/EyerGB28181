@@ -40,7 +40,7 @@ namespace Eyer
 
     int EventStartRealTimeVideoRequest::Do(struct eXosip_t * excontext, SIPServerContext * context)
     {
-        SIPDevice device;
+        GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceId);
         if(ret){
             return -1;

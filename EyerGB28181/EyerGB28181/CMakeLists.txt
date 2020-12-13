@@ -15,8 +15,8 @@ add_library(
         SIPProcessRegister.hpp
         SIPProcessMessage.cpp
         SIPProcessMessage.hpp
-        SIPDevice.cpp
-        SIPDevice.hpp
+        GBDevice.cpp
+        GBDevice.hpp
         SIPDeviceManager.cpp
         SIPDeviceManager.hpp
         SIPServerContext.cpp
@@ -43,7 +43,7 @@ add_library(
         ActiveCallbackList.hpp
         Callback/ActiveCallback.cpp
         Callback/ActiveCallback.hpp
-)
+        GBDeviceList.cpp GBDeviceList.hpp)
 
 set(head_files
         EyerGB28181.hpp

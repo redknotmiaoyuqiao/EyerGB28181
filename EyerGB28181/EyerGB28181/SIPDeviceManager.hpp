@@ -2,7 +2,7 @@
 #define EYERLIB_SIPDEVICEMANAGER_HPP
 
 #include "EyerCore/EyerCore.hpp"
-#include "SIPDevice.hpp"
+#include "GBDevice.hpp"
 #include <vector>
 
 namespace Eyer
@@ -15,10 +15,10 @@ namespace Eyer
         int Register(EyerString & deviceID, EyerString & ip, EyerString & port);
         int UnRegister(EyerString & deviceID);
 
-        int FindDevice(SIPDevice & device, EyerString & deviceID);
+        int FindDevice(GBDevice & device, EyerString & deviceID);
 
     private:
-        std::vector<SIPDevice *> deviceList;
+        std::vector<GBDevice *> deviceList;
     };
 }
 

@@ -1,6 +1,9 @@
 package com.zzsin.eyer.demo;
 
+import com.zzsin.eyer.gb28181.Device;
 import com.zzsin.eyer.gb28181.SIPServer;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args){
@@ -18,7 +21,11 @@ public class Main {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            // System.out.println(i + "");
+
+            List<Device> devices = sipServer.getDevices();
+            for(Device device : devices){
+                System.out.println("Device: " + device.getDeviceId());
+            }
         }
 
         sipServer.stop();

@@ -1,5 +1,8 @@
 package com.zzsin.eyer.gb28181;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SIPServer extends JNIObject {
 
     public static String getVersion(){
@@ -28,5 +31,15 @@ public class SIPServer extends JNIObject {
 
     public int setPassiveCallback(SIPPassiveCallback passiveCallback){
         return CInterface.eyer_gb_sipserver_set_passive_callback(objId, passiveCallback.objId);
+    }
+
+    public List<Device> getDevices(){
+        DeviceList deviceList = new DeviceList();
+        CInterface.eyer_gb_sipserver_query_devices(objId, deviceList.objId);
+        System.out.println("Query Device List: " + deviceList.size());
+        deviceList.destory();
+
+        List<Device> devices = new ArrayList<Device>();
+        return devices;
     }
 }

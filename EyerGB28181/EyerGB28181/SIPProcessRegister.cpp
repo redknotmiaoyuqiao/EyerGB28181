@@ -55,7 +55,7 @@ namespace Eyer
             EyerLog("devicePort: %s\n", devicePort.str);
             */
 
-            SIPDevice device;
+            GBDevice device;
             ret = context->deviceManager.FindDevice(device, deviceID);
             if(ret){
                 // 新用户

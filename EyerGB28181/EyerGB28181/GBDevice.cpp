@@ -1,30 +1,30 @@
-#include "SIPDevice.hpp"
+#include "GBDevice.hpp"
 
 namespace Eyer
 {
-    SIPDevice::SIPDevice()
+    GBDevice::GBDevice()
     {
 
     }
 
-    SIPDevice::SIPDevice(EyerString & _deviceID, EyerString & _ip, EyerString & _port) : SIPDevice()
+    GBDevice::GBDevice(EyerString & _deviceID, EyerString & _ip, EyerString & _port) : GBDevice()
     {
         deviceID        = _deviceID;
         ip              = _ip;
         port            = _port;
     }
 
-    SIPDevice::~SIPDevice()
+    GBDevice::~GBDevice()
     {
 
     }
 
-    SIPDevice::SIPDevice(const SIPDevice & device)
+    GBDevice::GBDevice(const GBDevice & device)
     {
         *this = device;
     }
 
-    SIPDevice & SIPDevice::operator = (const SIPDevice & device)
+    GBDevice & GBDevice::operator = (const GBDevice & device)
     {
         deviceID    = device.deviceID;
         ip          = device.ip;
@@ -33,17 +33,17 @@ namespace Eyer
         return *this;
     }
 
-    EyerString & SIPDevice::GetDeviceID()
+    EyerString & GBDevice::GetDeviceID()
     {
         return deviceID;
     }
 
-    EyerString & SIPDevice::GetIP()
+    EyerString & GBDevice::GetIP()
     {
         return ip;
     }
 
-    EyerString & SIPDevice::GetPort()
+    EyerString & GBDevice::GetPort()
     {
         return port;
     }

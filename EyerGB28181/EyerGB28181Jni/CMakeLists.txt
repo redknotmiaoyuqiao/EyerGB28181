@@ -11,6 +11,7 @@ target_link_libraries (EyerGB28181Jni EyerGB28181)
 target_link_libraries (EyerGB28181Jni EyerSIP)
 target_link_libraries (EyerGB28181Jni EyerCore)
 target_link_libraries (EyerGB28181Jni EyerThread)
+target_link_libraries (EyerGB28181Jni EyerJNI)
 
 target_link_libraries (EyerGB28181Jni eXosip2)
 target_link_libraries (EyerGB28181Jni osip2)

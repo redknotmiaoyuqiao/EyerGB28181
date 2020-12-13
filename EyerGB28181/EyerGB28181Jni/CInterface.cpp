@@ -1,12 +1,19 @@
 #include "com_zzsin_eyer_gb28181_CInterface.h"
 #include "EyerGB28181/EyerGB28181.hpp"
 #include "JNIPassiveCallback.hpp"
+#include "EyerJNI/EyerJNI.hpp"
 
-JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved)
+JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM * vm, void * reserved)
 {
     EyerLog("JavaVM GetEnv Success\n");
 
+    Eyer::EyerJNIEnvManager::vm = vm;
 
+    JNIEnv *env;
+    if (vm->GetEnv((void **) &env, JNI_VERSION_1_6) != JNI_OK) {
+        EyerLog("JavaVM GetEnv Fail\n");
+        return -1;
+    }
 
     return JNI_VERSION_1_6;
 }

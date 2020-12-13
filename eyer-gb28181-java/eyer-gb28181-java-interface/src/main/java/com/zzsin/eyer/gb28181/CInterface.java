@@ -24,7 +24,7 @@ public class CInterface {
 
     public static int eyer_gb_sipserver_passive_callback_UserRegister           (String deviceId)
     {
-        System.out.println("eyer_gb_sipserver_passive_callback_UserRegister");
+        System.out.println("eyer_gb_sipserver_passive_callback_UserRegister: " + deviceId);
         return 0;
     }
 }

@@ -18,11 +18,15 @@ public class SIPServer extends JNIObject {
         return 0;
     }
 
-    public int Start(){
+    public int start(){
         return CInterface.eyer_gb_sipserver_start(objId);
     }
 
-    public int Stop(){
+    public int stop(){
         return CInterface.eyer_gb_sipserver_stop(objId);
+    }
+
+    public int setPassiveCallback(SIPPassiveCallback passiveCallback){
+        return CInterface.eyer_gb_sipserver_set_passive_callback(objId, passiveCallback.objId);
     }
 }

@@ -18,6 +18,11 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM * vm, void * reserved)
     return JNI_VERSION_1_6;
 }
 
+JNIEXPORT void JNICALL JNI_OnUnload(JavaVM * vm, void * reserved)
+{
+    EyerLog("JNI_OnUnload");
+}
+
 JNIEXPORT jstring JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1get_1version
 (JNIEnv * env, jclass)
 {

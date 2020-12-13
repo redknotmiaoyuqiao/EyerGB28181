@@ -8,6 +8,11 @@ namespace Eyer
     class EyerJNIEnvManager {
     public:
         static JavaVM * vm;
+
+        static EyerJNIEnvManager * instance;
+        static EyerJNIEnvManager * GetInstance();
+
+
     };
 }
 

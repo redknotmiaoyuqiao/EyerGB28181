@@ -2,7 +2,7 @@ package com.zzsin.eyer.gb28181;
 
 public abstract class SIPPassiveCallback extends JNIObject {
     public SIPPassiveCallback(){
-        objId = CInterface.eyer_gb_sipserver_passive_callback_init();
+        objId = CInterface.eyer_gb_sipserver_passive_callback_init(this);
     }
 
     public int destory() {

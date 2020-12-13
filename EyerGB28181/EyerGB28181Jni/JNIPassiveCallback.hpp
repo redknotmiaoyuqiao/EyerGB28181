@@ -8,10 +8,11 @@ namespace Eyer
 {
     class JNIPassiveCallback : public PassiveCallback{
     public:
-        JNIPassiveCallback();
+        JNIPassiveCallback(jobject jPassiveCallback);
     public:
         virtual int UserRegister(EyerString deviceId);
     private:
+        jobject jPassiveCallback;
     };
 }
 

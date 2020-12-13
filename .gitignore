@@ -6,3 +6,5 @@ Lib/
 cmake-build-debug/
 *.iml
 target/
+
+*.class

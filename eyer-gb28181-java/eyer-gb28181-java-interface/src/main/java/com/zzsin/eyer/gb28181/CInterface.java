@@ -19,12 +19,13 @@ public class CInterface {
 
 
 
-    public static native long   eyer_gb_sipserver_passive_callback_init         ();
+    public static native long   eyer_gb_sipserver_passive_callback_init         (SIPPassiveCallback passiveCallback);
     public static native int    eyer_gb_sipserver_passive_callback_uninit       (long callback);
 
-    public static int eyer_gb_sipserver_passive_callback_UserRegister           (String deviceId)
+    public static int eyer_gb_sipserver_passive_callback_UserRegister           (SIPPassiveCallback passiveCallback, String deviceId)
     {
         System.out.println("eyer_gb_sipserver_passive_callback_UserRegister: " + deviceId);
+        System.out.println("eyer_gb_sipserver_passive_callback_UserRegister: " + passiveCallback.toString());
         return 0;
     }
 }

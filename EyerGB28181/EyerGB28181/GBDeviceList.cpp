@@ -31,4 +31,11 @@ namespace Eyer
         device = *deviceList[index];
         return 0;
     }
+
+    int GBDeviceList::AddDevice(GBDevice & device)
+    {
+        GBDevice * tempDevice = new GBDevice(device);
+        deviceList.push_back(tempDevice);
+        return 0;
+    }
 }

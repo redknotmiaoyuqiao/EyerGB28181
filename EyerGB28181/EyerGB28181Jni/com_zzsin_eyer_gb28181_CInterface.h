@@ -89,6 +89,14 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1device_1
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_device_list_get_device_id
+ * Signature: (JI)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1device_1list_1get_1device_1id
+  (JNIEnv *, jclass, jlong, jint);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
  * Method:    eyer_gb_sipserver_passive_callback_init
  * Signature: (Lcom/zzsin/eyer/gb28181/SIPPassiveCallback;)J
  */

@@ -49,4 +49,13 @@ namespace Eyer
         }
         return ret;
     }
+
+    int SIPDeviceManager::CopyDevices(GBDeviceList & gbDeviceList)
+    {
+        for(int i=0;i<deviceList.size();i++){
+            GBDevice * device = deviceList[i];
+            gbDeviceList.AddDevice(*device);
+        }
+        return 0;
+    }
 }

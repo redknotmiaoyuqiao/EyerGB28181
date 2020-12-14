@@ -3,6 +3,7 @@
 
 #include "EyerCore/EyerCore.hpp"
 #include "GBDevice.hpp"
+#include "GBDeviceList.hpp"
 #include <vector>
 
 namespace Eyer
@@ -17,6 +18,7 @@ namespace Eyer
 
         int FindDevice(GBDevice & device, EyerString & deviceID);
 
+        int CopyDevices(GBDeviceList & gbDeviceList);
     private:
         std::vector<GBDevice *> deviceList;
     };

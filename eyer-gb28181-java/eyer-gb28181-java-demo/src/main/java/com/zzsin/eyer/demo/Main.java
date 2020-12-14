@@ -22,6 +22,7 @@ public class Main {
                 e.printStackTrace();
             }
 
+            System.out.println("=====getDevices=====");
             List<Device> devices = sipServer.getDevices();
             for(Device device : devices){
                 System.out.println("Device: " + device.getDeviceId());

@@ -23,3 +23,14 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1device_1
     Eyer::GBDeviceList * deviceList = (Eyer::GBDeviceList *)deviceListJNI;
     return deviceList->Size();
 }
+
+JNIEXPORT jstring JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1device_1list_1get_1device_1id
+(JNIEnv * env, jclass, jlong deviceListJNI, jint index)
+{
+    Eyer::GBDeviceList * deviceList = (Eyer::GBDeviceList *)deviceListJNI;
+
+    Eyer::GBDevice device;
+    deviceList->Get(device, index);
+
+    return env->NewStringUTF(device.GetDeviceID().str);
+}

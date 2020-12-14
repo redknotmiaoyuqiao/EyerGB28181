@@ -12,6 +12,8 @@ namespace Eyer
 
         int Size();
         int Get(GBDevice & device, int index);
+
+        int AddDevice(GBDevice & device);
     private:
         std::vector<GBDevice *> deviceList;
     };

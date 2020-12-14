@@ -18,4 +18,13 @@ public class DeviceList extends JNIObject{
     public int size(){
         return CInterface.eyer_gb_device_list_size(objId);
     }
+
+    public Device getDevice(int index){
+        Device device = new Device();
+
+        String deviceId = CInterface.eyer_gb_device_list_get_device_id(objId, index);
+        device.setDeviceId(deviceId);
+
+        return device;
+    }
 }

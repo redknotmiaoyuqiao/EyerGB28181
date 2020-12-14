@@ -49,7 +49,7 @@ namespace Eyer
 
     int SIPServer::GetDeviceList(GBDeviceList & gbDeviceList)
     {
-        
+        context.deviceManager.CopyDevices(gbDeviceList);
         return 0;
     }
 

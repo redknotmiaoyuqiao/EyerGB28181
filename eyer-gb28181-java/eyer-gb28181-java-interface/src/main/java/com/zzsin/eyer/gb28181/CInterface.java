@@ -23,6 +23,7 @@ public class CInterface {
     public static native long   eyer_gb_device_list_init                ();
     public static native int    eyer_gb_device_list_uninit              (long list);
     public static native int    eyer_gb_device_list_size                (long list);
+    public static native String eyer_gb_device_list_get_device_id       (long list, int index);
 
 
 

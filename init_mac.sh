@@ -31,7 +31,7 @@ mkdir libexosip2_install
 cp -r ${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/lib ${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install/lib
 
 cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
-./configure --prefix=${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install
+./configure --prefix=${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install --enable-static --disable-shared
 make clean
 make -j4
 make install

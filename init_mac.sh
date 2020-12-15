@@ -46,7 +46,7 @@ make install
 cd ${basepath}/Eyer3rdpart/tinyxml2-8.0.0
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=../tinyxml_install ../
+cmake -DCMAKE_INSTALL_PREFIX=../tinyxml_install -DBUILD_SHARED_LIBS:BOOL=OFF -DBUILD_STATIC_LIBS:BOOL=ON ../
 make clean
 make
 make install

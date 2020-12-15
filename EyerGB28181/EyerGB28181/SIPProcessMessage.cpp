@@ -3,6 +3,8 @@
 #include <string>
 #include <EyerSIP/EyerSIPMessgae.hpp>
 
+#include <tinyxml2.h>
+
 namespace Eyer
 {
     int SIPProcessMessage::Process(SIPServerContext * context, struct eXosip_t * excontext, eXosip_event_t * je)
@@ -14,6 +16,10 @@ namespace Eyer
         EyerString body = sipMessgae.GetBody();
         EyerLog("Body: %s\n", body.str);
 
+        tinyxml2::XMLDocument bodyDoc;
+        bodyDoc.Parse(body.str, strlen(body.str));
+        tinyxml2::XMLElement * root = bodyDoc.RootElement();
+        EyerLog("Root: %s\n", root->Name());
         
 
         GBDevice device;

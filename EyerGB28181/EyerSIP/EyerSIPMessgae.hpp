@@ -27,6 +27,8 @@ namespace Eyer
         EyerString GetDeviceId();
         EyerString GetIp();
         EyerString GetPort();
+
+        EyerString GetBody();
     private:
         EyerSIPMessgaePrivate * impl = nullptr;
     };

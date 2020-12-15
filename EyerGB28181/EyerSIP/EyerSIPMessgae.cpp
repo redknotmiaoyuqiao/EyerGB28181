@@ -79,4 +79,17 @@ namespace Eyer
 
         return br->gvalue;
     }
+
+    EyerString EyerSIPMessgae::GetBody()
+    {
+        EyerString bodyStr;
+
+        osip_body_t * dist = nullptr;
+        osip_message_get_body(impl->sip, 0, &dist);
+        if(dist != nullptr){
+            bodyStr = dist->body;
+        }
+
+        return bodyStr;
+    }
 }

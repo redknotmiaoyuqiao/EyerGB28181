@@ -11,6 +11,11 @@ namespace Eyer
         EyerSIPMessgae sipMessgae(je->request);
         EyerString deviceID = sipMessgae.GetDeviceId();
 
+        EyerString body = sipMessgae.GetBody();
+        EyerLog("Body: %s\n", body.str);
+
+        
+
         GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceID);
         if(ret){

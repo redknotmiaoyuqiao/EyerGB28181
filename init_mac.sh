@@ -36,6 +36,18 @@ make clean
 make -j4
 make install
 
+
+
+
+
+
+
+
+cd ${basepath}/Eyer3rdpart/tinyxml2
+
+
+
+
 :<<!
 
 !

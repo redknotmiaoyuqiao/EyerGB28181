@@ -20,8 +20,11 @@ SET(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/)
 
 include_directories (${CMAKE_SOURCE_DIR}/../Lib/libexosip2_install/include)
 include_directories (${CMAKE_SOURCE_DIR}/../Lib/libosip2_install/include)
+include_directories (${CMAKE_SOURCE_DIR}/../Lib/c_ares_install/include)
+
 link_directories    (${CMAKE_SOURCE_DIR}/../Lib/libexosip2_install/lib)
 link_directories    (${CMAKE_SOURCE_DIR}/../Lib/libosip2_install/lib)
+link_directories    (${CMAKE_SOURCE_DIR}/../Lib/c_ares_install/lib)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
@@ -36,9 +39,6 @@ ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Android")
     ADD_DEFINITIONS(-D EYER_PLATFORM_ANDROID)
 ELSEIF (CMAKE_SYSTEM_NAME MATCHES "Darwin")
     MESSAGE(STATUS "current platform: Darwin")
-    set(CMAKE_EXE_LINKER_FLAGS
-        "-framework IOKit -framework AudioToolbox -framework CoreGraphics -framework CoreMedia -framework Cocoa -framework VideoToolbox -framework AVFoundation -framework Security -framework CoreFoundation -framework CoreVideo -framework OpenGL -framework AppKit -framework CoreImage -framework VideoDecodeAcceleration"
-    )
 ELSE ()
     MESSAGE(STATUS "other platform: ${CMAKE_SYSTEM_NAME}")
 ENDIF (CMAKE_SYSTEM_NAME MATCHES "Linux")

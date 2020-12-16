@@ -20,7 +20,27 @@ namespace Eyer
         bodyDoc.Parse(body.str, strlen(body.str));
         tinyxml2::XMLElement * root = bodyDoc.RootElement();
         EyerLog("Root: %s\n", root->Name());
-        
+        if(root != nullptr){
+            if(!root->NoChildren()){
+                EyerLog("Root is not null !!!\n");
+                tinyxml2::XMLElement * CmdTypeElement = root->FirstChildElement("CmdType");
+                if(CmdTypeElement != nullptr){
+                    EyerString cmdType = CmdTypeElement->GetText();
+                    EyerLog("CmdType: %s\n", cmdType.str);
+                    if(cmdType == "Keepalive"){
+
+                    }
+                }
+
+                tinyxml2::XMLElement * SNElement = root->FirstChildElement("SN");
+                if(SNElement != nullptr){
+                    EyerString sn = SNElement->GetText();
+                    EyerLog("sn: %s\n", sn.str);
+                }
+            }
+        }
+
+
 
         GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceID);

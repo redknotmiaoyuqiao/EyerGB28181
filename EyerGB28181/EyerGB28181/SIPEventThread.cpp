@@ -1,3 +1,4 @@
+#include "Event/EventDeviceHeart.hpp"
 #include "Callback/StartStreamCallback.hpp"
 #include "Event/EventStartRealTimeVideoResponse.hpp"
 #include "SIPEventThread.hpp"
@@ -39,6 +40,12 @@ namespace Eyer
                         if(context->passiveCallback != nullptr){
                             EventUserRegister * eventUserRegister = (EventUserRegister *)event;
                             context->passiveCallback->UserRegister(eventUserRegister->deviceId);
+                        }
+                    }
+                    if(eventType == SIPEventType::DEVICE_HEART){
+                        if(context->passiveCallback != nullptr){
+                            EventDeviceHeart * deviceHeart = (EventDeviceHeart *)event;
+                            context->passiveCallback->DeviceHeart(deviceHeart->deviceId);
                         }
                     }
                     if(eventType == SIPEventType::REALTIME_RESPONSE){

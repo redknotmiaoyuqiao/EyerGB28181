@@ -4,7 +4,8 @@ include_directories (./)
 add_library(
         EyerJNI
         EyerJNI.cpp
-)
+        EyerJNIEnvManager.cpp
+        )
 
 set(head_files
         EyerJNI.hpp

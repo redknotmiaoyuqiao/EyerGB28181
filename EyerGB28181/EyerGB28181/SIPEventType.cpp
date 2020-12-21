@@ -2,9 +2,10 @@
 
 namespace Eyer
 {
-    SIPEventType SIPEventType::USER_REGISTER(1, "USER_REGISTER");
-    SIPEventType SIPEventType::REALTIME_REQUEST(2, "REALTIME_REQUEST");
-    SIPEventType SIPEventType::REALTIME_RESPONSE(3, "REALTIME_RESPONSE");
+    SIPEventType SIPEventType::USER_REGISTER        (1, "USER_REGISTER");
+    SIPEventType SIPEventType::DEVICE_HEART         (2, "DEVICE_HEART");
+    SIPEventType SIPEventType::REALTIME_REQUEST     (3, "REALTIME_REQUEST");
+    SIPEventType SIPEventType::REALTIME_RESPONSE    (4, "REALTIME_RESPONSE");
 
     SIPEventType::SIPEventType(int _val, EyerString _name)
     {

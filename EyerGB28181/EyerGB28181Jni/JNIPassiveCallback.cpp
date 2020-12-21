@@ -38,4 +38,9 @@ namespace Eyer
 
         return ret;
     }
+
+    int JNIPassiveCallback::DeviceHeart(Eyer::EyerString deviceId)
+    {
+        return 0;
+    }
 }

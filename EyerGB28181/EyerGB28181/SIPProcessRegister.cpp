@@ -49,17 +49,11 @@ namespace Eyer
             EyerString deviceIp         = sipMessgae.GetIp();
             EyerString devicePort       = sipMessgae.GetPort();
 
-            /*
-            EyerLog("deviceId: %s\n", deviceID.str);
-            EyerLog("deviceIp: %s\n", deviceIp.str);
-            EyerLog("devicePort: %s\n", devicePort.str);
-            */
-
             GBDevice device;
             ret = context->deviceManager.FindDevice(device, deviceID);
             if(ret){
                 // 新用户
-                EyerLog("New User Register\n");
+                // EyerLog("New User Register\n");
                 context->deviceManager.Register(deviceID, deviceIp, devicePort);
                 // 发送 消息
                 EventUserRegister * eventUserRegister = new EventUserRegister();
@@ -74,10 +68,6 @@ namespace Eyer
             osip_message_t * answer = NULL;
             eXosip_message_build_answer (excontext, je->tid, 200, &answer);
             eXosip_message_send_answer (excontext, je->tid, 200, answer);
-
-
-            /*
-             */
 
             /*
             // Query Device Info

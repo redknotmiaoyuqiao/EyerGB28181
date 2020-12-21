@@ -11,6 +11,7 @@ namespace Eyer
         JNIPassiveCallback(jobject jPassiveCallback);
     public:
         virtual int UserRegister(EyerString deviceId);
+        virtual int DeviceHeart(Eyer::EyerString deviceId);
     private:
         jobject jPassiveCallback;
     };

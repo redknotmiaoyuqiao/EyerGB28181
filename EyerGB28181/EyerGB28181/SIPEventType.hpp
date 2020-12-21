@@ -30,6 +30,8 @@ namespace Eyer
         EyerString name;
     public:
         static SIPEventType USER_REGISTER;
+        static SIPEventType DEVICE_HEART;
+
         static SIPEventType REALTIME_REQUEST;
         static SIPEventType REALTIME_RESPONSE;
     };

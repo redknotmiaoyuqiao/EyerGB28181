@@ -2,8 +2,9 @@
 
 #include <string>
 #include <EyerSIP/EyerSIPMessgae.hpp>
+#include "Event/EventDeviceHeart.hpp"
 
-#include <tinyxml2.h>
+#include "EyerXMLMessage/EyerXMLMessage.hpp"
 
 namespace Eyer
 {
@@ -14,33 +15,16 @@ namespace Eyer
         EyerString deviceID = sipMessgae.GetDeviceId();
 
         EyerString body = sipMessgae.GetBody();
-        EyerLog("Body: %s\n", body.str);
 
-        tinyxml2::XMLDocument bodyDoc;
-        bodyDoc.Parse(body.str, strlen(body.str));
-        tinyxml2::XMLElement * root = bodyDoc.RootElement();
-        EyerLog("Root: %s\n", root->Name());
-        if(root != nullptr){
-            if(!root->NoChildren()){
-                EyerLog("Root is not null !!!\n");
-                tinyxml2::XMLElement * CmdTypeElement = root->FirstChildElement("CmdType");
-                if(CmdTypeElement != nullptr){
-                    EyerString cmdType = CmdTypeElement->GetText();
-                    EyerLog("CmdType: %s\n", cmdType.str);
-                    if(cmdType == "Keepalive"){
+        EyerXMLMsg xmlMsg;
+        xmlMsg.Parse(body);
 
-                    }
-                }
-
-                tinyxml2::XMLElement * SNElement = root->FirstChildElement("SN");
-                if(SNElement != nullptr){
-                    EyerString sn = SNElement->GetText();
-                    EyerLog("sn: %s\n", sn.str);
-                }
-            }
+        if(xmlMsg.GetCMDType() == "Keepalive"){
+            // 发送 心跳 消息
+            EventDeviceHeart * deviceHeart = new EventDeviceHeart();
+            deviceHeart->deviceId = deviceID;
+            context->eventQueue.PutEvent(deviceHeart);
         }
-
-
 
         GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceID);

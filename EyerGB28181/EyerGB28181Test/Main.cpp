@@ -6,7 +6,13 @@ class MyPassiveCallback : public Eyer::PassiveCallback
 public:
     virtual int UserRegister(Eyer::EyerString deviceId)
     {
-        EyerLog("UserRegister Device Id: %s\n", deviceId.str);
+        EyerLog("User Register Device Id: %s\n", deviceId.str);
+        return 0;
+    }
+
+    virtual int DeviceHeart(Eyer::EyerString deviceId)
+    {
+        EyerLog("Device Heart Device Id: %s\n", deviceId.str);
         return 0;
     }
 };

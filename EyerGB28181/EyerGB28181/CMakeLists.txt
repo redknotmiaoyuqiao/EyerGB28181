@@ -43,7 +43,7 @@ add_library(
         ActiveCallbackList.hpp
         Callback/ActiveCallback.cpp
         Callback/ActiveCallback.hpp
-        GBDeviceList.cpp GBDeviceList.hpp)
+        GBDeviceList.cpp GBDeviceList.hpp Event/EventDeviceHeart.cpp Event/EventDeviceHeart.hpp)
 
 set(head_files
         EyerGB28181.hpp

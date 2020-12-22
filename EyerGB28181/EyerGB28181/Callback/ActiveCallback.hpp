@@ -5,7 +5,8 @@ namespace Eyer
 {
     enum ActiveCallbackType
     {
-        START_STREAM_CALLBACK
+        START_STREAM_CALLBACK,
+        CATALOG_CALLBACK
     };
 
     class ActiveCallback {

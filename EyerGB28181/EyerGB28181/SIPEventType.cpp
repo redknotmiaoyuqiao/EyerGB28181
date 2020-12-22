@@ -6,6 +6,8 @@ namespace Eyer
     SIPEventType SIPEventType::DEVICE_HEART         (2, "DEVICE_HEART");
     SIPEventType SIPEventType::REALTIME_REQUEST     (3, "REALTIME_REQUEST");
     SIPEventType SIPEventType::REALTIME_RESPONSE    (4, "REALTIME_RESPONSE");
+    SIPEventType SIPEventType::CATA_REQUEST         (5, "CATA_REQUEST");
+    SIPEventType SIPEventType::CATA_RESPONSE        (6, "CATA_RESPONSE");
 
     SIPEventType::SIPEventType(int _val, EyerString _name)
     {

@@ -34,6 +34,9 @@ namespace Eyer
 
         static SIPEventType REALTIME_REQUEST;
         static SIPEventType REALTIME_RESPONSE;
+
+        static SIPEventType CATA_REQUEST;
+        static SIPEventType CATA_RESPONSE;
     };
 }
 

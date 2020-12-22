@@ -1,6 +1,7 @@
 #ifndef EYERLIB_SIPSERVER_HPP
 #define EYERLIB_SIPSERVER_HPP
 
+#include "Callback/CatalogCallback.hpp"
 #include "SIPServerMainThread.hpp"
 #include "SIPServerContext.hpp"
 #include "EyerCore/EyerCore.hpp"
@@ -31,6 +32,8 @@ namespace Eyer
                 StartStreamCallback * startStreamCallback);
 
         int StopStream();
+
+        int Catalog(EyerString & deviceId, CatalogCallback * catalogCallback);
 
     private:
         int port = 5060;

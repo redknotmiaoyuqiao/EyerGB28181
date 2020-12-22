@@ -1,5 +1,7 @@
 #include "SIPServer.hpp"
 #include "Event/EventStartRealTimeVideoRequest.hpp"
+#include "Event/EventCatalogRequest.hpp"
+#include "Event/EventCatalogResponse.hpp"
 #include "Callback/StartStreamCallback.hpp"
 
 namespace Eyer
@@ -72,6 +74,15 @@ namespace Eyer
 
     int SIPServer::StopStream()
     {
+        return 0;
+    }
+
+    int SIPServer::Catalog(EyerString & deviceId, CatalogCallback * catalogCallback)
+    {
+        EventCatalogRequest * catalogRequest = new EventCatalogRequest();
+        catalogRequest->deviceId        = deviceId;
+        catalogRequest->catalogCallback = catalogCallback;
+        context.eventQueue.PutEvent(catalogRequest);
         return 0;
     }
 }

@@ -45,6 +45,25 @@ namespace Eyer
             return -1;
         }
 
+        // Catalog
+        EyerString to = EyerString("sip:") + device.GetDeviceID() + "@" + device.GetIP() + ":" + device.GetPort();
+        char * from = (char *)"sip:34020000002000000001@34020000";
+
+        osip_message_t * msg = NULL;
+        eXosip_message_build_request(excontext, &msg, "MESSAGE", to.str, from, NULL);
+        char * queryContent = "<?xml version=\"1.0\"?>\r\n<Query><CmdType>Catalog</CmdType><SN>4</SN><DeviceID>34020000001320000001</DeviceID></Query>";
+
+        osip_message_set_contact(msg, "sip:34020000002000000001@192.168.2.102:5060");
+        osip_message_set_body (msg, queryContent, strlen(queryContent));
+        osip_message_set_content_type (msg, "Application/MANSCDP+xml");
+        eXosip_message_send_request(excontext, msg);
+
+        char * msgStr = nullptr;
+        size_t msgLen = 0;
+        osip_message_to_str(msg, &msgStr, &msgLen);
+
+        EyerLog("Msg: %s\n", msgStr);
+
         EyerLog("We Find Device: %s\n", device.GetDeviceID().str);
 
         return 0;

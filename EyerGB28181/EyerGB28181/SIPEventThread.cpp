@@ -1,3 +1,4 @@
+#include "Event/EventCatalogResponse.hpp"
 #include "Event/EventDeviceHeart.hpp"
 #include "Callback/StartStreamCallback.hpp"
 #include "Event/EventStartRealTimeVideoResponse.hpp"
@@ -47,6 +48,13 @@ namespace Eyer
                             EventDeviceHeart * deviceHeart = (EventDeviceHeart *)event;
                             context->passiveCallback->DeviceHeart(deviceHeart->deviceId);
                         }
+                    }
+                    if(eventType == SIPEventType::CATA_RESPONSE){
+                        EventCatalogResponse * eventCatalogResponse = (EventCatalogResponse *)event;
+                        EyerLog("CATA_RESPONSE\n");
+
+                        // ActiveCallback * callback = nullptr;
+                        // context->activeCallbackList.FindCallback(&callback, callId);
                     }
                     if(eventType == SIPEventType::REALTIME_RESPONSE){
                         EventStartRealTimeVideoResponse * eventStartRealTimeVideoResponse = (EventStartRealTimeVideoResponse *)event;

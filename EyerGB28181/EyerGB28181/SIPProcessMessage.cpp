@@ -2,6 +2,7 @@
 
 #include <string>
 #include <EyerSIP/EyerSIPMessgae.hpp>
+#include "Event/EventCatalogResponse.hpp"
 #include "Event/EventDeviceHeart.hpp"
 
 #include "EyerXMLMessage/EyerXMLMessage.hpp"
@@ -31,6 +32,8 @@ namespace Eyer
         if(xmlMsg.GetCMDType() == "Catalog"){
             EyerXMLCatalog catalog;
             catalog.Parse(body);
+            EventCatalogResponse * catalogResponse = new EventCatalogResponse();
+            context->eventQueue.PutEvent(catalogResponse);
         }
 
         GBDevice device;

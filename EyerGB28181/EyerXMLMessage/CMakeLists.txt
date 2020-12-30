@@ -7,7 +7,7 @@ add_library(
         EyerXMLMessage.hpp
         EyerXMLMsg.hpp
         EyerXMLMsg.cpp
-)
+        EyerXMLCatalog.cpp EyerXMLCatalog.hpp)
 
 set(head_files
         EyerXMLMessage.hpp

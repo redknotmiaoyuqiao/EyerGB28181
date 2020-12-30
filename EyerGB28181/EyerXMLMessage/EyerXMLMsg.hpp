@@ -2,6 +2,7 @@
 #define EYERGB28181_EYERXMLMSG_HPP
 
 #include "EyerCore/EyerCore.hpp"
+#include <tinyxml2.h>
 
 namespace Eyer
 {
@@ -12,11 +13,14 @@ namespace Eyer
 
         int Parse(EyerString & xmlStr);
 
+        virtual int ParseSub(tinyxml2::XMLElement * root);
+
         EyerString GetCMDType();
 
-    private:
+    public:
         EyerString cmdType;
         EyerString sn;
+        EyerString DeviceID;
     };
 }
 

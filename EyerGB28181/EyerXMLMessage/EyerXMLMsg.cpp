@@ -23,21 +23,30 @@ namespace Eyer
         // EyerLog("Root: %s\n", root->Name());
         if(root != nullptr){
             if(!root->NoChildren()){
-                // EyerLog("Root is not null !!!\n");
                 tinyxml2::XMLElement * CmdTypeElement = root->FirstChildElement("CmdType");
                 if(CmdTypeElement != nullptr){
                     cmdType = CmdTypeElement->GetText();
-                    // EyerLog("CmdType: %s\n", cmdType.str);
                 }
 
                 tinyxml2::XMLElement * SNElement = root->FirstChildElement("SN");
                 if(SNElement != nullptr){
                     sn = SNElement->GetText();
-                    // EyerLog("sn: %s\n", sn.str);
                 }
+
+                tinyxml2::XMLElement * DeviceIDElement = root->FirstChildElement("DeviceID");
+                if(DeviceIDElement != nullptr){
+                    DeviceID = DeviceIDElement->GetText();
+                }
+
+                ParseSub(root);
             }
         }
 
+        return 0;
+    }
+
+    int EyerXMLMsg::ParseSub(tinyxml2::XMLElement * root)
+    {
         return 0;
     }
 

@@ -45,6 +45,8 @@ namespace Eyer
             return -1;
         }
 
+        // EyerLog("AAA We Find Device: %s\n", device.GetDeviceID().str);
+
         // Catalog
         EyerString to = EyerString("sip:") + device.GetDeviceID() + "@" + device.GetIP() + ":" + device.GetPort();
         char * from = (char *)"sip:34020000002000000001@34020000";
@@ -62,9 +64,9 @@ namespace Eyer
         size_t msgLen = 0;
         osip_message_to_str(msg, &msgStr, &msgLen);
 
-        EyerLog("Msg: %s\n", msgStr);
+        // EyerLog("Msg: %s\n", msgStr);
 
-        EyerLog("We Find Device: %s\n", device.GetDeviceID().str);
+        // EyerLog("BBB We Find Device: %s\n", device.GetDeviceID().str);
 
         return 0;
     }

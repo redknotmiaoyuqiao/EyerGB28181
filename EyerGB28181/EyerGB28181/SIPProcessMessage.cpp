@@ -19,11 +19,18 @@ namespace Eyer
         EyerXMLMsg xmlMsg;
         xmlMsg.Parse(body);
 
+        EyerLog("%s\n", body.str);
+
         if(xmlMsg.GetCMDType() == "Keepalive"){
             // 发送 心跳 消息
             EventDeviceHeart * deviceHeart = new EventDeviceHeart();
             deviceHeart->deviceId = deviceID;
             context->eventQueue.PutEvent(deviceHeart);
+        }
+
+        if(xmlMsg.GetCMDType() == "Catalog"){
+            EyerXMLCatalog catalog;
+            catalog.Parse(body);
         }
 
         GBDevice device;

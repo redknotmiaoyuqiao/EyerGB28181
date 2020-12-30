@@ -45,6 +45,8 @@ namespace Eyer
 
         eXosip_event_t * je = NULL;
         while(!stopFlag){
+            EventLoop(je, excontext);
+
             je = eXosip_event_wait(excontext, 0, 50);
 
             eXosip_lock(excontext);
@@ -212,8 +214,6 @@ namespace Eyer
             if(je->type == EXOSIP_EVENT_COUNT) {
                 EyerLog_1("============EXOSIP_EVENT_COUNT============\n");
             }
-
-            EventLoop(je, excontext);
         }
 
         eXosip_quit(excontext);

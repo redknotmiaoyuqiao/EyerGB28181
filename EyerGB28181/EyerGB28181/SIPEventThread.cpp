@@ -52,15 +52,9 @@ namespace Eyer
                     if(eventType == SIPEventType::CATA_RESPONSE){
                         EventCatalogResponse * eventCatalogResponse = (EventCatalogResponse *)event;
                         EyerLog("CATA_RESPONSE\n");
-
-                        // ActiveCallback * callback = nullptr;
-                        // context->activeCallbackList.FindCallback(&callback, callId);
                     }
                     if(eventType == SIPEventType::REALTIME_RESPONSE){
                         EventStartRealTimeVideoResponse * eventStartRealTimeVideoResponse = (EventStartRealTimeVideoResponse *)event;
-                        // EyerLog("EventStartRealTimeVideoResponse Callback\n");
-                        // EyerLog("EventStartRealTimeVideoResponse Callback status: %d\n", eventStartRealTimeVideoResponse->status);
-                        // EyerLog("EventStartRealTimeVideoResponse Callback callid: %s\n", eventStartRealTimeVideoResponse->callId.str);
                         EyerString callId = eventStartRealTimeVideoResponse->callId;
                         int status = eventStartRealTimeVideoResponse->status;
                         ActiveCallback * callback = nullptr;

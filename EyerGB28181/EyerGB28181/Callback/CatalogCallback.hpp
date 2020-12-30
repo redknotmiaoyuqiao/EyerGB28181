@@ -7,7 +7,7 @@ namespace Eyer
 {
     class CatalogCallback : public ActiveCallback {
     public:
-        virtual int OnStartStream(int status) = 0;
+        virtual int OnCatalog(int status) = 0;
         virtual ActiveCallbackType GetType();
     };
 }

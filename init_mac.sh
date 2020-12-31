@@ -22,26 +22,23 @@ make -j4
 make install
 
 
-
-cp -r ${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/include/osip2 ${basepath}/Eyer3rdpart/libexosip2-5.2.0/include/osip2
-cp -r ${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/include/osipparser2 ${basepath}/Eyer3rdpart/libexosip2-5.2.0/include/osipparser2
 cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
 mkdir libexosip2_install
-
-cp -r ${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/lib ${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install/lib
+cd libexosip2_install
+mkdir lib
+mkdir include
 
 cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
-./configure --prefix=${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install --enable-static --enable-shared
+./configure \
+--prefix=${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install \
+--enable-static \
+--enable-shared \
+--libdir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/lib" \
+--includedir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/include"
+
 make clean
 make -j4
 make install
-
-
-
-
-
-
-
 
 cd ${basepath}/Eyer3rdpart/tinyxml2-8.0.0
 mkdir build
@@ -50,8 +47,6 @@ cmake -DCMAKE_INSTALL_PREFIX=../tinyxml_install -DBUILD_SHARED_LIBS:BOOL=OFF -DB
 make clean
 make
 make install
-
-
 
 
 :<<!

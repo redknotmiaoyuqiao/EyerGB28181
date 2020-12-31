@@ -16,7 +16,6 @@ chmod -R 777 Eyer3rdpart
 cd ${basepath}/Eyer3rdpart/c-ares-1.17.1
 ./configure --prefix=${basepath}/Eyer3rdpart/c-ares-1.17.1/c_ares_install --enable-static --enable-shared
 # ./configure --enable-static --enable-shared
-autoreconf -ivf
 make clean
 make -j4
 make install
@@ -37,7 +36,7 @@ echo "+"
 cd ${basepath}/Eyer3rdpart/libosip2-5.0.0
 ./configure --prefix=${basepath}/Eyer3rdpart/libosip2-5.0.0/libosip2_install --enable-static --enable-shared
 # ./configure --enable-static --enable-shared
-autoreconf -ivf
+# autoreconf -ivf
 make clean
 make -j4
 make install
@@ -66,7 +65,7 @@ cp -r ${basepath}/Eyer3rdpart/libosip2-5.0.0/libosip2_install/lib ${basepath}/Ey
 cd ${basepath}/Eyer3rdpart/libexosip2-5.0.0
 ./configure --prefix=${basepath}/Eyer3rdpart/libexosip2-5.0.0/libexosip2_install --enable-static --enable-shared
 # ./configure --enable-static --enable-shared
-autoreconf -ivf
+# autoreconf -ivf
 make clean
 make -j4
 make install

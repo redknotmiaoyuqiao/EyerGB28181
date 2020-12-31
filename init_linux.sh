@@ -35,6 +35,7 @@ echo "+"
 
 cd ${basepath}/Eyer3rdpart/libosip2-5.0.0
 ./configure --prefix=${basepath}/Eyer3rdpart/libosip2-5.0.0/libosip2_install --enable-static --enable-shared
+autoreconf -ivf
 # ./configure --enable-static --enable-shared
 # autoreconf -ivf
 make clean
@@ -79,6 +80,6 @@ fi
 
 mkdir Lib
 
-cp -r Eyer3rdpart/libosip2-5.2.0/libosip2_install Lib/libosip2_install
-cp -r Eyer3rdpart/libexosip2-5.2.0/libexosip2_install Lib/libexosip2_install
+cp -r Eyer3rdpart/libosip2-5.0.0/libosip2_install Lib/libosip2_install
+cp -r Eyer3rdpart/libexosip2-5.0.0/libexosip2_install Lib/libexosip2_install
 cp -r Eyer3rdpart/c-ares-1.17.1/c_ares_install Lib/c_ares_install

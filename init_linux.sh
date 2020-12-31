@@ -57,14 +57,14 @@ echo "+"
 
 cp -r ${basepath}/Eyer3rdpart/libosip2-5.0.0/libosip2_install/include/osip2 ${basepath}/Eyer3rdpart/libexosip2-5.0.0/include/osip2
 cp -r ${basepath}/Eyer3rdpart/libosip2-5.0.0/libosip2_install/include/osipparser2 ${basepath}/Eyer3rdpart/libexosip2-5.0.0/include/osipparser2
-cp -r ${basepath}/Eyer3rdpart/c-ares-1.17.1/c_ares_install/include/ ${basepath}/Eyer3rdpart/libexosip2-5.0.0/include/
+cp -r ${basepath}/Eyer3rdpart/c-ares-1.17.1/c_ares_install/include/* ${basepath}/Eyer3rdpart/libexosip2-5.0.0/include/
 
 
 cd ${basepath}/Eyer3rdpart/libexosip2-5.0.0
 mkdir libexosip2_install
 
 cp -r ${basepath}/Eyer3rdpart/libosip2-5.0.0/libosip2_install/lib ${basepath}/Eyer3rdpart/libexosip2-5.0.0/libexosip2_install/lib
-cp -r ${basepath}/Eyer3rdpart/c-ares-1.17.1/c_ares_install/lib ${basepath}/Eyer3rdpart/libexosip2-5.0.0/libexosip2_install/lib
+cp -r ${basepath}/Eyer3rdpart/c-ares-1.17.1/c_ares_install/lib/* ${basepath}/Eyer3rdpart/libexosip2-5.0.0/libexosip2_install/lib
 
 cd ${basepath}/Eyer3rdpart/libexosip2-5.0.0
 ./configure --prefix=${basepath}/Eyer3rdpart/libexosip2-5.0.0/libexosip2_install --enable-static --enable-shared

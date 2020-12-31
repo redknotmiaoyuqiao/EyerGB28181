@@ -13,8 +13,6 @@ git clone https://gitee.com/redknot/Eyer3rdpart
 chmod -R 777 Eyer3rdpart
 
 
-
-
 cd ${basepath}/Eyer3rdpart/libosip2-5.2.0
 ./configure --prefix=${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install --enable-static --enable-shared
 make clean

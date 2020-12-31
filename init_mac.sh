@@ -13,8 +13,6 @@ git clone https://gitee.com/redknot/Eyer3rdpart
 chmod -R 777 Eyer3rdpart
 
 
-
-
 cd ${basepath}/Eyer3rdpart/libosip2-5.2.0
 ./configure --prefix=${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install --enable-static --enable-shared
 make clean
@@ -23,18 +21,14 @@ make install
 
 
 cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
-mkdir libexosip2_install
-cd libexosip2_install
-mkdir lib
-mkdir include
 
 cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
 ./configure \
---prefix=${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install \
 --enable-static \
 --enable-shared \
 --libdir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/lib" \
---includedir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/include"
+--includedir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/include" \
+--prefix="${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install"
 
 make clean
 make -j4

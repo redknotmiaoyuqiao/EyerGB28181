@@ -21,8 +21,6 @@ make install
 
 
 cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
-
-cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
 ./configure \
 --enable-static \
 --enable-shared \

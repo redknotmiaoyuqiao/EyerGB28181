@@ -12,22 +12,22 @@ git clone https://gitee.com/redknot/Eyer3rdpart
 
 chmod -R 777 Eyer3rdpart
 
-
 cd ${basepath}/Eyer3rdpart/libosip2-5.2.0
 ./configure --prefix=${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install --enable-static --enable-shared
-autoreconf -ivf   
+autoreconf -ivf
 make clean
 make -j4
 make install
 
 cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
-autoreconf -ivf   
 ./configure \
 --enable-static \
 --enable-shared \
 --libdir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/lib" \
 --includedir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/include" \
 --prefix="${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install"
+
+autoreconf -ivf
 
 make clean
 make -j4
@@ -42,14 +42,19 @@ make
 make install
 
 
-:<<!
-cd ${basepath}/Eyer3rdpart/c-ares-1.17.1
-./configure --prefix=${basepath}/Eyer3rdpart/c-ares-1.17.1/c_ares_install --enable-static --enable-shared
-# ./configure --enable-static --enable-shared
+cd ${basepath}/Eyer3rdpart/c-ares-1.16.0
+./configure \
+--prefix=${basepath}/Eyer3rdpart/c-ares-1.16.0/c_ares_install \
+--enable-static \
+--enable-shared
+
+# autoreconf -ivf
+
 make clean
 make -j4
 make install
 
+:<<!
 !
 
 cd ${basepath}
@@ -62,4 +67,5 @@ mkdir Lib
 
 cp -r Eyer3rdpart/libosip2-5.2.0/libosip2_install Lib/libosip2_install
 cp -r Eyer3rdpart/libexosip2-5.2.0/libexosip2_install Lib/libexosip2_install
+cp -r Eyer3rdpart/c-ares-1.16.0/c_ares_install Lib/c_ares_install
 cp -r Eyer3rdpart/tinyxml2-8.0.0/tinyxml_install Lib/tinyxml_install

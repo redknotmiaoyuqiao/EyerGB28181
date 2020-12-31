@@ -15,8 +15,7 @@
         <dependency>
             <groupId>com.zzsin.eyer</groupId>
             <artifactId>eyer-gb28181-java-interface</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <version>0.1-RELEASES</version>
         </dependency>
     </dependencies>
 </project>

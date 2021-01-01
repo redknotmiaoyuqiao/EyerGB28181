@@ -14,7 +14,7 @@ chmod -R 777 Eyer3rdpart
 
 
 cd ${basepath}/Eyer3rdpart/libosip2-5.2.0
-./configure --prefix=${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install --enable-static --enable-shared
+./configure --prefix=${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install --enable-static --disable-shared
 make clean
 make -j4
 make install
@@ -23,7 +23,7 @@ make install
 cd ${basepath}/Eyer3rdpart/libexosip2-5.2.0
 ./configure \
 --enable-static \
---enable-shared \
+--disable-shared \
 --libdir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/lib" \
 --includedir="${basepath}/Eyer3rdpart/libosip2-5.2.0/libosip2_install/include" \
 --prefix="${basepath}/Eyer3rdpart/libexosip2-5.2.0/libexosip2_install"

@@ -17,50 +17,50 @@ JNIEXPORT jstring JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1get_1
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
- * Method:    eyer_gb_sipserver_init
+ * Method:    eyer_gb_gbserver_init
  * Signature: (I)J
  */
-JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1init
+JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1init
   (JNIEnv *, jclass, jint);
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
- * Method:    eyer_gb_sipserver_uninit
+ * Method:    eyer_gb_gbserver_uninit
  * Signature: (J)I
  */
-JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1uninit
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1uninit
   (JNIEnv *, jclass, jlong);
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
- * Method:    eyer_gb_sipserver_start
+ * Method:    eyer_gb_gbserver_start
  * Signature: (J)I
  */
-JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1start
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1start
   (JNIEnv *, jclass, jlong);
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
- * Method:    eyer_gb_sipserver_stop
+ * Method:    eyer_gb_gbserver_stop
  * Signature: (J)I
  */
-JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1stop
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1stop
   (JNIEnv *, jclass, jlong);
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
- * Method:    eyer_gb_sipserver_set_passive_callback
+ * Method:    eyer_gb_gbserver_set_passive_callback
  * Signature: (JJ)I
  */
-JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1set_1passive_1callback
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1set_1passive_1callback
   (JNIEnv *, jclass, jlong, jlong);
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
- * Method:    eyer_gb_sipserver_query_devices
+ * Method:    eyer_gb_gbserver_query_devices
  * Signature: (JJ)I
  */
-JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1query_1devices
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1query_1devices
   (JNIEnv *, jclass, jlong, jlong);
 
 /*
@@ -97,19 +97,27 @@ JNIEXPORT jstring JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1devic
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
- * Method:    eyer_gb_sipserver_passive_callback_init
+ * Method:    eyer_gb_gbserver_passive_callback_init
  * Signature: (Lcom/zzsin/eyer/gb28181/SIPPassiveCallback;)J
  */
-JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1passive_1callback_1init
+JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1passive_1callback_1init
   (JNIEnv *, jclass, jobject);
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
- * Method:    eyer_gb_sipserver_passive_callback_uninit
+ * Method:    eyer_gb_gbserver_passive_callback_uninit
  * Signature: (J)I
  */
-JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1passive_1callback_1uninit
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1passive_1callback_1uninit
   (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_gbserver_catalog
+ * Signature: (JLjava/lang/String;Lcom/zzsin/eyer/gb28181/callback/CatalogCallback;)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1catalog
+  (JNIEnv *, jclass, jlong, jstring, jobject);
 
 #ifdef __cplusplus
 }

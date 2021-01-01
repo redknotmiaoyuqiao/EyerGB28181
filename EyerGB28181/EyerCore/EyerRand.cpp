@@ -15,9 +15,16 @@ namespace Eyer {
     {
         EyerString str;
         for(int i=0;i<length;i++){
-            int num = Rand(10);
-            if(num <= 0){
-                num++;
+            int num = 0;
+            while(1){
+                num = Rand(10);
+                if(num <= 0){
+                    continue;
+                }
+                if(num >= 10){
+                    continue;
+                }
+                break;
             }
             str = str + EyerString::Number(num);
         }

@@ -1,4 +1,4 @@
-#include "SIPServerMainThread.hpp"
+#include "GBServerMainThread.hpp"
 
 #include "eXosipHeader.hpp"
 #include <sys/socket.h>
@@ -12,18 +12,18 @@
 
 namespace Eyer
 {
-    SIPServerMainThread::SIPServerMainThread(int _port, SIPServerContext * _context)
+    GBServerMainThread::GBServerMainThread(int _port, SIPServerContext * _context)
     {
         port = _port;
         context = _context;
     }
 
-    SIPServerMainThread::~SIPServerMainThread()
+    GBServerMainThread::~GBServerMainThread()
     {
 
     }
 
-    void SIPServerMainThread::Run()
+    void GBServerMainThread::Run()
     {
         int ret = 0;
         struct eXosip_t *excontext;
@@ -219,7 +219,7 @@ namespace Eyer
         eXosip_quit(excontext);
     }
 
-    int SIPServerMainThread::EventLoop(eXosip_event_t * je, struct eXosip_t * excontext)
+    int GBServerMainThread::EventLoop(eXosip_event_t * je, struct eXosip_t * excontext)
     {
         SIPEvent * event = nullptr;
         context->eventQueue.GetEvent(&event);
@@ -236,7 +236,7 @@ namespace Eyer
         return 0;
     }
 
-    int SIPServerMainThread::ANSWEREDProcess(eXosip_event_t * je, struct eXosip_t * excontext)
+    int GBServerMainThread::ANSWEREDProcess(eXosip_event_t * je, struct eXosip_t * excontext)
     {
         if(je->response != NULL){
             EyerString callId = je->response->call_id->number;
@@ -262,7 +262,7 @@ namespace Eyer
         return 0;
     }
 
-    int SIPServerMainThread::PrintJe(eXosip_event_t * je)
+    int GBServerMainThread::PrintJe(eXosip_event_t * je)
     {
         /*
         if(je->request != NULL){

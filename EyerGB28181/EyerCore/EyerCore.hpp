@@ -16,5 +16,6 @@
 #include "EyerBufferMut.hpp"
 #include "EyerSockaddr.hpp"
 #include "BLOCK_TIME.hpp"
+#include "EyerRand.hpp"
 
 #endif

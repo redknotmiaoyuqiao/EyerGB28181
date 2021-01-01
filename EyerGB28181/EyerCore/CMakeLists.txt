@@ -46,6 +46,7 @@ add_library(
         EyerLogParam.hpp
         BLOCK_TIME.cpp
         BLOCK_TIME.hpp
+        EyerRand.hpp
 )
 
 set(head_files 

@@ -7,7 +7,13 @@ add_library(
         EyerXMLMessage.hpp
         EyerXMLMsg.hpp
         EyerXMLMsg.cpp
-        EyerXMLCatalog.cpp EyerXMLCatalog.hpp)
+        EyerXMLCatalog.cpp
+        EyerXMLCatalog.hpp
+        CataDeviceList.cpp
+        CataDeviceList.hpp
+        CataDevice.cpp
+        CataDevice.hpp
+)
 
 set(head_files
         EyerXMLMessage.hpp

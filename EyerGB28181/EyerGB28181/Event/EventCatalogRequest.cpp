@@ -2,6 +2,7 @@
 #include "EventStartRealTimeVideoRequest.hpp"
 #include "SIPServerContext.hpp"
 #include "eXosipHeader.hpp"
+#include "EyerCore/EyerCore.hpp"
 
 namespace Eyer
 {
@@ -42,10 +43,14 @@ namespace Eyer
         GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceId);
         if(ret){
+            EyerLog("Do Not Find Device %s\n", deviceId.str);
             return -1;
         }
 
-        // EyerLog("AAA We Find Device: %s\n", device.GetDeviceID().str);
+        EyerString callId = EyerRand::RandNumberStr(4);
+        context->activeCallbackList.PutCallback(catalogCallback, callId);
+
+        // EyerLog("Call Id: %s\n", callId.str);
 
         // Catalog
         EyerString to = EyerString("sip:") + device.GetDeviceID() + "@" + device.GetIP() + ":" + device.GetPort();
@@ -53,20 +58,24 @@ namespace Eyer
 
         osip_message_t * msg = NULL;
         eXosip_message_build_request(excontext, &msg, "MESSAGE", to.str, from, NULL);
-        char * queryContent = "<?xml version=\"1.0\"?>\r\n<Query><CmdType>Catalog</CmdType><SN>4</SN><DeviceID>34020000001320000001</DeviceID></Query>";
 
-        osip_message_set_contact(msg, "sip:34020000002000000001@192.168.2.102:5060");
+        char queryContent[2048];
+        sprintf(queryContent,
+                "<?xml version=\"1.0\"?>"
+                "<Query>"
+                "<CmdType>Catalog</CmdType>"
+                "<SN>%s</SN>"
+                "<DeviceID>34020000001320000001</DeviceID>"
+                "</Query>",
+                callId.str
+                );
+
+        osip_message_set_contact(msg, "sip:34020000002000000001@192.168.2.104:5060");
         osip_message_set_body (msg, queryContent, strlen(queryContent));
         osip_message_set_content_type (msg, "Application/MANSCDP+xml");
-        eXosip_message_send_request(excontext, msg);
+        ret = eXosip_message_send_request(excontext, msg);
 
-        char * msgStr = nullptr;
-        size_t msgLen = 0;
-        osip_message_to_str(msg, &msgStr, &msgLen);
-
-        // EyerLog("Msg: %s\n", msgStr);
-
-        // EyerLog("BBB We Find Device: %s\n", device.GetDeviceID().str);
+        // EyerLog("ret: %d\n", ret);
 
         return 0;
     }

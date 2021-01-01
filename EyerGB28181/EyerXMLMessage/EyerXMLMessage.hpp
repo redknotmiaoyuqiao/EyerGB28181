@@ -3,6 +3,8 @@
 
 #include "EyerXMLMsg.hpp"
 #include "EyerXMLCatalog.hpp"
+#include "CataDeviceList.hpp"
+#include "CataDevice.hpp"
 
 namespace Eyer
 {

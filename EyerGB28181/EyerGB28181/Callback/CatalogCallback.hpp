@@ -2,12 +2,13 @@
 #define EYERGB28181_CATALOGCALLBACK_HPP
 
 #include "ActiveCallback.hpp"
+#include "EyerXMLMessage/EyerXMLMessage.hpp"
 
 namespace Eyer
 {
     class CatalogCallback : public ActiveCallback {
     public:
-        virtual int OnCatalog(int status) = 0;
+        virtual int OnCatalog(int status, CataDeviceList & cataDeviceList) = 0;
         virtual ActiveCallbackType GetType();
     };
 }

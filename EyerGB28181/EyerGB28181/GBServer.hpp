@@ -2,7 +2,7 @@
 #define EYERLIB_SIPSERVER_HPP
 
 #include "Callback/CatalogCallback.hpp"
-#include "SIPServerMainThread.hpp"
+#include "GBServerMainThread.hpp"
 #include "SIPServerContext.hpp"
 #include "EyerCore/EyerCore.hpp"
 #include "SIPEventThread.hpp"
@@ -12,10 +12,10 @@
 namespace Eyer
 {
     class StartStreamCallback;
-    class SIPServer {
+    class GBServer {
     public:
-        SIPServer(int _port = 5060);
-        ~SIPServer();
+        GBServer(int _port = 5060);
+        ~GBServer();
 
         int Start();
         int Stop();
@@ -37,7 +37,7 @@ namespace Eyer
 
     private:
         int port = 5060;
-        SIPServerMainThread * mainThread = nullptr;
+        GBServerMainThread * mainThread = nullptr;
         SIPServerContext context;
     };
 }

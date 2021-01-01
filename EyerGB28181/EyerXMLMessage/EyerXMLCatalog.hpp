@@ -2,6 +2,7 @@
 #define EYERGB28181_EYERXMLCATALOG_HPP
 
 #include "EyerXMLMsg.hpp"
+#include "CataDeviceList.hpp"
 
 namespace Eyer
 {
@@ -11,6 +12,8 @@ namespace Eyer
 
     public:
         int SumNum = 0;
+
+        CataDeviceList deviceList;
     };
 }
 

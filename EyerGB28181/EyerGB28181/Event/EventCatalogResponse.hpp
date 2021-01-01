@@ -1,6 +1,7 @@
 #ifndef EYERGB28181_EVENTCATALOGRESPONSE_HPP
 #define EYERGB28181_EVENTCATALOGRESPONSE_HPP
 
+#include <EyerXMLMessage/CataDeviceList.hpp>
 #include "SIPEvent.hpp"
 
 namespace Eyer
@@ -16,6 +17,10 @@ namespace Eyer
         virtual SIPEventType GetEventType();
 
         virtual int Do(struct eXosip_t * excontext, SIPServerContext * context);
+
+    public:
+        CataDeviceList cataDeviceList;
+        EyerString callId;
     };
 }
 

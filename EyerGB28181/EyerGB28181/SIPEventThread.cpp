@@ -7,6 +7,7 @@
 #include "EyerCore/EyerCore.hpp"
 #include "SIPServerContext.hpp"
 #include "Event/EventUserRegister.hpp"
+#include "Callback/CatalogCallback.hpp"
 
 namespace Eyer
 {
@@ -51,7 +52,13 @@ namespace Eyer
                     }
                     if(eventType == SIPEventType::CATA_RESPONSE){
                         EventCatalogResponse * eventCatalogResponse = (EventCatalogResponse *)event;
-                        EyerLog("CATA_RESPONSE\n");
+                        EyerString callId = eventCatalogResponse->callId;
+                        ActiveCallback * callback = nullptr;
+                        context->activeCallbackList.FindCallback(&callback, callId);
+                        if(callback != nullptr){
+                            CatalogCallback * catelogCallback = (CatalogCallback *)callback;
+                            catelogCallback->OnCatalog(0, eventCatalogResponse->cataDeviceList);
+                        }
                     }
                     if(eventType == SIPEventType::REALTIME_RESPONSE){
                         EventStartRealTimeVideoResponse * eventStartRealTimeVideoResponse = (EventStartRealTimeVideoResponse *)event;

@@ -20,7 +20,7 @@ namespace Eyer
         EyerXMLMsg xmlMsg;
         xmlMsg.Parse(body);
 
-        EyerLog("%s\n", body.str);
+        // EyerLog("%s\n", body.str);
 
         if(xmlMsg.GetCMDType() == "Keepalive"){
             // 发送 心跳 消息
@@ -33,6 +33,8 @@ namespace Eyer
             EyerXMLCatalog catalog;
             catalog.Parse(body);
             EventCatalogResponse * catalogResponse = new EventCatalogResponse();
+            catalogResponse->cataDeviceList     = catalog.deviceList;
+            catalogResponse->callId             = catalog.SN;
             context->eventQueue.PutEvent(catalogResponse);
         }
 

@@ -25,12 +25,12 @@ namespace Eyer
             if(!root->NoChildren()){
                 tinyxml2::XMLElement * CmdTypeElement = root->FirstChildElement("CmdType");
                 if(CmdTypeElement != nullptr){
-                    cmdType = CmdTypeElement->GetText();
+                    CmdType = CmdTypeElement->GetText();
                 }
 
                 tinyxml2::XMLElement * SNElement = root->FirstChildElement("SN");
                 if(SNElement != nullptr){
-                    sn = SNElement->GetText();
+                    SN = SNElement->GetText();
                 }
 
                 tinyxml2::XMLElement * DeviceIDElement = root->FirstChildElement("DeviceID");
@@ -52,6 +52,6 @@ namespace Eyer
 
     EyerString EyerXMLMsg::GetCMDType()
     {
-        return cmdType;
+        return CmdType;
     }
 }

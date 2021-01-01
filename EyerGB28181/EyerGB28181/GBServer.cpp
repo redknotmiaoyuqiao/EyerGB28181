@@ -1,4 +1,4 @@
-#include "SIPServer.hpp"
+#include "GBServer.hpp"
 #include "Event/EventStartRealTimeVideoRequest.hpp"
 #include "Event/EventCatalogRequest.hpp"
 #include "Event/EventCatalogResponse.hpp"
@@ -6,29 +6,29 @@
 
 namespace Eyer
 {
-    SIPServer::SIPServer(int _port)
+    GBServer::GBServer(int _port)
     {
         port = _port;
     }
 
-    SIPServer::~SIPServer()
+    GBServer::~GBServer()
     {
         Stop();
     }
 
-    int SIPServer::Start()
+    int GBServer::Start()
     {
         Stop();
         context.eventThread = new SIPEventThread(&context);
         context.eventThread->Start();
 
-        mainThread = new SIPServerMainThread(port, &context);
+        mainThread = new GBServerMainThread(port, &context);
         mainThread->Start();
 
         return 0;
     }
 
-    int SIPServer::Stop()
+    int GBServer::Stop()
     {
         if(mainThread != nullptr){
             mainThread->Stop();
@@ -43,19 +43,19 @@ namespace Eyer
         return 0;
     }
 
-    int SIPServer::SetCallback(PassiveCallback * callback)
+    int GBServer::SetCallback(PassiveCallback * callback)
     {
         context.passiveCallback = callback;
         return 0;
     }
 
-    int SIPServer::GetDeviceList(GBDeviceList & gbDeviceList)
+    int GBServer::GetDeviceList(GBDeviceList & gbDeviceList)
     {
         context.deviceManager.CopyDevices(gbDeviceList);
         return 0;
     }
 
-    int SIPServer::StartStream(
+    int GBServer::StartStream(
             EyerString & streamServerIp,
             int streamServerPort,
             EyerString & deviceId,
@@ -72,12 +72,12 @@ namespace Eyer
         return 0;
     }
 
-    int SIPServer::StopStream()
+    int GBServer::StopStream()
     {
         return 0;
     }
 
-    int SIPServer::Catalog(EyerString & deviceId, CatalogCallback * catalogCallback)
+    int GBServer::Catalog(EyerString & deviceId, CatalogCallback * catalogCallback)
     {
         EventCatalogRequest * catalogRequest = new EventCatalogRequest();
         catalogRequest->deviceId        = deviceId;

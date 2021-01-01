@@ -33,14 +33,14 @@ JNIEXPORT jstring JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1get_1
 JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1init
 (JNIEnv *, jclass, jint port)
 {
-    Eyer::SIPServer * sipserver = new Eyer::SIPServer(port);
+    Eyer::GBServer * sipserver = new Eyer::GBServer(port);
     return (jlong)sipserver;
 }
 
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1uninit
 (JNIEnv *, jclass, jlong sipserverJni)
 {
-    Eyer::SIPServer * sipserver = (Eyer::SIPServer *)sipserverJni;
+    Eyer::GBServer * sipserver = (Eyer::GBServer *)sipserverJni;
     delete sipserver;
 
     return 0;
@@ -49,21 +49,21 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserve
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1start
 (JNIEnv *, jclass, jlong sipserverJni)
 {
-    Eyer::SIPServer * sipserver = (Eyer::SIPServer *)sipserverJni;
+    Eyer::GBServer * sipserver = (Eyer::GBServer *)sipserverJni;
     return sipserver->Start();
 }
 
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1stop
 (JNIEnv *, jclass, jlong sipserverJni)
 {
-    Eyer::SIPServer * sipserver = (Eyer::SIPServer *)sipserverJni;
+    Eyer::GBServer * sipserver = (Eyer::GBServer *)sipserverJni;
     return sipserver->Stop();
 }
 
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1query_1devices
 (JNIEnv *, jclass, jlong sipserverJNI, jlong deviceListJNI)
 {
-    Eyer::SIPServer * sipserver = (Eyer::SIPServer *)sipserverJNI;
+    Eyer::GBServer * sipserver = (Eyer::GBServer *)sipserverJNI;
     Eyer::GBDeviceList * deviceList = (Eyer::GBDeviceList *)deviceListJNI;
 
     return sipserver->GetDeviceList(*deviceList);
@@ -72,7 +72,7 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserve
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1sipserver_1set_1passive_1callback
 (JNIEnv *, jclass, jlong sipserverJni, jlong passiveCallbackJNI)
 {
-    Eyer::SIPServer * sipserver = (Eyer::SIPServer *)sipserverJni;
+    Eyer::GBServer * sipserver = (Eyer::GBServer *)sipserverJni;
     Eyer::JNIPassiveCallback * passiveCallback = (Eyer::JNIPassiveCallback *)passiveCallbackJNI;
     return sipserver->SetCallback(passiveCallback);
 }

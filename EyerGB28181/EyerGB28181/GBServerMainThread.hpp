@@ -7,10 +7,10 @@
 
 namespace Eyer
 {
-    class SIPServerMainThread : public EyerThread {
+    class GBServerMainThread : public EyerThread {
     public:
-        SIPServerMainThread(int _port, SIPServerContext * _context);
-        ~SIPServerMainThread();
+        GBServerMainThread(int _port, SIPServerContext * _context);
+        ~GBServerMainThread();
 
         virtual void Run();
 

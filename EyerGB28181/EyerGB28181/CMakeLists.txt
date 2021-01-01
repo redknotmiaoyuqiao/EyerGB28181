@@ -4,10 +4,10 @@ include_directories (./)
 add_library(
         EyerGB28181
         EyerGB28181.hpp
-        SIPServer.cpp
-        SIPServer.hpp
-        SIPServerMainThread.cpp
-        SIPServerMainThread.hpp
+        GBServer.cpp
+        GBServer.hpp
+        GBServerMainThread.cpp
+        GBServerMainThread.hpp
         eXosipHeader.hpp
         SIPProcess.cpp
         SIPProcess.hpp
@@ -53,8 +53,8 @@ add_library(
 
 set(head_files
         EyerGB28181.hpp
-        SIPServer.hpp
-        SIPServerMainThread.hpp
+        GBServer.hpp
+        GBServerMainThread.hpp
         SIPProcess.hpp
         SIPProcessRegister.hpp
         )

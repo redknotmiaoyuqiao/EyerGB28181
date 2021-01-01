@@ -20,6 +20,8 @@ namespace Eyer
 
     EventCatalogResponse & EventCatalogResponse::operator = (const EventCatalogResponse & event)
     {
+        cataDeviceList  = event.cataDeviceList;
+        callId          = event.callId;
         return *this;
     }
 

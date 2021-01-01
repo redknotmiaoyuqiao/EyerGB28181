@@ -18,8 +18,8 @@ namespace Eyer
         EyerString GetCMDType();
 
     public:
-        EyerString cmdType;
-        EyerString sn;
+        EyerString CmdType;
+        EyerString SN;
         EyerString DeviceID;
     };
 }

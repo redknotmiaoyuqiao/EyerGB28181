@@ -16,6 +16,14 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM * vm, void * reserved)
         return -1;
     }
 
+    jclass classLoaderClass = env->FindClass("com/zzsin/eyer/gb28181/CInterface");
+    if(classLoaderClass == nullptr){
+        EyerLog("JNI_OnLoad Find classLoaderClass com/zzsin/eyer/gb28181/CInterface Class Fail\n");
+        return -1;
+    }
+
+    EyerLog("JNI_OnLoad Find classLoaderClass com/zzsin/eyer/gb28181/CInterface Class Success\n");
+
     return JNI_VERSION_1_6;
 }
 

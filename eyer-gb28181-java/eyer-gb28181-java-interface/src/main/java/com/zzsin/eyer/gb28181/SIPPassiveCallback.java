@@ -14,4 +14,5 @@ public abstract class SIPPassiveCallback extends JNIObject {
     }
 
     public abstract int UserRegister(String deviceId);
+    public abstract int DeviceHeart(String deviceId);
 }

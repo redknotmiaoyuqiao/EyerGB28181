@@ -7,4 +7,9 @@ public class DemoSIPPassiveCallback extends SIPPassiveCallback {
         System.out.println("New Device Register: " + deviceId);
         return 0;
     }
+
+    public int DeviceHeart(String deviceId) {
+        System.out.println("Device Heart: " + deviceId);
+        return 0;
+    }
 }

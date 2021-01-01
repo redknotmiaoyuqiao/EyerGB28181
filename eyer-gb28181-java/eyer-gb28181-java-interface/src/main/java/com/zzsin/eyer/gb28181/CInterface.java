@@ -32,7 +32,11 @@ public class CInterface {
 
     public static int eyer_gb_sipserver_passive_callback_UserRegister           (SIPPassiveCallback passiveCallback, String deviceId)
     {
-        passiveCallback.UserRegister(deviceId);
-        return 0;
+        return passiveCallback.UserRegister(deviceId);
+    }
+
+    public static int eyer_gb_sipserver_passive_callback_DeviceHeart            (SIPPassiveCallback passiveCallback, String deviceId)
+    {
+        return passiveCallback.DeviceHeart(deviceId);
     }
 }

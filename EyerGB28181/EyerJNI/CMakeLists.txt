@@ -5,7 +5,7 @@ add_library(
         EyerJNI
         EyerJNI.cpp
         EyerJNIEnvManager.cpp
-        )
+        EyerJNIClazzLoader.cpp EyerJNIClazzLoader.hpp)
 
 set(head_files
         EyerJNI.hpp

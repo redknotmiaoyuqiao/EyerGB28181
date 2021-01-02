@@ -1,8 +1,8 @@
 #include "com_zzsin_eyer_gb28181_CInterface.h"
 #include "EyerGB28181/EyerGB28181.hpp"
 #include "JNIPassiveCallback.hpp"
-#include "EyerJNI/EyerJNI.hpp"
 #include "EyerGB28181/GBDeviceList.hpp"
+#include "EyerJNI/EyerJNI.hpp"
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM * vm, void * reserved)
 {
@@ -10,19 +10,13 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM * vm, void * reserved)
 
     Eyer::EyerJNIEnvManager::vm = vm;
 
-    JNIEnv *env;
+    JNIEnv * env;
     if (vm->GetEnv((void **) &env, JNI_VERSION_1_6) != JNI_OK) {
         EyerLog("JavaVM GetEnv Fail\n");
         return -1;
     }
 
-    jclass classLoaderClass = env->FindClass("com/zzsin/eyer/gb28181/CInterface");
-    if(classLoaderClass == nullptr){
-        EyerLog("JNI_OnLoad Find classLoaderClass com/zzsin/eyer/gb28181/CInterface Class Fail\n");
-        return -1;
-    }
-
-    EyerLog("JNI_OnLoad Find classLoaderClass com/zzsin/eyer/gb28181/CInterface Class Success\n");
+    Eyer::EyerJNIClazzLoader::GetInstance()->JNILoadClazz(env);
 
     return JNI_VERSION_1_6;
 }

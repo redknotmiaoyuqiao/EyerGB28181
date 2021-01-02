@@ -1,6 +1,7 @@
 #include <EyerJNI/EyerJNIEnvManager.hpp>
 #include "JNIPassiveCallback.hpp"
 
+#include "EyerJNI/EyerJNI.hpp"
 #include "EyerJNI/JNIHeader.hpp"
 
 namespace Eyer
@@ -19,7 +20,8 @@ namespace Eyer
             return -1;
         }
 
-        jclass classLoaderClass = env->FindClass("com/zzsin/eyer/gb28181/CInterface");
+        jclass classLoaderClass = Eyer::EyerJNIClazzLoader::GetInstance()->GetClazz();
+        // jclass classLoaderClass = env->FindClass("com/zzsin/eyer/gb28181/CInterface");
         if(classLoaderClass == nullptr){
             EyerLog("FFFFF Find classLoaderClass Class Fail\n");
             return -1;
@@ -46,7 +48,8 @@ namespace Eyer
             return -1;
         }
 
-        jclass classLoaderClass = env->FindClass("com/zzsin/eyer/gb28181/CInterface");
+        jclass classLoaderClass = Eyer::EyerJNIClazzLoader::GetInstance()->GetClazz();
+        // jclass classLoaderClass = env->FindClass("com/zzsin/eyer/gb28181/CInterface");
         if(classLoaderClass == nullptr){
             EyerLog("FFFFF Find classLoaderClass Class Fail\n");
             return -1;

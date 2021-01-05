@@ -12,9 +12,9 @@ class MyLoadCallback extends LoadCallback
 {
     public int load(String libName) {
         if("EyerGB28181Jni".equals(libName)){
-            // System.load("/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/cmake-build-debug/EyerGB28181Jni/libEyerGB28181Jni.dylib");
+            System.load("/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/cmake-build-debug/EyerGB28181Jni/libEyerGB28181Jni.dylib");
             // System.load("/Users/lichi/EyerGB28181/EyerGB28181/cmake-build-debug/EyerGB28181Jni/libEyerGB28181Jni.dylib");
-            System.load("/root/EyerGB28181/EyerGB28181/cmake-build-debug/EyerGB28181Jni/libEyerGB28181Jni.so");
+            // System.load("/root/EyerGB28181/EyerGB28181/cmake-build-debug/EyerGB28181Jni/libEyerGB28181Jni.so");
         }
         return 0;
     }
@@ -24,7 +24,6 @@ class MyTestCallback extends TestCallback
 {
     @Override
     public int callback(int a) {
-        System.out.println("a: " + a);
         return 0;
     }
 }
@@ -36,13 +35,10 @@ public class Main {
         long a = CInterface.eyer_jni_test_set_callback_start(new MyTestCallback());
         CInterface.eyer_jni_test_set_callback_stop(a);
 
-        /*
-
         System.out.println(GBServer.getVersion());
 
-        DemoSIPPassiveCallback demoSIPPassiveCallback = new DemoSIPPassiveCallback();
-
         GBServer gbServer = new GBServer(5060);
+        DemoSIPPassiveCallback demoSIPPassiveCallback = new DemoSIPPassiveCallback(gbServer);
         gbServer.setPassiveCallback(demoSIPPassiveCallback);
         gbServer.start();
 
@@ -64,7 +60,5 @@ public class Main {
         gbServer.destory();
 
         demoSIPPassiveCallback.destory();
-
-         */
     }
 }

@@ -77,7 +77,7 @@ namespace Eyer
         return 0;
     }
 
-    int GBServer::Catalog(EyerString & deviceId, CatalogCallback * catalogCallback)
+    int GBServer::Catalog(EyerString deviceId, CatalogCallback * catalogCallback)
     {
         EventCatalogRequest * catalogRequest = new EventCatalogRequest();
         catalogRequest->deviceId        = deviceId;

@@ -11,4 +11,15 @@ namespace Eyer
     };
 }
 
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+char * jstringtochar(JNIEnv *env, jstring jstr);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif //EYERGB28181_EYERJNI_HPP

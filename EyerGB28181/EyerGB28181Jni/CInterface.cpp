@@ -89,9 +89,10 @@ JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserve
 }
 
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1passive_1callback_1uninit
-(JNIEnv *, jclass, jlong passiveCallbackJNI)
+(JNIEnv * env, jclass, jlong passiveCallbackJNI)
 {
     Eyer::JNIPassiveCallback * passiveCallback = (Eyer::JNIPassiveCallback *)passiveCallbackJNI;
+    env->DeleteGlobalRef(passiveCallback->jPassiveCallback);
     delete passiveCallback;
     return 0;
 }

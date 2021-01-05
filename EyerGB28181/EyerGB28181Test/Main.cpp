@@ -20,7 +20,7 @@ class MyCatalogCallback : public Eyer::CatalogCallback
 class MyPassiveCallback : public Eyer::PassiveCallback
 {
 public:
-    virtual int UserRegister(Eyer::EyerString deviceId)
+    virtual int DeviceRegister(Eyer::EyerString deviceId)
     {
         EyerLog("User Register Device Id: %s\n", deviceId.str);
         return 0;

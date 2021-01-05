@@ -41,7 +41,7 @@ namespace Eyer
                     if(eventType == SIPEventType::USER_REGISTER){
                         if(context->passiveCallback != nullptr){
                             EventUserRegister * eventUserRegister = (EventUserRegister *)event;
-                            context->passiveCallback->UserRegister(eventUserRegister->deviceId);
+                            context->passiveCallback->DeviceRegister(eventUserRegister->deviceId);
                         }
                     }
                     if(eventType == SIPEventType::DEVICE_HEART){

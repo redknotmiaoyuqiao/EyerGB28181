@@ -10,7 +10,7 @@ namespace Eyer
         PassiveCallback();
         ~PassiveCallback();
 
-        virtual int UserRegister    (EyerString deviceId) = 0;
+        virtual int DeviceRegister  (EyerString deviceId) = 0;
         virtual int DeviceHeart     (EyerString deviceId) = 0;
     };
 }

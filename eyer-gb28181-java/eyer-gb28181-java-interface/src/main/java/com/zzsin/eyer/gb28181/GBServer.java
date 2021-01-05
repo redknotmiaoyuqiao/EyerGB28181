@@ -41,7 +41,7 @@ public class GBServer extends JNIObject {
     }
 
     public int catalog(String deviceId, CatalogCallback callback){
-        return 0;
+        return CInterface.eyer_gb_gbserver_catalog(objId, deviceId, callback.objId);
     }
 
     public List<Device> getDevices(){

@@ -114,10 +114,26 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
  * Method:    eyer_gb_gbserver_catalog
- * Signature: (JLjava/lang/String;Lcom/zzsin/eyer/gb28181/callback/CatalogCallback;)I
+ * Signature: (JLjava/lang/String;J)I
  */
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1catalog
-  (JNIEnv *, jclass, jlong, jstring, jobject);
+  (JNIEnv *, jclass, jlong, jstring, jlong);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_catalog_callback_init
+ * Signature: (Lcom/zzsin/eyer/gb28181/callback/CatalogCallback;)J
+ */
+JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1catalog_1callback_1init
+  (JNIEnv *, jclass, jobject);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_catalog_callback_uninit
+ * Signature: (J)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1catalog_1callback_1uninit
+  (JNIEnv *, jclass, jlong);
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface

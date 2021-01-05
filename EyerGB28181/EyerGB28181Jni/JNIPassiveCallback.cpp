@@ -11,7 +11,11 @@ namespace Eyer
         jPassiveCallback = _jPassiveCallback;
     }
 
-    int JNIPassiveCallback::UserRegister(EyerString _deviceId)
+    JNIPassiveCallback::~JNIPassiveCallback()
+    {
+    }
+
+    int JNIPassiveCallback::DeviceRegister(EyerString _deviceId)
     {
         EyerLog("UserRegister UserRegister: %s\n", _deviceId.str);
 
@@ -26,7 +30,7 @@ namespace Eyer
             return - 1;
         }
 
-        jmethodID jmethodId = env->GetMethodID(classLoaderClass, "UserRegister", "(Ljava/lang/String;)I");
+        jmethodID jmethodId = env->GetMethodID(classLoaderClass, "DeviceRegister", "(Ljava/lang/String;)I");
         if(jmethodId == nullptr){
             EyerLog("GetMethodID Fail\n");
             return -1;

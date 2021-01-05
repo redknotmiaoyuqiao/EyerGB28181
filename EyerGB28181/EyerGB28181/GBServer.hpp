@@ -33,7 +33,7 @@ namespace Eyer
 
         int StopStream();
 
-        int Catalog(EyerString & deviceId, CatalogCallback * catalogCallback);
+        int Catalog(EyerString deviceId, CatalogCallback * catalogCallback);
 
     private:
         int port = 5060;

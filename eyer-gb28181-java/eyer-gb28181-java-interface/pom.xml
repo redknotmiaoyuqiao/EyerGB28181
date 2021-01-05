@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zzsin.eyer</groupId>
-    <version>0.2-RELEASES</version>
+    <version>0.3-RELEASES</version>
     <artifactId>eyer-gb28181-java-interface</artifactId>
 
     <distributionManagement>
@@ -16,5 +16,4 @@
             <url>http://maven.zzsin.com/repository/zzsin-gb28181-lib/</url>
         </repository>
     </distributionManagement>
-
 </project>

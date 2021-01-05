@@ -18,6 +18,5 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1jni_1test_1s
     Eyer::TestThread * testThread = (Eyer::TestThread *)testThreadJni;
     testThread->Stop();
     delete testThread;
-
     return 0;
 }

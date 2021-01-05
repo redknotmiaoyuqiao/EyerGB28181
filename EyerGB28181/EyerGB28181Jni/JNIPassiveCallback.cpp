@@ -20,21 +20,19 @@ namespace Eyer
             return -1;
         }
 
-        jclass classLoaderClass = Eyer::EyerJNIClazzLoader::GetInstance()->GetClazz();
-        // jclass classLoaderClass = env->FindClass("com/zzsin/eyer/gb28181/CInterface");
+        jclass classLoaderClass = env->GetObjectClass(jPassiveCallback);
         if(classLoaderClass == nullptr){
-            EyerLog("FFFFF Find classLoaderClass Class Fail\n");
+            EyerLog("GetObjectClass Fail\n");
+            return - 1;
+        }
+
+        jmethodID jmethodId = env->GetMethodID(classLoaderClass, "UserRegister", "(Ljava/lang/String;)I");
+        if(jmethodId == nullptr){
+            EyerLog("GetMethodID Fail\n");
             return -1;
         }
 
-        jmethodID callbackMethodId = env->GetStaticMethodID(classLoaderClass, "eyer_gb_gbserver_passive_callback_UserRegister", "(Lcom/zzsin/eyer/gb28181/SIPPassiveCallback;Ljava/lang/String;)I");
-        if(callbackMethodId == nullptr){
-            EyerLog("FFFFF GetMethodID Fail\n");
-            return -1;
-        }
-
-        jstring deviceId = env->NewStringUTF(_deviceId.str);
-        jint ret = env->CallStaticIntMethod(classLoaderClass, callbackMethodId, jPassiveCallback, deviceId);
+        int ret = env->CallIntMethod(jPassiveCallback, jmethodId, env->NewStringUTF(_deviceId.str));
 
         EyerJNIEnvManager::GetInstance()->DetachCurrentThread();
 
@@ -48,21 +46,17 @@ namespace Eyer
             return -1;
         }
 
-        jclass classLoaderClass = Eyer::EyerJNIClazzLoader::GetInstance()->GetClazz();
-        // jclass classLoaderClass = env->FindClass("com/zzsin/eyer/gb28181/CInterface");
+        jclass classLoaderClass = env->GetObjectClass(jPassiveCallback);
         if(classLoaderClass == nullptr){
-            EyerLog("FFFFF Find classLoaderClass Class Fail\n");
-            return -1;
+            EyerLog("GetObjectClass Fail\n");
+            return - 1;
         }
 
-        jmethodID callbackMethodId = env->GetStaticMethodID(classLoaderClass, "eyer_gb_gbserver_passive_callback_DeviceHeart", "(Lcom/zzsin/eyer/gb28181/SIPPassiveCallback;Ljava/lang/String;)I");
-        if(callbackMethodId == nullptr){
-            EyerLog("FFFFF GetMethodID Fail\n");
+        jmethodID jmethodId = env->GetMethodID(classLoaderClass, "DeviceHeart", "(Ljava/lang/String;)I");
+        if(jmethodId == nullptr){
+            EyerLog("GetMethodID Fail\n");
             return -1;
         }
-
-        jstring deviceId = env->NewStringUTF(_deviceId.str);
-        jint ret = env->CallStaticIntMethod(classLoaderClass, callbackMethodId, jPassiveCallback, deviceId);
 
         EyerJNIEnvManager::GetInstance()->DetachCurrentThread();
         return 0;

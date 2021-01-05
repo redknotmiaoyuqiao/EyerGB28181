@@ -1,6 +1,5 @@
 #include "com_zzsin_eyer_gb28181_CInterface.h"
 #include "EyerGB28181/EyerGB28181.hpp"
-#include "JNIPassiveCallback.hpp"
 #include "EyerJNI/EyerJNI.hpp"
 #include "EyerGB28181/GBDeviceList.hpp"
 #include "JNICatalogCallback.hpp"

@@ -1,8 +1,10 @@
 package com.zzsin.eyer.demo;
 
+import com.zzsin.eyer.gb28181.CInterface;
 import com.zzsin.eyer.gb28181.Device;
 import com.zzsin.eyer.gb28181.GBServer;
 import com.zzsin.eyer.gb28181.LoadCallback;
+import com.zzsin.eyer.gb28181.callback.TestCallback;
 
 import java.util.List;
 
@@ -16,8 +18,26 @@ class MyLoadCallback extends LoadCallback
     }
 }
 
+class MyTestCallback extends TestCallback
+{
+    @Override
+    public int callback(int a) {
+        System.out.println("a: " + a);
+        return 0;
+    }
+}
+
 public class Main {
     public static void main(String[] args){
+        CInterface.eyer_jni_test_set_callback(new MyTestCallback());
+        for(int i=0;i<60 * 1;i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        /*
         GBServer.load(new MyLoadCallback());
 
         System.out.println(GBServer.getVersion());
@@ -46,5 +66,7 @@ public class Main {
         gbServer.destory();
 
         demoSIPPassiveCallback.destory();
+
+         */
     }
 }

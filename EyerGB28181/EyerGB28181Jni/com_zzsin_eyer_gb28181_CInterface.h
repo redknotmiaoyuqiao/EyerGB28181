@@ -119,6 +119,14 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1catalog
   (JNIEnv *, jclass, jlong, jstring, jobject);
 
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_jni_test_set_callback
+ * Signature: (Lcom/zzsin/eyer/gb28181/callback/TestCallback;)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1jni_1test_1set_1callback
+  (JNIEnv *, jclass, jobject);
+
 #ifdef __cplusplus
 }
 #endif

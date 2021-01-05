@@ -1,6 +1,7 @@
 package com.zzsin.eyer.gb28181;
 
 import com.zzsin.eyer.gb28181.callback.CatalogCallback;
+import com.zzsin.eyer.gb28181.callback.TestCallback;
 
 public class CInterface {
     // static {
@@ -43,4 +44,10 @@ public class CInterface {
     }
 
     public static native int    eyer_gb_gbserver_catalog (long gbserver, String deviceId, CatalogCallback callback);
+
+
+
+
+
+    public static native int    eyer_jni_test_set_callback                      (TestCallback testCallback);
 }

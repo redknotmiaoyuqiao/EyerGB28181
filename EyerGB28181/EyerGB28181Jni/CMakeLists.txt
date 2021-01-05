@@ -9,7 +9,9 @@ add_library(
         JNIPassiveCallback.cpp
         JNIPassiveCallback.hpp
         CInterfaceDeviceList.cpp
-        Catalog.cpp)
+        Catalog.cpp
+        CJNITest.cpp
+        TestThread.cpp TestThread.hpp)
 
 target_link_libraries (EyerGB28181Jni EyerGB28181)
 target_link_libraries (EyerGB28181Jni EyerSIP)

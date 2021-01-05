@@ -41,6 +41,8 @@ namespace Eyer
 
     int JNIPassiveCallback::DeviceHeart(Eyer::EyerString _deviceId)
     {
+        EyerLog("DeviceHeart Device Id: %s\n", _deviceId.str);
+
         JNIEnv * env = EyerJNIEnvManager::GetInstance()->AttachCurrentThread();
         if(env == nullptr){
             return -1;

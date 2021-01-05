@@ -20,7 +20,7 @@ namespace Eyer
         EyerXMLMsg xmlMsg;
         xmlMsg.Parse(body);
 
-        // EyerLog("%s\n", body.str);
+        EyerLog("%s\n", body.str);
 
         if(xmlMsg.GetCMDType() == "Keepalive"){
             // 发送 心跳 消息
@@ -42,14 +42,14 @@ namespace Eyer
         int ret = context->deviceManager.FindDevice(device, deviceID);
         if(ret){
             // 尚未注册
-            // EyerLog("No Register\n");
+            EyerLog("No Register\n");
             osip_message_t * answer = NULL;
             eXosip_message_build_answer (excontext, je->tid, 407, &answer);
             eXosip_message_send_answer (excontext, je->tid, 407, answer);
         }
         else{
             // 已经注册
-            // EyerLog("Already Register\n");
+            EyerLog("Already Register\n");
             osip_message_t * answer = NULL;
             eXosip_message_build_answer (excontext, je->tid, 200, &answer);
             eXosip_message_send_answer (excontext, je->tid, 200, answer);

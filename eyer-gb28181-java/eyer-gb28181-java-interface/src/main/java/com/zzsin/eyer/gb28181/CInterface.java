@@ -49,5 +49,7 @@ public class CInterface {
 
 
 
-    public static native int    eyer_jni_test_set_callback                      (TestCallback testCallback);
+    public static native long   eyer_jni_test_set_callback_start                  (TestCallback testCallback);
+    public static native int    eyer_jni_test_set_callback_stop                   (long test);
+
 }

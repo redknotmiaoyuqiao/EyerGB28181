@@ -14,13 +14,6 @@ namespace Eyer
     public:
         EyerJNIClazzLoader();
         ~EyerJNIClazzLoader();
-
-        int JNILoadClazz(JNIEnv * env);
-
-        jclass GetClazz();
-
-    private:
-        jclass jclazzloader = nullptr;
     };
 }
 

@@ -1,8 +1,7 @@
-#include "EyerMath.hpp"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #include "EyerRand.hpp"
 
 namespace Eyer {

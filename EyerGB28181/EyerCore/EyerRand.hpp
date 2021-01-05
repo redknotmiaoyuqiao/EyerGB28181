@@ -1,9 +1,10 @@
-#ifndef EYERGB28181_EYERRAND_HPP
-#define EYERGB28181_EYERRAND_HPP
+#ifndef EYERLIB_EYERRAND_HPP
+#define EYERLIB_EYERRAND_HPP
 
 #include "EyerString.hpp"
 
-namespace Eyer {
+namespace Eyer
+{
     class EyerRand
     {
     public:
@@ -12,4 +13,4 @@ namespace Eyer {
     };
 }
 
-#endif //EYERGB28181_EYERRAND_HPP
+#endif //EYERLIB_EYERRAND_HPP

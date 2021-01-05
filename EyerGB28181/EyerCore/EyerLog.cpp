@@ -10,7 +10,20 @@
 #include "EyerLogThread.hpp"
 #include "EyerLogBean.hpp"
 
-int eye_log_set_level       (int level)
+int eyer_log_path(const char * path)
+{
+    Eyer::EyerLogThread * logThread = Eyer::EyerLogThread::GetInstance();
+    return logThread->SetPath(path);
+}
+
+int eyer_log_set_level(int level)
+{
+    Eyer::EyerLogThread * logThread = Eyer::EyerLogThread::GetInstance();
+    logThread->SetLevel(level);
+    return 0;
+}
+
+int eye_log_set_level(int level)
 {
     Eyer::EyerLogThread * logThread = Eyer::EyerLogThread::GetInstance();
     logThread->SetLevel(level);
@@ -46,6 +59,35 @@ void eyer_log_log(const char * file, const char * function, int line, int level,
 
     Eyer::EyerLogThread * logThread = Eyer::EyerLogThread::GetInstance();
     logThread->PutLog(logBean);
+}
+
+int     eyer_log_clear          ()
+{
+    class ClearEyerRunnable : public Eyer::EyerRunnable
+    {
+    public:
+        ClearEyerRunnable(Eyer::EyerLogThread * _logThread)
+        {
+            logThread = _logThread;
+        }
+
+        virtual void Run()
+        {
+            logThread->Clear();
+        }
+    private:
+        Eyer::EyerLogThread * logThread = nullptr;
+    };
+
+    Eyer::EyerLogThread * logThread = Eyer::EyerLogThread::GetInstance();
+
+    ClearEyerRunnable clearRunnable(logThread);
+
+    logThread->PushEvent(&clearRunnable);
+    logThread->StartEventLoop();
+    logThread->StopEventLoop();
+
+    return 0;
 }
 
 /*

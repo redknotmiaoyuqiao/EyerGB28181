@@ -2,6 +2,7 @@
 #define	EYER_LIB_MATH_H
 
 namespace Eyer {
+
     class EyerMat;
     class EyerMat4x1;
     class EyerMat3x1;

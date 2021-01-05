@@ -60,7 +60,10 @@ namespace Eyer
             return -1;
         }
 
+        int ret = env->CallIntMethod(jPassiveCallback, jmethodId, env->NewStringUTF(_deviceId.str));
+
         EyerJNIEnvManager::GetInstance()->DetachCurrentThread();
-        return 0;
+        
+        return ret;
     }
 }

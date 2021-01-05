@@ -3,10 +3,13 @@
 #include "JNIPassiveCallback.hpp"
 #include "EyerGB28181/GBDeviceList.hpp"
 #include "EyerJNI/EyerJNI.hpp"
+#include "EyerCore/EyerCore.hpp"
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM * vm, void * reserved)
 {
     EyerLog("JavaVM GetEnv Success\n");
+
+    eyer_log_path("./eyer_gb_28181_log.txt");
 
     Eyer::EyerJNIEnvManager::vm = vm;
 
@@ -15,8 +18,6 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM * vm, void * reserved)
         EyerLog("JavaVM GetEnv Fail\n");
         return -1;
     }
-
-    Eyer::EyerJNIClazzLoader::GetInstance()->JNILoadClazz(env);
 
     return JNI_VERSION_1_6;
 }

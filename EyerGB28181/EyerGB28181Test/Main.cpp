@@ -44,7 +44,7 @@ int main(int argc, char **argv)
     sipServer->SetCallback(&passiveCallback);
     sipServer->Start();
 
-    for(int i = 0; i < 60 * 2; i++){
+    for(int i = 0; i < 60 * 60; i++){
         Eyer::EyerTime::EyerSleepMilliseconds(1000);
     }
 

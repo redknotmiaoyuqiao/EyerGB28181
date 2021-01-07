@@ -18,10 +18,11 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver
 }
 
 JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1catalog_1callback_1init
-(JNIEnv * env, jclass, jobject catalogCallback)
+(JNIEnv * env, jclass, jobject catalogCallback, jobject catalogDeviceList)
 {
     jobject catalogCallbackGlobal = env->NewGlobalRef(catalogCallback);
-    Eyer::JNICatalogCallback * callback = new Eyer::JNICatalogCallback(catalogCallbackGlobal);
+    jobject catalogDeviceListGlobal = env->NewGlobalRef(catalogDeviceList);
+    Eyer::JNICatalogCallback * callback = new Eyer::JNICatalogCallback(catalogCallbackGlobal, catalogDeviceListGlobal);
     return (jlong)callback;
 }
 
@@ -30,6 +31,7 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1catalog_
 {
     Eyer::JNICatalogCallback * callback = (Eyer::JNICatalogCallback *)callbackJni;
     env->DeleteGlobalRef(callback->catalogCallbackJo);
+    env->DeleteGlobalRef(callback->catalogDeviceListJo);
     delete callback;
     return 0;
 }

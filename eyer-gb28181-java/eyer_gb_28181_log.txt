@@ -1,0 +1,1663 @@
+[ 5] [2021-00-07 21:03:06] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/CInterface.cpp(10)] [JNI_OnLoad] JavaVM GetEnv Success
+[ 5] [2021-00-07 21:03:06] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/GBServerMainThread.cpp(36)] [Run] eXosip_init successfully!
+[ 5] [2021-00-07 21:03:27] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(20)] [DeviceRegister] UserRegister UserRegister: 34020000001320000001
+[ 5] [2021-00-07 21:03:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6051</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:03:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:03:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:03:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>1745</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:03:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:03:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(30)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:03:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6052</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:03:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:03:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:03:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>2669</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:03:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:03:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(30)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:03:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6053</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:03:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:03:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:03:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>3585</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:03:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:03:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(30)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:10:36] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/CInterface.cpp(10)] [JNI_OnLoad] JavaVM GetEnv Success
+[ 5] [2021-00-07 21:10:36] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/GBServerMainThread.cpp(36)] [Run] eXosip_init successfully!
+[ 5] [2021-00-07 21:10:58] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(20)] [DeviceRegister] UserRegister UserRegister: 34020000001320000001
+[ 5] [2021-00-07 21:11:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6058</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:11:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:11:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>1745</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:11:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6059</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:11:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:11:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>2669</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:11:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6060</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:11:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:11:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>3585</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:11:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:34] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6061</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:11:34] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:34] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:11:34] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6346</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:11:34] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6062</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:11:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:11:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>5985</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:11:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6063</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:11:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:11:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:11:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6479</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:11:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:12:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6064</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:12:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:12:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:12:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>7273</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:12:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:12:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6065</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:12:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:12:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:12:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6793</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:12:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:12:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6066</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:12:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:12:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:12:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>2977</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:12:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:12:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6067</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:12:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:12:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:12:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6682</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:12:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:29:50] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/CInterface.cpp(10)] [JNI_OnLoad] JavaVM GetEnv Success
+[ 5] [2021-00-07 21:29:50] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/GBServerMainThread.cpp(36)] [Run] eXosip_init successfully!
+[ 5] [2021-00-07 21:30:47] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(20)] [DeviceRegister] UserRegister UserRegister: 34020000001320000001
+[ 5] [2021-00-07 21:30:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6072</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:30:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:30:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:30:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>1745</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:30:52] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:02] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6073</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:31:02] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:02] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:31:02] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>2669</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:31:02] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:12] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6074</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:31:12] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:12] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:31:12] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>3585</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:31:12] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:22] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6075</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:31:22] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:22] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:31:22] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6346</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:31:22] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6076</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:31:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:31:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>5985</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:31:32] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6077</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:31:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:31:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:31:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6479</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:31:42] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:52:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/CInterface.cpp(10)] [JNI_OnLoad] JavaVM GetEnv Success
+[ 5] [2021-00-07 21:52:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/GBServerMainThread.cpp(36)] [Run] eXosip_init successfully!
+[ 5] [2021-00-07 21:53:06] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(20)] [DeviceRegister] UserRegister UserRegister: 34020000001320000001
+[ 5] [2021-00-07 21:53:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6082</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:53:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:53:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>1745</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:53:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(44)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:53:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6083</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:53:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:53:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>2669</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:53:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(44)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:53:31] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6084</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:53:31] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:31] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:53:31] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>3585</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:53:31] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:31] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(44)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:53:41] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6085</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:53:41] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:41] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:53:41] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6346</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:53:41] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:41] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(44)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:53:51] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6086</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:53:51] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:51] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:53:51] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>5985</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:53:51] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:53:51] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(44)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:54:01] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6087</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:54:01] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:54:01] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:54:01] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6479</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:54:01] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:54:01] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(44)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:54:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6088</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:54:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:54:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:54:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>7273</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:54:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:54:11] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(44)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:54:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6089</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:54:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:54:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:54:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6793</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:54:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:54:21] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNICatalogCallback.cpp(44)] [OnCatalog] GetMethodID Fail
+[ 5] [2021-00-07 21:56:01] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/CInterface.cpp(10)] [JNI_OnLoad] JavaVM GetEnv Success
+[ 5] [2021-00-07 21:56:01] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/GBServerMainThread.cpp(36)] [Run] eXosip_init successfully!
+[ 5] [2021-00-07 21:56:41] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(20)] [DeviceRegister] UserRegister UserRegister: 34020000001320000001
+[ 5] [2021-00-07 21:56:46] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6094</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:56:46] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:56:46] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:56:46] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>1745</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:56:46] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:56:56] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6095</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:56:56] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:56:56] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:56:56] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>2669</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:56:56] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:06] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6096</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:57:06] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:06] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:57:06] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>3585</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:57:06] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:16] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6097</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:57:16] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:16] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:57:16] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6346</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:57:16] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:26] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6098</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:57:26] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:26] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:57:26] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>5985</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:57:26] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:36] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6099</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:57:36] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:36] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:57:37] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6479</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:57:37] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:46] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6100</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:57:46] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:46] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:57:47] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>7273</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:57:47] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:57] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6101</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 21:57:57] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 21:57:57] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 21:57:57] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6793</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 21:57:57] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:29:44] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/CInterface.cpp(10)] [JNI_OnLoad] JavaVM GetEnv Success
+[ 5] [2021-00-07 22:29:44] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/GBServerMainThread.cpp(36)] [Run] eXosip_init successfully!
+[ 5] [2021-00-07 22:30:28] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(20)] [DeviceRegister] UserRegister UserRegister: 34020000001320000001
+[ 5] [2021-00-07 22:30:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6106</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 22:30:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:30:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 22:30:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>1745</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 22:30:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:30:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6107</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 22:30:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:30:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 22:30:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>2669</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 22:30:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:30:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6108</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 22:30:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:30:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 22:30:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>3585</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 22:30:53] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6109</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 22:31:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 22:31:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6346</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 22:31:03] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6110</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 22:31:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 22:31:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>5985</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 22:31:13] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6111</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 22:31:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 22:31:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6479</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 22:31:23] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6112</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 22:31:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 22:31:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>7273</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 22:31:33] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Notify>
+<CmdType>Keepalive</CmdType>
+<SN>6113</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<Status>OK</Status>
+<Info>
+</Info>
+</Notify>
+
+[ 5] [2021-00-07 22:31:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register
+[ 5] [2021-00-07 22:31:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/JNIPassiveCallback.cpp(48)] [DeviceHeart] DeviceHeart Device Id: 34020000001320000001
+[ 5] [2021-00-07 22:31:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(23)] [Process] <?xml version="1.0" encoding="GB2312"?>
+<Response>
+<CmdType>Catalog</CmdType>
+<SN>6793</SN>
+<DeviceID>34020000001320000001</DeviceID>
+<SumNum>1</SumNum>
+<DeviceList Num="1">
+<Item>
+<DeviceID>34020000001320000001</DeviceID>
+<Name>Camera 01</Name>
+<Manufacturer>Hikvision</Manufacturer>
+<Model>IP Camera</Model>
+<Owner>Owner</Owner>
+<CivilCode>3402000000</CivilCode>
+<Address>Address</Address>
+<Parental>0</Parental>
+<ParentID>34020000002000000001</ParentID>
+<SafetyWay>0</SafetyWay>
+<RegisterWay>1</RegisterWay>
+<Secrecy>0</Secrecy>
+<Status>ON</Status>
+</Item>
+</DeviceList>
+</Response>
+
+[ 5] [2021-00-07 22:31:43] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181/SIPProcessMessage.cpp(52)] [Process] Already Register

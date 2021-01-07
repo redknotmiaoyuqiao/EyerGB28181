@@ -9,13 +9,14 @@ namespace Eyer
 {
     class JNICatalogCallback : public CatalogCallback{
     public:
-        JNICatalogCallback(jobject _catalogCallbackJo);
+        JNICatalogCallback(jobject _catalogCallbackJo, jobject _catalogDeviceListJo);
         ~JNICatalogCallback();
 
         virtual int OnCatalog(int status, CataDeviceList & cataDeviceList);
 
     public:
         jobject catalogCallbackJo = nullptr;
+        jobject catalogDeviceListJo = nullptr;
     };
 }
 

@@ -7,6 +7,7 @@ public class MyCatalogCallback extends CatalogCallback {
     @Override
     public int OnCatalog(int status, CatalogDeviceList catalogDeviceList) {
         System.out.println("OnCatalog: " + status);
+        catalogDeviceList.PrintInfo();
         return 0;
     }
 }

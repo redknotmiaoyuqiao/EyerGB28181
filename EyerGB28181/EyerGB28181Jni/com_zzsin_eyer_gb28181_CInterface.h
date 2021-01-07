@@ -122,10 +122,10 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
  * Method:    eyer_gb_catalog_callback_init
- * Signature: (Lcom/zzsin/eyer/gb28181/callback/CatalogCallback;)J
+ * Signature: (Lcom/zzsin/eyer/gb28181/callback/CatalogCallback;Lcom/zzsin/eyer/gb28181/callback/CatalogDeviceList;)J
  */
 JNIEXPORT jlong JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1catalog_1callback_1init
-  (JNIEnv *, jclass, jobject);
+  (JNIEnv *, jclass, jobject, jobject);
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface

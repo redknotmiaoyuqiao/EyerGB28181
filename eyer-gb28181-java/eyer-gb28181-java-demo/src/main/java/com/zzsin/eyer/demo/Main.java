@@ -48,12 +48,6 @@ public class Main {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
-            // System.out.println("=====getDevices=====");
-            List<Device> devices = gbServer.getDevices();
-            for(Device device : devices){
-                //System.out.println("Device: " + device.getDeviceId());
-            }
         }
 
         gbServer.stop();

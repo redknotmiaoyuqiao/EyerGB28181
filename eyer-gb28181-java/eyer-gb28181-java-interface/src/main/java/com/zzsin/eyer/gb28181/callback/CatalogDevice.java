@@ -49,6 +49,24 @@ public class CatalogDevice {
         this.Status = Status;
     }
 
+    public int PrintInfo()
+    {
+        System.out.println("DeviceID: " + DeviceID);
+        System.out.println("Name: " + Name);
+        System.out.println("Manufacturer: " + Manufacturer);
+        System.out.println("Model: " + Model);
+        System.out.println("Owner: " + Owner);
+        System.out.println("CivilCode: " + CivilCode);
+        System.out.println("Address: " + Address);
+        System.out.println("Parental: " + Parental);
+        System.out.println("ParentID: " + ParentID);
+        System.out.println("SafetyWay: " + SafetyWay);
+        System.out.println("RegisterWay: " + RegisterWay);
+        System.out.println("Secrecy: " + Secrecy);
+        System.out.println("Status: " + Status);
+        return 0;
+    }
+
     public String getDeviceID() {
         return DeviceID;
     }

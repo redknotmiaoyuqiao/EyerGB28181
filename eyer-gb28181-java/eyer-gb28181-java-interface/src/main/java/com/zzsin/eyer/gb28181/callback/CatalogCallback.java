@@ -7,7 +7,7 @@ import java.util.List;
 
 public abstract class CatalogCallback extends JNIObject {
     public CatalogCallback(){
-        objId = CInterface.eyer_gb_catalog_callback_init(this);
+        objId = CInterface.eyer_gb_catalog_callback_init(this, new CatalogDeviceList());
     }
 
     public int destory() {

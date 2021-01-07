@@ -18,9 +18,9 @@ namespace Eyer
         EyerString GetCMDType();
 
     public:
-        EyerString CmdType;
-        EyerString SN;
-        EyerString DeviceID;
+        EyerString CmdType = "";
+        EyerString SN = "";
+        EyerString DeviceID = "";
     };
 }
 

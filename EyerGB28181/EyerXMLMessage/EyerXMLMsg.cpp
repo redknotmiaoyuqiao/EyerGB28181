@@ -15,10 +15,17 @@ namespace Eyer
 
     int EyerXMLMsg::Parse(EyerString & xmlStr)
     {
-        // EyerLog("Xml: %s\n", xmlStr.str);
+        if(xmlStr.IsEmpty()){
+            return -1;
+        }
+
+        if(strlen(xmlStr.str) <= 0){
+            return -2;
+        }
 
         tinyxml2::XMLDocument bodyDoc;
         bodyDoc.Parse(xmlStr.str, strlen(xmlStr.str));
+
         tinyxml2::XMLElement * root = bodyDoc.RootElement();
         // EyerLog("Root: %s\n", root->Name());
         if(root != nullptr){

@@ -18,5 +18,5 @@ public abstract class CatalogCallback extends JNIObject {
         return 0;
     }
     // public abstract int OnCatalog(int status, List<CataDevice> cataDeviceList);
-    public abstract int OnCatalog(int status);
+    public abstract int OnCatalog(int status, CatalogDeviceList deviceList);
 }

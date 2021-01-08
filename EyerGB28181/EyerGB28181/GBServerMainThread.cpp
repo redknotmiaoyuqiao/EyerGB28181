@@ -5,6 +5,7 @@
 #include <netinet/in.h>
 #include <iostream>
 #include <string.h>
+#include "Event/EventCatalogRequest.hpp"
 #include "Event/EventStartRealTimeVideoResponse.hpp"
 
 #include "SIPProcessRegister.hpp"
@@ -225,7 +226,13 @@ namespace Eyer
         context->eventQueue.GetEvent(&event);
         if(event != nullptr){
             if(event->to == SIPEventTarget::SIPEventTarget_MainThread){
-                event->Do(excontext, context);
+                if(event->GetEventType() == SIPEventType::CATA_REQUEST){
+                    ((EventCatalogRequest *)event)->Do(excontext, context);
+                }
+                else{
+                    event->Do(excontext, context);
+                }
+
                 delete event;
                 event = nullptr;
             }

@@ -53,6 +53,16 @@ namespace Eyer
         // EyerLog("Call Id: %s\n", callId.str);
 
         // Catalog
+        if(device.GetDeviceID().IsEmpty()){
+            return -2;
+        }
+        if(device.GetIP().IsEmpty()){
+            return -2;
+        }
+        if(device.GetPort().IsEmpty()){
+            return -2;
+        }
+
         EyerString to = EyerString("sip:") + device.GetDeviceID() + "@" + device.GetIP() + ":" + device.GetPort();
         char * from = (char *)"sip:34020000002000000001@34020000";
 

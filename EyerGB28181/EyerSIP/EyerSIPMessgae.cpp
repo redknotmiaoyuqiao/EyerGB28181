@@ -70,11 +70,13 @@ namespace Eyer
         osip_via_t* via = nullptr;
         osip_message_get_via(impl->sip, 0, &via);
         if(!via || !via->host) {
+            return "";
         }
 
         osip_generic_param_t * br = nullptr;
         osip_via_param_get_byname(via, (char *)"rport", &br);
         if(!br || !br->gvalue) {
+            return "";
         }
 
         return br->gvalue;

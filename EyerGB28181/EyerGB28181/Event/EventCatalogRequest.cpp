@@ -85,6 +85,8 @@ namespace Eyer
         osip_message_set_content_type (msg, "Application/MANSCDP+xml");
         ret = eXosip_message_send_request(excontext, msg);
 
+        osip_free(msg);
+
         return 0;
     }
 }

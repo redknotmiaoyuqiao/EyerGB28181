@@ -41,6 +41,7 @@ namespace Eyer
             EyerSIPMessgae sipMessgaeRequest(je->request);
             EyerString deviceID         = sipMessgaeRequest.GetDeviceId();
 
+            // asw_register 需要手动释放
             osip_message_t * asw_register = nullptr;
             int ret = eXosip_message_build_answer (excontext, je->tid, 200, &asw_register);
 
@@ -48,6 +49,8 @@ namespace Eyer
             EyerSIPMessgae sipMessgae(asw_register);
             EyerString deviceIp         = sipMessgae.GetIp();
             EyerString devicePort       = sipMessgae.GetPort();
+
+            osip_message_free(asw_register);
 
             GBDevice device;
             ret = context->deviceManager.FindDevice(device, deviceID);

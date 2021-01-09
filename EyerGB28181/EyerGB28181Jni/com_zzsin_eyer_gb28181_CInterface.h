@@ -137,6 +137,22 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1catalog_
 
 /*
  * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_gbserver_start_realtime_video
+ * Signature: (JLjava/lang/String;)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1start_1realtime_1video
+  (JNIEnv *, jclass, jlong, jstring);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_gbserver_stop_realtime_video
+ * Signature: (J)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1stop_1realtime_1video
+  (JNIEnv *, jclass, jlong);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
  * Method:    eyer_jni_test_set_callback_start
  * Signature: (Lcom/zzsin/eyer/gb28181/callback/TestCallback;)J
  */

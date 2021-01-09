@@ -55,6 +55,8 @@ namespace Eyer
 
         EyerString localSipId = context->serverId;
 
+        EyerString sses = EyerRand::RandNumberStr(6);
+
         char body[500];
         int bodyLen = snprintf(body, 500,
                                "v=0\r\n"
@@ -68,10 +70,18 @@ namespace Eyer
                                "a=rtpmap:98 H264/90000\r\n"
                                "a=recvonly\r\n"
                                "y=%s\r\n", localSipId.str, streamServerIp.str,
-                               streamServerIp.str, streamServerPort, "100000123");
+                               streamServerIp.str, streamServerPort, sses.str);
+
+        EyerLog("sses: %s\n", sses.str);
 
         osip_message_set_body(invite, body, bodyLen);
         osip_message_set_content_type(invite, "APPLICATION/SDP");
+
+        char * osip_str = nullptr;
+        size_t osip_str_length = 0;
+        osip_message_to_str(invite, &osip_str, &osip_str_length);
+        EyerLog("body: %s\n", osip_str);
+        osip_free(osip_str);
 
         EyerString callId = invite->call_id->number;
         context->activeCallbackList.PutCallback(startStreamCallback, callId);

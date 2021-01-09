@@ -11,7 +11,7 @@ class MyCatalogCallback : public Eyer::CatalogCallback
         for(int i=0;i<cataDeviceList.Size();i++){
             Eyer::CataDevice cataDevice;
             cataDeviceList.GetDevice(cataDevice, i);
-            cataDevice.PrintInfo();
+            // cataDevice.PrintInfo();
         }
         return 0;
     }
@@ -25,6 +25,8 @@ public:
     virtual int DeviceRegister(Eyer::EyerString deviceId)
     {
         EyerLog("User Register Device Id: %s\n", deviceId.str);
+        sipServer->StartStream("39.105.183.99", 9000, deviceId, nullptr);
+        sipServer->StartStream("39.105.183.99", 9000, deviceId, nullptr);
         return 0;
     }
 

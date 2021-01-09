@@ -56,9 +56,9 @@ namespace Eyer
     }
 
     int GBServer::StartStream(
-            EyerString & streamServerIp,
+            const EyerString & streamServerIp,
             int streamServerPort,
-            EyerString & deviceId,
+            const EyerString & deviceId,
             StartStreamCallback * startStreamCallback)
     {
         EventStartRealTimeVideoRequest * startRealTimeVideoRequest = new EventStartRealTimeVideoRequest();

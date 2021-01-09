@@ -44,6 +44,10 @@ public class GBServer extends JNIObject {
         return CInterface.eyer_gb_gbserver_catalog(objId, deviceId, callback.objId);
     }
 
+    public int startRealtimeVideo(String deviceId){
+        return CInterface.eyer_gb_gbserver_start_realtime_video(objId, deviceId);
+    }
+
     public List<Device> getDevices(){
         DeviceList deviceList = new DeviceList();
         CInterface.eyer_gb_gbserver_query_devices(objId, deviceList.objId);

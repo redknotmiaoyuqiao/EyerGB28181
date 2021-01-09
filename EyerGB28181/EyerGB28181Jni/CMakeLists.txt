@@ -15,7 +15,7 @@ add_library(
         TestThread.hpp
         JNICatalogCallback.cpp
         JNICatalogCallback.hpp
-)
+        JNIStartRealtimeVideo.cpp JNIStartRealtimeVideo.hpp)
 
 target_link_libraries (EyerGB28181Jni EyerGB28181)
 target_link_libraries (EyerGB28181Jni EyerSIP)

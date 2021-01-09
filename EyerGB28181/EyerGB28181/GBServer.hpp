@@ -25,9 +25,9 @@ namespace Eyer
         int GetDeviceList(GBDeviceList & gbDeviceList);
 
         int StartStream(
-                EyerString & streamServerIp,
+                const EyerString & streamServerIp,
                 int streamServerPort,
-                EyerString & deviceId,
+                const EyerString & deviceId,
                 StartStreamCallback * startStreamCallback);
 
         int StopStream();

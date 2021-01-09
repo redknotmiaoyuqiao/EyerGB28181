@@ -232,12 +232,16 @@ namespace Eyer
         context->eventQueue.GetEvent(&event);
         if(event != nullptr){
             if(event->to == SIPEventTarget::SIPEventTarget_MainThread){
+                /*
                 if(event->GetEventType() == SIPEventType::CATA_REQUEST){
                     ((EventCatalogRequest *)event)->Do(excontext, context);
                 }
                 else{
                     event->Do(excontext, context);
                 }
+                */
+
+                event->Do(excontext, context);
 
                 delete event;
                 event = nullptr;
@@ -251,7 +255,15 @@ namespace Eyer
 
     int GBServerMainThread::ANSWEREDProcess(eXosip_event_t * je, struct eXosip_t * excontext)
     {
+        EyerLog("ANSWEREDProcess \n");
         if(je->response != NULL){
+            EyerLog("Status: %d\n", je->response->status_code);
+            char * str = NULL;
+            size_t len = 0;
+            osip_message_to_str(je->response, &str, &len);
+            EyerLog("response msg: \n%s\n", str);
+            osip_free(str);
+
             EyerString callId = je->response->call_id->number;
             ActiveCallback * activeCallback = nullptr;
             context->activeCallbackList.FindCallback(&activeCallback, callId);
@@ -305,6 +317,7 @@ namespace Eyer
             osip_free(str);
         }
         */
+
         return 0;
     }
 }

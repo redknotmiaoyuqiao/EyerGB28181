@@ -21,6 +21,7 @@ public class DemoSIPPassiveCallback extends SIPPassiveCallback {
 
     public int DeviceRegister(String deviceId) {
         System.out.println("New Device Register: " + deviceId);
+        this.gbServer.startRealtimeVideo(deviceId);
         return 0;
     }
 

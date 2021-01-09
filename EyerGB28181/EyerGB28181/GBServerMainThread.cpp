@@ -223,6 +223,7 @@ namespace Eyer
         }
 
         eXosip_quit(excontext);
+        osip_free(excontext);
     }
 
     int GBServerMainThread::EventLoop(eXosip_event_t * je, struct eXosip_t * excontext)

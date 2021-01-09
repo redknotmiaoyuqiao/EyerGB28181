@@ -56,11 +56,12 @@ namespace Eyer
 
         osip_generic_param_t * br = nullptr;
         osip_via_param_get_byname (via, (char *)"received", &br);
-        if (br != NULL && br->gvalue != NULL)
+        if (br != NULL && br->gvalue != NULL){
             strcpy(addr, br->gvalue);
-        else
+        }
+        else {
             strcpy(addr, via->host);
-
+        }
 
         return addr;
     }

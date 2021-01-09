@@ -64,10 +64,10 @@ namespace Eyer
         }
 
         EyerString to = EyerString("sip:") + device.GetDeviceID() + "@" + device.GetIP() + ":" + device.GetPort();
-        char * from = (char *)"sip:34020000002000000001@34020000";
+        EyerString from = EyerString("sip:") + context->serverId + "@" + context->serverRealm;
 
         osip_message_t * msg = NULL;
-        eXosip_message_build_request(excontext, &msg, "MESSAGE", to.str, from, NULL);
+        eXosip_message_build_request(excontext, &msg, "MESSAGE", to.str, from.str, NULL);
 
         char queryContent[2048];
         sprintf(queryContent,
@@ -80,7 +80,7 @@ namespace Eyer
                 callId.str
                 );
 
-        osip_message_set_contact(msg, "sip:34020000002000000001@123.57.50.178:5060");
+        // osip_message_set_contact(msg, "sip:34020000002000000001@123.57.50.178:5060");
         osip_message_set_body (msg, queryContent, strlen(queryContent));
         osip_message_set_content_type (msg, "Application/MANSCDP+xml");
         ret = eXosip_message_send_request(excontext, msg);

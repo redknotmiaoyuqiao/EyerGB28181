@@ -1,10 +1,6 @@
 #include "EyerSIPMessgae.hpp"
 #include "EyerSIPMessgaePrivate.hpp"
 #include "EyerSIPFromPrivate.hpp"
-#include "EyerSIPCallIDPrivate.hpp"
-#include "EyerSIPCseqPrivate.hpp"
-#include "EyerSIPContactPrivate.hpp"
-#include "EyerSIPUriPrivate.hpp"
 
 namespace Eyer
 {
@@ -17,6 +13,10 @@ namespace Eyer
 
     EyerSIPMessgae::EyerSIPMessgae(osip_message_t * sip) : EyerSIPMessgae()
     {
+        if(impl->sip != nullptr){
+            osip_message_free(impl->sip);
+            impl->sip = nullptr;
+        }
         osip_message_clone(sip, &impl->sip);
     }
 

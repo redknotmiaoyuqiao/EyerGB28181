@@ -6,9 +6,6 @@
 #include <stdint.h>
 #include "EyerCore/EyerCore.hpp"
 #include "EyerSIPFrom.hpp"
-#include "EyerSIPCallID.hpp"
-#include "EyerSIPCseq.hpp"
-#include "EyerSIPContact.hpp"
 
 #include <osipparser2/osip_parser.h>
 

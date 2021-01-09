@@ -215,6 +215,11 @@ namespace Eyer
             if(je->type == EXOSIP_EVENT_COUNT) {
                 EyerLog_1("============EXOSIP_EVENT_COUNT============\n");
             }
+
+            if(je != NULL){
+                eXosip_event_free(je);
+                je = NULL;
+            }
         }
 
         eXosip_quit(excontext);

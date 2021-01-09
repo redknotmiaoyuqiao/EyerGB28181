@@ -31,7 +31,7 @@ namespace Eyer
         return *this;
     }
 
-    int EventUserRegister::Do(struct eXosip_t * excontext, SIPServerContext * context)
+    int EventUserRegister::Do(struct eXosip_t * excontext, GBServerContext * context)
     {
         eXosip_lock(excontext);
 

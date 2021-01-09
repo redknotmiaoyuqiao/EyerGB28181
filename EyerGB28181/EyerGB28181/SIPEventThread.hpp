@@ -2,21 +2,21 @@
 #define EYERLIB_SIPEVENTTHREAD_HPP
 
 #include "EyerThread/EyerThread.hpp"
-#include "SIPEventQueue.hpp"
+#include "GBEventQueue.hpp"
 
 namespace Eyer
 {
-    class SIPServerContext;
+    class GBServerContext;
 
     class SIPEventThread : public EyerThread{
     public:
-        SIPEventThread(SIPServerContext * _context);
+        SIPEventThread(GBServerContext * _context);
         ~SIPEventThread();
 
         virtual void Run();
 
     private:
-        SIPServerContext * context = nullptr;
+        GBServerContext * context = nullptr;
     };
 }
 

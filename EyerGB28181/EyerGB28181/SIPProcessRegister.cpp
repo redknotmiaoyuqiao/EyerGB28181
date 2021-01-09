@@ -15,7 +15,7 @@
 
 namespace Eyer
 {
-    int SIPProcessRegister::Process(SIPServerContext * context, struct eXosip_t * excontext, eXosip_event_t * je)
+    int SIPProcessRegister::Process(GBServerContext * context, struct eXosip_t * excontext, eXosip_event_t * je)
     {
         osip_authorization_t * auth = NULL;
         osip_message_get_authorization(je->request, 0, &auth);

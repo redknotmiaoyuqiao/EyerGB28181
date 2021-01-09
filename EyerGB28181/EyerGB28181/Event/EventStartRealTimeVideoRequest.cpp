@@ -1,5 +1,5 @@
 #include "EventStartRealTimeVideoRequest.hpp"
-#include "SIPServerContext.hpp"
+#include "GBServerContext.hpp"
 #include "eXosipHeader.hpp"
 
 namespace Eyer
@@ -38,7 +38,7 @@ namespace Eyer
         return SIPEventType::REALTIME_REQUEST;
     }
 
-    int EventStartRealTimeVideoRequest::Do(struct eXosip_t * excontext, SIPServerContext * context)
+    int EventStartRealTimeVideoRequest::Do(struct eXosip_t * excontext, GBServerContext * context)
     {
         GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceId);

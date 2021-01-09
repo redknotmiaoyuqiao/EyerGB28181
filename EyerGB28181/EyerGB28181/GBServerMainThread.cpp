@@ -13,7 +13,7 @@
 
 namespace Eyer
 {
-    GBServerMainThread::GBServerMainThread(int _port, SIPServerContext * _context)
+    GBServerMainThread::GBServerMainThread(int _port, GBServerContext * _context)
     {
         port = _port;
         context = _context;
@@ -46,7 +46,7 @@ namespace Eyer
 
         eXosip_event_t * je = NULL;
         while(!stopFlag){
-            EventLoop(je, excontext);
+            EventLoop(excontext);
 
             je = eXosip_event_wait(excontext, 0, 50);
 
@@ -226,9 +226,9 @@ namespace Eyer
         osip_free(excontext);
     }
 
-    int GBServerMainThread::EventLoop(eXosip_event_t * je, struct eXosip_t * excontext)
+    int GBServerMainThread::EventLoop(struct eXosip_t * excontext)
     {
-        SIPEvent * event = nullptr;
+        GBEvent * event = nullptr;
         context->eventQueue.GetEvent(&event);
         if(event != nullptr){
             if(event->to == SIPEventTarget::SIPEventTarget_MainThread){

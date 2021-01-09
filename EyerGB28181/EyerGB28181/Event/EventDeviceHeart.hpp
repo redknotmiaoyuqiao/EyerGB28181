@@ -1,11 +1,11 @@
 #ifndef EYERGB28181_EVENTDEVICEHEART_HPP
 #define EYERGB28181_EVENTDEVICEHEART_HPP
 
-#include "SIPEvent.hpp"
+#include "GBEvent.hpp"
 
 namespace Eyer
 {
-    class EventDeviceHeart : public SIPEvent{
+    class EventDeviceHeart : public GBEvent{
     public:
         EventDeviceHeart();
         ~EventDeviceHeart();
@@ -15,7 +15,7 @@ namespace Eyer
 
         virtual SIPEventType GetEventType();
 
-        virtual int Do(struct eXosip_t * excontext, SIPServerContext * context);
+        virtual int Do(struct eXosip_t * excontext, GBServerContext * context);
 
     public:
         EyerString deviceId;

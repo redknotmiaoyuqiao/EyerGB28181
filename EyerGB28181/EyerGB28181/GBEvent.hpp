@@ -6,14 +6,14 @@
 
 namespace Eyer
 {
-    class SIPServerContext;
-    class SIPEvent {
+    class GBServerContext;
+    class GBEvent {
     public:
-        SIPEvent();
-        virtual ~SIPEvent();
+        GBEvent();
+        virtual ~GBEvent();
 
         virtual SIPEventType GetEventType() = 0;
-        virtual int Do(struct eXosip_t * excontext, SIPServerContext * context) = 0;
+        virtual int Do(struct eXosip_t * excontext, GBServerContext * context) = 0;
 
         SIPEventTarget from;
         SIPEventTarget to;

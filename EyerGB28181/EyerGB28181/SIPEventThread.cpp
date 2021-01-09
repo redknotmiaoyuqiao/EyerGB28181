@@ -5,13 +5,13 @@
 #include "SIPEventThread.hpp"
 
 #include "EyerCore/EyerCore.hpp"
-#include "SIPServerContext.hpp"
+#include "GBServerContext.hpp"
 #include "Event/EventUserRegister.hpp"
 #include "Callback/CatalogCallback.hpp"
 
 namespace Eyer
 {
-    SIPEventThread::SIPEventThread(SIPServerContext * _context)
+    SIPEventThread::SIPEventThread(GBServerContext * _context)
     {
         context = _context;
     }
@@ -19,7 +19,7 @@ namespace Eyer
     SIPEventThread::~SIPEventThread()
     {
         while(context->eventQueue.Size() > 0){
-            SIPEvent * event = nullptr;
+            GBEvent * event = nullptr;
             context->eventQueue.GetEvent(&event);
             if(event != nullptr){
                 delete event;
@@ -33,7 +33,7 @@ namespace Eyer
         while(!stopFlag){
             Eyer::EyerTime::EyerSleepMilliseconds(1);
 
-            SIPEvent * event = nullptr;
+            GBEvent * event = nullptr;
             context->eventQueue.GetEvent(&event);
             if(event != nullptr){
                 if(event->to == SIPEventTarget::SIPEventTarget_EventThread){

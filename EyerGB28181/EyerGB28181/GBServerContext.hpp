@@ -2,20 +2,20 @@
 #define EYERLIB_SIPSERVERCONTEXT_HPP
 
 #include "SIPDeviceManager.hpp"
-#include "SIPEventQueue.hpp"
+#include "GBEventQueue.hpp"
 #include "SIPEventThread.hpp"
 #include "PassiveCallback.hpp"
 #include "ActiveCallbackList.hpp"
 
 namespace Eyer
 {
-    class SIPServerContext {
+    class GBServerContext {
     public:
-        SIPServerContext();
-        ~SIPServerContext();
+        GBServerContext();
+        ~GBServerContext();
 
         SIPDeviceManager deviceManager;
-        SIPEventQueue eventQueue;
+        GBEventQueue eventQueue;
         ActiveCallbackList activeCallbackList;
         SIPEventThread * eventThread = nullptr;
         PassiveCallback * passiveCallback = nullptr;

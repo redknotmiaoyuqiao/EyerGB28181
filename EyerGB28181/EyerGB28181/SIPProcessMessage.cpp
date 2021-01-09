@@ -9,7 +9,7 @@
 
 namespace Eyer
 {
-    int SIPProcessMessage::Process(SIPServerContext * context, struct eXosip_t * excontext, eXosip_event_t * je)
+    int SIPProcessMessage::Process(GBServerContext * context, struct eXosip_t * excontext, eXosip_event_t * je)
     {
         // 验证是否已经注册
         EyerSIPMessgae sipMessgae(je->request);

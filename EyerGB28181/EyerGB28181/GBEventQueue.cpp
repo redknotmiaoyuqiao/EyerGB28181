@@ -1,16 +1,16 @@
-#include "SIPEventQueue.hpp"
+#include "GBEventQueue.hpp"
 
 namespace Eyer
 {
-    SIPEventQueue::SIPEventQueue()
+    GBEventQueue::GBEventQueue()
     {
 
     }
 
-    SIPEventQueue::~SIPEventQueue()
+    GBEventQueue::~GBEventQueue()
     {
         while(eventQueue.Size() > 0){
-            SIPEvent * event = nullptr;
+            GBEvent * event = nullptr;
             eventQueue.FrontPop(&event);
             if(event != nullptr){
                 delete event;
@@ -19,13 +19,13 @@ namespace Eyer
         }
     }
 
-    int SIPEventQueue::PutEvent(SIPEvent * event)
+    int GBEventQueue::PutEvent(GBEvent * event)
     {
         eventQueue.Push(event);
         return 0;
     }
 
-    int SIPEventQueue::GetEvent(SIPEvent ** event)
+    int GBEventQueue::GetEvent(GBEvent ** event)
     {
         if(eventQueue.Size() <= 0){
             return -1;
@@ -34,7 +34,7 @@ namespace Eyer
         return 0;
     }
 
-    int SIPEventQueue::Size()
+    int GBEventQueue::Size()
     {
         return eventQueue.Size();
     }

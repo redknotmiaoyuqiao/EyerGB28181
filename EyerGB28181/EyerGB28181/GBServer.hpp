@@ -3,7 +3,7 @@
 
 #include "Callback/CatalogCallback.hpp"
 #include "GBServerMainThread.hpp"
-#include "SIPServerContext.hpp"
+#include "GBServerContext.hpp"
 #include "EyerCore/EyerCore.hpp"
 #include "SIPEventThread.hpp"
 #include "ActiveCallbackList.hpp"
@@ -28,7 +28,6 @@ namespace Eyer
                 EyerString & streamServerIp,
                 int streamServerPort,
                 EyerString & deviceId,
-                EyerString & channelId,
                 StartStreamCallback * startStreamCallback);
 
         int StopStream();
@@ -38,7 +37,7 @@ namespace Eyer
     private:
         int port = 5060;
         GBServerMainThread * mainThread = nullptr;
-        SIPServerContext context;
+        GBServerContext context;
     };
 }
 

@@ -30,7 +30,7 @@ namespace Eyer
         return SIPEventType::CATA_RESPONSE;
     }
 
-    int EventCatalogResponse::Do(struct eXosip_t * excontext, SIPServerContext * context)
+    int EventCatalogResponse::Do(struct eXosip_t * excontext, GBServerContext * context)
     {
         return 0;
     }

@@ -1,6 +1,6 @@
 #include "EventCatalogRequest.hpp"
 #include "EventStartRealTimeVideoRequest.hpp"
-#include "SIPServerContext.hpp"
+#include "GBServerContext.hpp"
 #include "eXosipHeader.hpp"
 #include "EyerCore/EyerCore.hpp"
 
@@ -38,7 +38,7 @@ namespace Eyer
         return SIPEventType::CATA_REQUEST;
     }
 
-    int EventCatalogRequest::Do(struct eXosip_t * excontext, SIPServerContext * context)
+    int EventCatalogRequest::Do(struct eXosip_t * excontext, GBServerContext * context)
     {
         GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceId);

@@ -19,12 +19,12 @@ add_library(
         GBDevice.hpp
         SIPDeviceManager.cpp
         SIPDeviceManager.hpp
-        SIPServerContext.cpp
-        SIPServerContext.hpp
-        SIPEventQueue.cpp
-        SIPEventQueue.hpp
-        SIPEvent.cpp
-        SIPEvent.hpp
+        GBServerContext.cpp
+        GBServerContext.hpp
+        GBEventQueue.cpp
+        GBEventQueue.hpp
+        GBEvent.cpp
+        GBEvent.hpp
         SIPEventThread.cpp
         SIPEventThread.hpp
         Event/EventUserRegister.cpp

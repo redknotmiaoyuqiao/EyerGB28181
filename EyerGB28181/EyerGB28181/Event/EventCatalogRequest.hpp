@@ -2,11 +2,11 @@
 #define EYERGB28181_EVENTCATALOGREQUEST_HPP
 
 #include "Callback/CatalogCallback.hpp"
-#include "SIPEvent.hpp"
+#include "GBEvent.hpp"
 
 namespace Eyer
 {
-    class EventCatalogRequest : public SIPEvent{
+    class EventCatalogRequest : public GBEvent{
     public:
         EventCatalogRequest();
         ~EventCatalogRequest();
@@ -16,7 +16,7 @@ namespace Eyer
 
         virtual SIPEventType GetEventType();
 
-        virtual int Do(struct eXosip_t * excontext, SIPServerContext * context);
+        virtual int Do(struct eXosip_t * excontext, GBServerContext * context);
 
     public:
         EyerString deviceId;

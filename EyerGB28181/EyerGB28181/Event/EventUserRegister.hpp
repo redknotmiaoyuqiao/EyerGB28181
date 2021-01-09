@@ -1,11 +1,11 @@
 #ifndef EYERLIB_EVENTUSERREGISTER_HPP
 #define EYERLIB_EVENTUSERREGISTER_HPP
 
-#include "SIPEvent.hpp"
+#include "GBEvent.hpp"
 
 namespace Eyer
 {
-    class EventUserRegister : public SIPEvent{
+    class EventUserRegister : public GBEvent{
     public:
         EventUserRegister();
         ~EventUserRegister();
@@ -15,7 +15,7 @@ namespace Eyer
 
         virtual SIPEventType GetEventType();
 
-        virtual int Do(struct eXosip_t * excontext, SIPServerContext * context);
+        virtual int Do(struct eXosip_t * excontext, GBServerContext * context);
 
     public:
         EyerString deviceId;

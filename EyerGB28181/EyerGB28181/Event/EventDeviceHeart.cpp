@@ -29,7 +29,7 @@ namespace Eyer
         return SIPEventType::DEVICE_HEART;
     }
 
-    int EventDeviceHeart::Do(struct eXosip_t * excontext, SIPServerContext * context)
+    int EventDeviceHeart::Do(struct eXosip_t * excontext, GBServerContext * context)
     {
         return 0;
     }

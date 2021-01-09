@@ -3,24 +3,24 @@
 
 #include "EyerThread/EyerThread.hpp"
 #include "eXosipHeader.hpp"
-#include "SIPServerContext.hpp"
+#include "GBServerContext.hpp"
 
 namespace Eyer
 {
     class GBServerMainThread : public EyerThread {
     public:
-        GBServerMainThread(int _port, SIPServerContext * _context);
+        GBServerMainThread(int _port, GBServerContext * _context);
         ~GBServerMainThread();
 
         virtual void Run();
 
     private:
         int port = 5060;
-        SIPServerContext * context = nullptr;
+        GBServerContext * context = nullptr;
 
         int PrintJe(eXosip_event_t * je);
 
-        int EventLoop           (eXosip_event_t * je, struct eXosip_t * excontext);
+        int EventLoop           (struct eXosip_t * excontext);
         int ANSWEREDProcess     (eXosip_event_t * je, struct eXosip_t * excontext);
     };
 }

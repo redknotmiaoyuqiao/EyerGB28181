@@ -3,7 +3,6 @@
 
 Eyer::GBServer * sipServer = nullptr;
 
-
 class MyCatalogCallback : public Eyer::CatalogCallback
 {
     virtual int OnCatalog(int status, Eyer::CataDeviceList & cataDeviceList)

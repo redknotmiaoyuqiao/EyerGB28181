@@ -1,11 +1,11 @@
 #ifndef EYERLIB_EVENTSTARTREALTIMEVIDEORESPONSE_HPP
 #define EYERLIB_EVENTSTARTREALTIMEVIDEORESPONSE_HPP
 
-#include "SIPEvent.hpp"
+#include "GBEvent.hpp"
 #include "Callback/ActiveCallback.hpp"
 
 namespace Eyer {
-    class EventStartRealTimeVideoResponse : public SIPEvent{
+    class EventStartRealTimeVideoResponse : public GBEvent{
     public:
         EventStartRealTimeVideoResponse();
         ~EventStartRealTimeVideoResponse();
@@ -15,7 +15,7 @@ namespace Eyer {
 
         virtual SIPEventType GetEventType();
 
-        virtual int Do(struct eXosip_t * excontext, SIPServerContext * context);
+        virtual int Do(struct eXosip_t * excontext, GBServerContext * context);
 
     public:
         EyerString callId;

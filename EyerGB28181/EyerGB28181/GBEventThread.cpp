@@ -2,7 +2,7 @@
 #include "Event/EventDeviceHeart.hpp"
 #include "Callback/StartStreamCallback.hpp"
 #include "Event/EventStartRealTimeVideoResponse.hpp"
-#include "SIPEventThread.hpp"
+#include "GBEventThread.hpp"
 
 #include "EyerCore/EyerCore.hpp"
 #include "GBServerContext.hpp"
@@ -11,12 +11,12 @@
 
 namespace Eyer
 {
-    SIPEventThread::SIPEventThread(GBServerContext * _context)
+    GBEventThread::GBEventThread(GBServerContext * _context)
     {
         context = _context;
     }
 
-    SIPEventThread::~SIPEventThread()
+    GBEventThread::~GBEventThread()
     {
         while(context->eventQueue.Size() > 0){
             GBEvent * event = nullptr;
@@ -28,7 +28,7 @@ namespace Eyer
         }
     }
 
-    void SIPEventThread::Run()
+    void GBEventThread::Run()
     {
         while(!stopFlag){
             Eyer::EyerTime::EyerSleepMilliseconds(1);
@@ -37,20 +37,20 @@ namespace Eyer
             context->eventQueue.GetEvent(&event);
             if(event != nullptr){
                 if(event->to == SIPEventTarget::SIPEventTarget_EventThread){
-                    SIPEventType eventType = event->GetEventType();
-                    if(eventType == SIPEventType::USER_REGISTER){
+                    GBEventType eventType = event->GetEventType();
+                    if(eventType == GBEventType::USER_REGISTER){
                         if(context->passiveCallback != nullptr){
                             EventUserRegister * eventUserRegister = (EventUserRegister *)event;
                             context->passiveCallback->DeviceRegister(eventUserRegister->deviceId);
                         }
                     }
-                    if(eventType == SIPEventType::DEVICE_HEART){
+                    if(eventType == GBEventType::DEVICE_HEART){
                         if(context->passiveCallback != nullptr){
                             EventDeviceHeart * deviceHeart = (EventDeviceHeart *)event;
                             context->passiveCallback->DeviceHeart(deviceHeart->deviceId);
                         }
                     }
-                    if(eventType == SIPEventType::CATA_RESPONSE){
+                    if(eventType == GBEventType::CATA_RESPONSE){
                         EventCatalogResponse * eventCatalogResponse = (EventCatalogResponse *)event;
                         EyerString callId = eventCatalogResponse->callId;
                         ActiveCallback * callback = nullptr;
@@ -60,7 +60,7 @@ namespace Eyer
                             catelogCallback->OnCatalog(0, eventCatalogResponse->cataDeviceList);
                         }
                     }
-                    if(eventType == SIPEventType::REALTIME_RESPONSE){
+                    if(eventType == GBEventType::REALTIME_RESPONSE){
                         EventStartRealTimeVideoResponse * eventStartRealTimeVideoResponse = (EventStartRealTimeVideoResponse *)event;
                         EyerString callId = eventStartRealTimeVideoResponse->callId;
                         int status = eventStartRealTimeVideoResponse->status;

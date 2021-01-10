@@ -10,6 +10,7 @@
 
 #include "SIPProcessRegister.hpp"
 #include "SIPProcessMessage.hpp"
+#include "GBPlaybackSession.hpp"
 
 namespace Eyer
 {
@@ -27,15 +28,15 @@ namespace Eyer
     void GBServerMainThread::Run()
     {
         int ret = 0;
-        struct eXosip_t *excontext;
+        struct eXosip_t * excontext = nullptr;
         excontext = eXosip_malloc();
         ret = eXosip_init(excontext);
         if (ret != 0) {
             EyerLog("Can't initialize eXosip!\n");
             return;
-        } else {
-            EyerLog("eXosip_init successfully!\n");
         }
+
+        EyerLog("eXosip_init successfully!\n");
 
         ret = eXosip_listen_addr(excontext, IPPROTO_UDP, NULL, port, AF_INET, 0);
         if (ret != 0) {
@@ -44,7 +45,7 @@ namespace Eyer
             return;
         }
 
-        eXosip_event_t * je = NULL;
+        eXosip_event_t * je = nullptr;
         while(!stopFlag){
             EventLoop(excontext);
 
@@ -55,7 +56,7 @@ namespace Eyer
             eXosip_automatic_action(excontext);
             eXosip_unlock(excontext);
 
-            if (je == NULL) {
+            if (je == nullptr) {
                 continue;
             }
 
@@ -216,14 +217,17 @@ namespace Eyer
                 EyerLog_1("============EXOSIP_EVENT_COUNT============\n");
             }
 
-            if(je != NULL){
+            if(je != nullptr){
                 eXosip_event_free(je);
-                je = NULL;
+                je = nullptr;
             }
         }
 
-        eXosip_quit(excontext);
-        osip_free(excontext);
+        if(excontext != nullptr){
+            eXosip_quit(excontext);
+            osip_free(excontext);
+            excontext = nullptr;
+        }
     }
 
     int GBServerMainThread::EventLoop(struct eXosip_t * excontext)
@@ -232,17 +236,7 @@ namespace Eyer
         context->eventQueue.GetEvent(&event);
         if(event != nullptr){
             if(event->to == SIPEventTarget::SIPEventTarget_MainThread){
-                /*
-                if(event->GetEventType() == SIPEventType::CATA_REQUEST){
-                    ((EventCatalogRequest *)event)->Do(excontext, context);
-                }
-                else{
-                    event->Do(excontext, context);
-                }
-                */
-
                 event->Do(excontext, context);
-
                 delete event;
                 event = nullptr;
             }
@@ -258,6 +252,15 @@ namespace Eyer
         EyerLog("ANSWEREDProcess \n");
         if(je->response != NULL){
             EyerLog("Status: %d\n", je->response->status_code);
+
+            int call_id = je->cid;
+            int dialog_id = je->did;
+
+            GBPlaybackSession gbPlaybackSession(call_id, dialog_id);
+
+            EyerLog("ANSWEREDProcess CallBack Id: \n", call_id);
+            EyerLog("ANSWEREDProcess Dialog Id: \n", dialog_id);
+
             char * str = NULL;
             size_t len = 0;
             osip_message_to_str(je->response, &str, &len);
@@ -270,15 +273,26 @@ namespace Eyer
             if(activeCallback != nullptr){
                 if(activeCallback->GetType() == ActiveCallbackType::START_STREAM_CALLBACK){
                     EventStartRealTimeVideoResponse * eventStartRealTimeVideoResponse = new EventStartRealTimeVideoResponse();
-                    eventStartRealTimeVideoResponse->status = je->response->status_code;
-                    eventStartRealTimeVideoResponse->callId = callId;
+                    eventStartRealTimeVideoResponse->gbPlaybackSession  = gbPlaybackSession;
+                    eventStartRealTimeVideoResponse->status             = je->response->status_code;
+                    eventStartRealTimeVideoResponse->callId             = callId;
                     context->eventQueue.PutEvent(eventStartRealTimeVideoResponse);
                 }
             }
         }
 
+        /*
+        eXosip_lock(excontext);
+        eXosip_call_terminate(excontext, call_id, dialog_id);
+        eXosip_unlock(excontext);
+        */
+
         osip_message_t *ack = NULL;
         eXosip_call_build_ack(excontext, je->did, &ack);
+        if(ack == NULL){
+            EyerERROR("ANSWEREDProcess eXosip_call_build_ack Fail\n");
+            return -1;
+        }
 
         eXosip_lock(excontext);
         eXosip_call_send_ack(excontext, je->did, ack);

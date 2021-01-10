@@ -25,9 +25,9 @@ namespace Eyer
         return *this;
     }
 
-    SIPEventType EventCatalogResponse::GetEventType()
+    GBEventType EventCatalogResponse::GetEventType()
     {
-        return SIPEventType::CATA_RESPONSE;
+        return GBEventType::CATA_RESPONSE;
     }
 
     int EventCatalogResponse::Do(struct eXosip_t * excontext, GBServerContext * context)

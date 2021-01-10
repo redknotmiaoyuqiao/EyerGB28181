@@ -25,9 +25,9 @@ namespace Eyer
         return *this;
     }
 
-    SIPEventType EventStartRealTimeVideoResponse::GetEventType()
+    GBEventType EventStartRealTimeVideoResponse::GetEventType()
     {
-        return SIPEventType::REALTIME_RESPONSE;
+        return GBEventType::REALTIME_RESPONSE;
     }
 
     int EventStartRealTimeVideoResponse::Do(struct eXosip_t * excontext, GBServerContext * context)

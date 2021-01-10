@@ -14,7 +14,7 @@ namespace Eyer
         EventCatalogRequest(const EventCatalogRequest & event);
         EventCatalogRequest & operator = (const EventCatalogRequest & event);
 
-        virtual SIPEventType GetEventType();
+        virtual GBEventType GetEventType();
 
         virtual int Do(struct eXosip_t * excontext, GBServerContext * context);
 

@@ -8,10 +8,10 @@ namespace Eyer
 {
     class GBServerContext;
 
-    class SIPEventThread : public EyerThread{
+    class GBEventThread : public EyerThread{
     public:
-        SIPEventThread(GBServerContext * _context);
-        ~SIPEventThread();
+        GBEventThread(GBServerContext * _context);
+        ~GBEventThread();
 
         virtual void Run();
 

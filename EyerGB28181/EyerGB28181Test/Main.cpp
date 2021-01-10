@@ -53,6 +53,8 @@ int main(int argc, char **argv)
         Eyer::EyerTime::EyerSleepMilliseconds(1000);
     }
 
+    sipServer->StopStream("34020000001320000001");
+
     sipServer->Stop();
 
     delete sipServer;

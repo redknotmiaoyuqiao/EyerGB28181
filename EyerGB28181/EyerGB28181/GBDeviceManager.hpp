@@ -8,10 +8,10 @@
 
 namespace Eyer
 {
-    class SIPDeviceManager {
+    class GBDeviceManager {
     public:
-        SIPDeviceManager();
-        ~SIPDeviceManager();
+        GBDeviceManager();
+        ~GBDeviceManager();
 
         int Register(EyerString & deviceID, EyerString & ip, EyerString & port);
         int UnRegister(EyerString & deviceID);

@@ -17,20 +17,20 @@ add_library(
         SIPProcessMessage.hpp
         GBDevice.cpp
         GBDevice.hpp
-        SIPDeviceManager.cpp
-        SIPDeviceManager.hpp
+        GBDeviceManager.cpp
+        GBDeviceManager.hpp
         GBServerContext.cpp
         GBServerContext.hpp
         GBEventQueue.cpp
         GBEventQueue.hpp
         GBEvent.cpp
         GBEvent.hpp
-        SIPEventThread.cpp
-        SIPEventThread.hpp
+        GBEventThread.cpp
+        GBEventThread.hpp
         Event/EventUserRegister.cpp
         Event/EventUserRegister.hpp
-        SIPEventType.cpp
-        SIPEventType.hpp
+        GBEventType.cpp
+        GBEventType.hpp
         PassiveCallback.cpp
         PassiveCallback.hpp
         Event/EventStartRealTimeVideoRequest.cpp
@@ -49,7 +49,7 @@ add_library(
         Event/EventDeviceHeart.hpp
         Callback/CatalogCallback.cpp
         Callback/CatalogCallback.hpp
-        Event/EventCatalogRequest.cpp Event/EventCatalogRequest.hpp Event/EventCatalogResponse.cpp Event/EventCatalogResponse.hpp)
+        Event/EventCatalogRequest.cpp Event/EventCatalogRequest.hpp Event/EventCatalogResponse.cpp Event/EventCatalogResponse.hpp GBPlaybackSession.cpp GBPlaybackSession.hpp)
 
 set(head_files
         EyerGB28181.hpp

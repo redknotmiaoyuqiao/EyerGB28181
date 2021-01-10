@@ -1,13 +1,13 @@
-#include "SIPDeviceManager.hpp"
+#include "GBDeviceManager.hpp"
 
 namespace Eyer
 {
-    SIPDeviceManager::SIPDeviceManager()
+    GBDeviceManager::GBDeviceManager()
     {
 
     }
 
-    SIPDeviceManager::~SIPDeviceManager()
+    GBDeviceManager::~GBDeviceManager()
     {
         for(int i=0;i<deviceList.size();i++){
             delete deviceList[i];
@@ -15,14 +15,14 @@ namespace Eyer
         deviceList.clear();
     }
 
-    int SIPDeviceManager::Register(EyerString & deviceID, EyerString & ip, EyerString & port)
+    int GBDeviceManager::Register(EyerString & deviceID, EyerString & ip, EyerString & port)
     {
         GBDevice * device = new GBDevice(deviceID, ip, port);
         deviceList.push_back(device);
         return 0;
     }
 
-    int SIPDeviceManager::UnRegister(EyerString & deviceID)
+    int GBDeviceManager::UnRegister(EyerString & deviceID)
     {
         for(std::vector<GBDevice *>::iterator it=deviceList.begin(); it != deviceList.end();) {
             GBDevice * device = *it;
@@ -37,7 +37,7 @@ namespace Eyer
         return 0;
     }
 
-    int SIPDeviceManager::FindDevice(GBDevice & device, EyerString & deviceID)
+    int GBDeviceManager::FindDevice(GBDevice & device, EyerString & deviceID)
     {
         int ret = -1;
         for(std::vector<GBDevice *>::iterator it=deviceList.begin(); it != deviceList.end(); ++it) {
@@ -50,7 +50,7 @@ namespace Eyer
         return ret;
     }
 
-    int SIPDeviceManager::CopyDevices(GBDeviceList & gbDeviceList)
+    int GBDeviceManager::CopyDevices(GBDeviceList & gbDeviceList)
     {
         for(int i=0;i<deviceList.size();i++){
             GBDevice * device = deviceList[i];

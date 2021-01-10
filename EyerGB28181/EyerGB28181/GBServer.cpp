@@ -19,7 +19,7 @@ namespace Eyer
     int GBServer::Start()
     {
         Stop();
-        context.eventThread = new SIPEventThread(&context);
+        context.eventThread = new GBEventThread(&context);
         context.eventThread->Start();
 
         mainThread = new GBServerMainThread(port, &context);
@@ -71,8 +71,9 @@ namespace Eyer
         return 0;
     }
 
-    int GBServer::StopStream()
+    int GBServer::StopStream(const EyerString & deviceId)
     {
+
         return 0;
     }
 

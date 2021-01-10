@@ -14,7 +14,7 @@ namespace Eyer
         EventStartRealTimeVideoRequest(const EventStartRealTimeVideoRequest & event);
         EventStartRealTimeVideoRequest & operator = (const EventStartRealTimeVideoRequest & event);
 
-        virtual SIPEventType GetEventType();
+        virtual GBEventType GetEventType();
 
         virtual int Do(struct eXosip_t * excontext, GBServerContext * context);
 

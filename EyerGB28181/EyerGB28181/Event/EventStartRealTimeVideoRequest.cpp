@@ -30,20 +30,37 @@ namespace Eyer
         deviceId                = event.deviceId;
         channelId               = event.channelId;
         startStreamCallback     = event.startStreamCallback;
+
         return *this;
     }
 
-    SIPEventType EventStartRealTimeVideoRequest::GetEventType()
+    GBEventType EventStartRealTimeVideoRequest::GetEventType()
     {
-        return SIPEventType::REALTIME_REQUEST;
+        return GBEventType::REALTIME_REQUEST;
     }
 
     int EventStartRealTimeVideoRequest::Do(struct eXosip_t * excontext, GBServerContext * context)
     {
+        EyerINFO("===============StartRealTimeVideo Request===============\n");
+
         GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceId);
         if(ret){
+            EyerERROR("StartRealTimeVideo Do Not Find Device %s\n", deviceId.str);
             return -1;
+        }
+
+        if(device.GetDeviceID().IsEmpty()){
+            EyerERROR("StartRealTimeVideo GetDeviceID Fail\n");
+            return -2;
+        }
+        if(device.GetIP().IsEmpty()){
+            EyerERROR("StartRealTimeVideo GetIP Fail\n");
+            return -2;
+        }
+        if(device.GetPort().IsEmpty()){
+            EyerERROR("StartRealTimeVideo GetPort Fail\n");
+            return -2;
         }
 
         EyerString to = EyerString("sip:") + device.GetDeviceID() + "@" + device.GetIP() + ":" + device.GetPort();
@@ -53,7 +70,10 @@ namespace Eyer
         osip_message_t *invite = NULL;
         ret = eXosip_call_build_initial_invite(excontext, &invite, to.str, from.str, to.str, subject.str);
 
-        EyerString localSipId = context->serverId;
+        if(invite == NULL){
+            EyerERROR("StartRealTimeVideo eXosip_message_build_request Fail\n");
+            return -3;
+        }
 
         EyerString sses = EyerRand::RandNumberStr(6);
 
@@ -69,8 +89,11 @@ namespace Eyer
                                "a=rtpmap:97 MPEG4/90000\r\n"
                                "a=rtpmap:98 H264/90000\r\n"
                                "a=recvonly\r\n"
-                               "y=%s\r\n", localSipId.str, streamServerIp.str,
-                               streamServerIp.str, streamServerPort, sses.str);
+                               "y=%s\r\n",
+                               context->serverId.str,
+                               streamServerIp.str,
+                               streamServerIp.str,
+                               streamServerPort, sses.str);
 
         EyerLog("sses: %s\n", sses.str);
 
@@ -80,7 +103,7 @@ namespace Eyer
         char * osip_str = nullptr;
         size_t osip_str_length = 0;
         osip_message_to_str(invite, &osip_str, &osip_str_length);
-        EyerLog("body: %s\n", osip_str);
+        EyerLog("StartRealTimeVideo SIP Message: %s\n", osip_str);
         osip_free(osip_str);
 
         EyerString callId = invite->call_id->number;
@@ -89,6 +112,8 @@ namespace Eyer
         eXosip_lock(excontext);
         int call_id = eXosip_call_send_initial_invite(excontext, invite);
         eXosip_unlock(excontext);
+
+        EyerINFO("StartRealTimeVideo eXosip_call_send_initial_invite: %d\n", call_id);
 
         return 0;
     }

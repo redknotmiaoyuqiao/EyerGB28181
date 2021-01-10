@@ -13,7 +13,7 @@ namespace Eyer
         EventUserRegister(const EventUserRegister & event);
         EventUserRegister & operator = (const EventUserRegister & event);
 
-        virtual SIPEventType GetEventType();
+        virtual GBEventType GetEventType();
 
         virtual int Do(struct eXosip_t * excontext, GBServerContext * context);
 

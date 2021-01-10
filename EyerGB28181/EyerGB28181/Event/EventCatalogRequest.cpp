@@ -33,9 +33,9 @@ namespace Eyer
         return *this;
     }
 
-    SIPEventType EventCatalogRequest::GetEventType()
+    GBEventType EventCatalogRequest::GetEventType()
     {
-        return SIPEventType::CATA_REQUEST;
+        return GBEventType::CATA_REQUEST;
     }
 
     int EventCatalogRequest::Do(struct eXosip_t * excontext, GBServerContext * context)
@@ -98,12 +98,12 @@ namespace Eyer
         char * dest = nullptr;
         size_t message_length = 0;
         osip_message_to_str(msg, &dest, &message_length);
-
         EyerINFO("Catalog SIP Message: %s\n", dest);
-
         osip_free(dest);
 
+        eXosip_lock(excontext);
         ret = eXosip_message_send_request(excontext, msg);
+        eXosip_unlock(excontext);
 
         EyerINFO("Catalog eXosip_message_send_request: %d\n", ret);
 

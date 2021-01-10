@@ -1,7 +1,7 @@
 #ifndef EYERLIB_SIPEVENT_HPP
 #define EYERLIB_SIPEVENT_HPP
 
-#include "SIPEventType.hpp"
+#include "GBEventType.hpp"
 #include "eXosipHeader.hpp"
 
 namespace Eyer
@@ -12,7 +12,7 @@ namespace Eyer
         GBEvent();
         virtual ~GBEvent();
 
-        virtual SIPEventType GetEventType() = 0;
+        virtual GBEventType GetEventType() = 0;
         virtual int Do(struct eXosip_t * excontext, GBServerContext * context) = 0;
 
         SIPEventTarget from;

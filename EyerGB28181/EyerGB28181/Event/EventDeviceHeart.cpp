@@ -24,9 +24,9 @@ namespace Eyer
         return *this;
     }
 
-    SIPEventType EventDeviceHeart::GetEventType()
+    GBEventType EventDeviceHeart::GetEventType()
     {
-        return SIPEventType::DEVICE_HEART;
+        return GBEventType::DEVICE_HEART;
     }
 
     int EventDeviceHeart::Do(struct eXosip_t * excontext, GBServerContext * context)

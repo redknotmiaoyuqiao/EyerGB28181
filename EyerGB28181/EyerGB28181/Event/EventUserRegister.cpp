@@ -15,9 +15,9 @@ namespace Eyer
 
     }
 
-    SIPEventType EventUserRegister::GetEventType()
+    GBEventType EventUserRegister::GetEventType()
     {
-        return SIPEventType::USER_REGISTER;
+        return GBEventType::USER_REGISTER;
     }
 
     EventUserRegister::EventUserRegister(const EventUserRegister & event)

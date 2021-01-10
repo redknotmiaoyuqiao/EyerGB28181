@@ -1,9 +1,9 @@
 #ifndef EYERLIB_SIPSERVERCONTEXT_HPP
 #define EYERLIB_SIPSERVERCONTEXT_HPP
 
-#include "SIPDeviceManager.hpp"
+#include "GBDeviceManager.hpp"
 #include "GBEventQueue.hpp"
-#include "SIPEventThread.hpp"
+#include "GBEventThread.hpp"
 #include "PassiveCallback.hpp"
 #include "ActiveCallbackList.hpp"
 
@@ -14,10 +14,10 @@ namespace Eyer
         GBServerContext();
         ~GBServerContext();
 
-        SIPDeviceManager deviceManager;
+        GBDeviceManager deviceManager;
         GBEventQueue eventQueue;
         ActiveCallbackList activeCallbackList;
-        SIPEventThread * eventThread = nullptr;
+        GBEventThread * eventThread = nullptr;
         PassiveCallback * passiveCallback = nullptr;
 
         EyerString serverId = "34020000002000000001";

@@ -5,7 +5,7 @@
 #include "GBServerMainThread.hpp"
 #include "GBServerContext.hpp"
 #include "EyerCore/EyerCore.hpp"
-#include "SIPEventThread.hpp"
+#include "GBEventThread.hpp"
 #include "ActiveCallbackList.hpp"
 #include "GBDeviceList.hpp"
 
@@ -30,7 +30,7 @@ namespace Eyer
                 const EyerString & deviceId,
                 StartStreamCallback * startStreamCallback);
 
-        int StopStream();
+        int StopStream(const EyerString & deviceId);
 
         int Catalog(EyerString deviceId, CatalogCallback * catalogCallback);
 

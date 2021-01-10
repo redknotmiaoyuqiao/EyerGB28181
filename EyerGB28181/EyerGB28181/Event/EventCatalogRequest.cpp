@@ -45,7 +45,7 @@ namespace Eyer
         GBDevice device;
         int ret = context->deviceManager.FindDevice(device, deviceId);
         if(ret){
-            EyerERROR("Do Not Find Device %s\n", deviceId.str);
+            EyerERROR("Catalog Do Not Find Device %s\n", deviceId.str);
             return -1;
         }
 
@@ -53,15 +53,15 @@ namespace Eyer
         context->activeCallbackList.PutCallback(catalogCallback, callId);
 
         if(device.GetDeviceID().IsEmpty()){
-            EyerERROR("GetDeviceID Fail\n");
+            EyerERROR("Catalog GetDeviceID Fail\n");
             return -2;
         }
         if(device.GetIP().IsEmpty()){
-            EyerERROR("GetIP Fail\n");
+            EyerERROR("Catalog GetIP Fail\n");
             return -2;
         }
         if(device.GetPort().IsEmpty()){
-            EyerERROR("GetPort Fail\n");
+            EyerERROR("Catalog GetPort Fail\n");
             return -2;
         }
 
@@ -74,6 +74,10 @@ namespace Eyer
 
         osip_message_t * msg = NULL;
         eXosip_message_build_request(excontext, &msg, "MESSAGE", to.str, from.str, NULL);
+        if(msg == NULL){
+            EyerERROR("Catalog eXosip_message_build_request Fail\n");
+            return -3;
+        }
 
         char queryContent[2048];
         sprintf(queryContent,

@@ -26,7 +26,6 @@ public:
     {
         EyerLog("User Register Device Id: %s\n", deviceId.str);
         sipServer->StartStream("39.105.183.99", 9000, deviceId, nullptr);
-        sipServer->StartStream("39.105.183.99", 9000, deviceId, nullptr);
         return 0;
     }
 

@@ -9,7 +9,7 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver
     Eyer::GBServer * sipserver = (Eyer::GBServer *)sipserverJni;
 
     char * deviceId = jstringtochar(env, deviceIdJni);
-    int ret = sipserver->StartStream("39.105.183.99", 1935, deviceId, nullptr);
+    int ret = sipserver->StartStream("39.105.183.99", 9000, deviceId, nullptr);
     free(deviceId);
 
     return ret;

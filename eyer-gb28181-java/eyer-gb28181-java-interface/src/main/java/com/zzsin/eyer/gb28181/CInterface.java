@@ -37,6 +37,7 @@ public class CInterface {
     public static native long   eyer_gb_catalog_callback_init           (CatalogCallback callback, CatalogDeviceList deviceList);
     public static native int    eyer_gb_catalog_callback_uninit         (long catalog_callback);
 
+    
     public static native int    eyer_gb_gbserver_start_realtime_video   (long gbserver, String deviceId);
 
     public static native int    eyer_gb_gbserver_stop_realtime_video    (long gbserver);

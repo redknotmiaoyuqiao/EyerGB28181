@@ -118,9 +118,12 @@ namespace Eyer
             printf("%s", logstr.c_str());
         }
         else{
-            FILE * f = fopen(path.str, "a+");
-            fputs(logstr.c_str(), f);
-            fclose(f);
+            FILE * f = fopen(path.str, "at+");
+            if(f != nullptr){
+                fprintf(f, "%s", logstr.c_str());
+                fflush(f);
+                fclose(f);
+            }
         }
 
         return 0;

@@ -24,13 +24,10 @@ namespace Eyer
 
     int GBDeviceManager::Update(EyerString & deviceID, EyerString & ip, EyerString & port)
     {
-        for(std::vector<GBDevice *>::iterator it=deviceList.begin(); it != deviceList.end();) {
+        for(std::vector<GBDevice *>::iterator it=deviceList.begin(); it != deviceList.end();++it;) {
             GBDevice * device = *it;
             if(device->GetDeviceID() == deviceID){
                 device->UpdateIP_PORT(ip, port);
-            }
-            else{
-                ++it;
             }
         }
         return 0;

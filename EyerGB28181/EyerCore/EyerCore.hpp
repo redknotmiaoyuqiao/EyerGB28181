@@ -19,4 +19,6 @@
 #include "EyerTable.hpp"
 #include "EyerRand.hpp"
 
+#include "EyerLogThread.hpp"
+
 #endif

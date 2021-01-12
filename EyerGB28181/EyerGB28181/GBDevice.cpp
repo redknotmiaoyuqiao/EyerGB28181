@@ -33,6 +33,13 @@ namespace Eyer
         return *this;
     }
 
+    int GBDevice::UpdateIP_PORT(EyerString & _ip, EyerString & _port)
+    {
+        ip      = _ip;
+        port    = _port;
+        return 0;
+    }
+
     EyerString & GBDevice::GetDeviceID()
     {
         return deviceID;

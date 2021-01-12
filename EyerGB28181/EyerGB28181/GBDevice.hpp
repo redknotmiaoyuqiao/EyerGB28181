@@ -15,6 +15,8 @@ namespace Eyer
         GBDevice(const GBDevice & device);
         GBDevice & operator = (const GBDevice & device);
 
+        int UpdateIP_PORT(EyerString & ip, EyerString & port);
+
         EyerString & GetDeviceID();
         EyerString & GetIP();
         EyerString & GetPort();

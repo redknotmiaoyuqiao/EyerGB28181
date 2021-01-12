@@ -14,6 +14,8 @@ namespace Eyer
         ~GBDeviceManager();
 
         int Register(EyerString & deviceID, EyerString & ip, EyerString & port);
+        int Update(EyerString & deviceID, EyerString & ip, EyerString & port);
+
         int UnRegister(EyerString & deviceID);
 
         int FindDevice(GBDevice & device, EyerString & deviceID);

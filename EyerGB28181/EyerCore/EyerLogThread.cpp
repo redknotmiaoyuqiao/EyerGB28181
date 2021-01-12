@@ -18,30 +18,39 @@ namespace Eyer
 
     EyerLogThread::EyerLogThread()
     {
-
+        // logQueue.AddObserver(this);
     }
 
     EyerLogThread::~EyerLogThread()
     {
         while(logQueue.Size() > 0){
             EyerLogBean * logBean = nullptr;
-            logQueue.FrontPop(&logBean);
+            logQueue.FrontPop(logBean);
             if(logBean != nullptr){
                 delete logBean;
                 logBean = nullptr;
             }
         }
+        logQueue.RemoveObserver(this);
+    }
+
+    int EyerLogThread::BeforeStop()
+    {
+        return 0;
     }
 
     void EyerLogThread::Run()
     {
         while(!stopFlag){
-            EyerTime::EyerSleepMilliseconds(1);
             EventLoop();
-            // printf("[%d] [%s (%d)] [%s] %s", logBean->GetLevel(), logBean->GetFile().str, logBean->GetLine(), logBean->GetFunction().str, logBean->GetLog().str);
+            while(logQueue.Size() <= 0 && !stopFlag){
+                std::unique_lock<std::mutex> lck(cvMtx);
+                cv.wait_for(lck, std::chrono::milliseconds(500));
+            }
+
             while(logQueue.Size() > 0){
                 EyerLogBean * logBean = nullptr;
-                logQueue.FrontPop(&logBean);
+                logQueue.FrontPop(logBean);
                 if(logBean != nullptr){
                     if(logBean->GetLevel() >= level){
                         PrintLog(logBean);
@@ -54,7 +63,7 @@ namespace Eyer
 
         while(logQueue.Size() > 0){
             EyerLogBean * logBean = nullptr;
-            logQueue.FrontPop(&logBean);
+            logQueue.FrontPop(logBean);
             if(logBean != nullptr){
                 if(logBean->GetLevel() >= level){
                     PrintLog(logBean);
@@ -66,11 +75,17 @@ namespace Eyer
         }
     }
 
+    int EyerLogThread::Update()
+    {
+        cv.notify_one();
+        return 0;
+    }
+
     int EyerLogThread::Clear()
     {
         while(logQueue.Size() > 0){
             EyerLogBean * logBean = nullptr;
-            logQueue.FrontPop(&logBean);
+            logQueue.FrontPop(logBean);
             if(logBean != nullptr){
                 if(logBean->GetLevel() >= level){
                     PrintLog(logBean);
@@ -116,6 +131,8 @@ namespace Eyer
 
         if(path.IsEmpty()){
             printf("%s", logstr.c_str());
+            fflush(stdout);
+            fflush(stderr);
         }
         else{
             FILE * f = fopen(path.str, "at+");

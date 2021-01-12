@@ -38,8 +38,22 @@ namespace Eyer
             context->eventQueue.PutEvent(catalogResponse);
         }
 
+        // 更新 IP 和 PORT
+        osip_message_t * asw_register = nullptr;
+        int ret = eXosip_message_build_answer (excontext, je->tid, 200, &asw_register);
+
+        if(asw_register != nullptr){
+            UpdateIP_PORT(context, deviceID, asw_register);
+        }
+
+        if(asw_register != nullptr){
+            osip_message_free(asw_register);
+            asw_register = nullptr;
+        }
+
+
         GBDevice device;
-        int ret = context->deviceManager.FindDevice(device, deviceID);
+        ret = context->deviceManager.FindDevice(device, deviceID);
         if(ret){
             // 尚未注册
             EyerLog("No Register\n");
@@ -54,6 +68,23 @@ namespace Eyer
             eXosip_message_build_answer (excontext, je->tid, 200, &answer);
             eXosip_message_send_answer (excontext, je->tid, 200, answer);
         }
+
+        return 0;
+    }
+
+    int SIPProcessMessage::UpdateIP_PORT(GBServerContext * context, EyerString & deviceId, osip_message_t * asw_register)
+    {
+        // TODO 验证信息 这里直接返回 200
+        EyerSIPMessgae sipMessgae(asw_register);
+        EyerString deviceIp         = sipMessgae.GetIp();
+        EyerString devicePort       = sipMessgae.GetPort();
+
+        EyerINFO("===============UpdateIP_PORT===============\n");
+        EyerINFO("Device ID: %s\n", deviceId.str);
+        EyerINFO("IP: %s\n", deviceIp.str);
+        EyerINFO("PORT: %s\n", devicePort.str);
+
+        context->deviceManager.Update(deviceId, deviceIp, devicePort);
 
         return 0;
     }

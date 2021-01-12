@@ -18,12 +18,11 @@ namespace Eyer
         EyerThread();
         ~EyerThread();
 
-        virtual void Run() = 0;
-
-        int Stop(int t = 1000);
-
-        int IsRunning();
         int Start();
+        int Stop();
+
+        virtual void Run() = 0;
+        virtual int BeforeStop();
 
 
 
@@ -35,22 +34,13 @@ namespace Eyer
         int EventLoop();
 
     protected:
-        void SetRunning();
-        void SetStoping();
-
         std::atomic_int stopFlag {0};
-        std::atomic_int isRun {0};
 
         std::atomic_int eventLoopFlag {0};
+        std::atomic_int eventLoopStatus {0};
 
-        std::mutex eventLoopMut;
-        std::mutex eventMut;
-
-        std::atomic_int eventLoopIsStartFlag {0};
-        std::condition_variable eventLoopIsStart;
-
-        std::atomic_int eventLoopIsEndFlag {0};
-        std::condition_variable eventLoopIsEnd;
+        std::condition_variable cv;
+        std::mutex cvMtx;
 
     private:
         std::thread * t = nullptr;

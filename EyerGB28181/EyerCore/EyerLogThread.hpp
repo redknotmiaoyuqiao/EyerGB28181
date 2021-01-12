@@ -5,10 +5,12 @@
 #include "EyerLockQueue.hpp"
 #include "EyerThread/EyerThread.hpp"
 #include "EyerLogParam.hpp"
+#include "EyerObserverQueue.hpp"
+#include "EyerObserver.hpp"
 
 namespace Eyer
 {
-    class EyerLogThread : public EyerThread
+    class EyerLogThread : public EyerThread , public EyerObserver
     {
     public:
         class GarbageCollector {
@@ -31,6 +33,10 @@ namespace Eyer
 
         virtual void Run();
 
+        virtual int Update();
+
+        virtual int BeforeStop();
+
         int Clear();
 
         int SetLevel(int _level);
@@ -42,7 +48,7 @@ namespace Eyer
         int PutLog(EyerLogBean * logBean);
 
     private:
-        EyerLockQueue<EyerLogBean> logQueue;
+        EyerObserverQueue<EyerLogBean *> logQueue;
         int level = 5;
 
         int inline PrintLog(EyerLogBean * logBean);

@@ -19,13 +19,29 @@ namespace Eyer
         }
     }
 
-    int EyerThread::Stop(int time)
+    int EyerThread::Start()
+    {
+        if(t != nullptr){
+            return -1;
+        }
+
+        stopFlag = 0;
+        t = new std::thread(&EyerThread::Run, this);
+
+        return 0;
+    }
+
+    int EyerThread::Stop()
     {
         if(t == nullptr){
             return -1;
         }
 
         stopFlag = 1;
+
+        cv.notify_one();
+        BeforeStop();
+
         if(t != nullptr){
             t->join();
             delete t;
@@ -33,40 +49,13 @@ namespace Eyer
         }
         stopFlag = 0;
 
-        SetStoping();
-
         return 0;
     }
 
-    int EyerThread::IsRunning()
+    int EyerThread::BeforeStop()
     {
-        return isRun;
-    }
-
-    int EyerThread::Start()
-    {
-        if(t != nullptr){
-            return -1;
-        }
-
-        SetRunning();
-        stopFlag = 0;
-        t = new std::thread(&EyerThread::Run, this);
-
         return 0;
     }
-
-    void EyerThread::SetRunning()
-    {
-        stopFlag = 0;
-        isRun = 1;
-    }
-
-    void EyerThread::SetStoping()
-    {
-        isRun = 0;
-    }
-
 
     int EyerThread::PushEvent(EyerRunnable * event)
     {
@@ -77,64 +66,52 @@ namespace Eyer
 
     int EyerThread::StartEventLoop()
     {
-        eventMut.lock();
-
-        std::unique_lock<std::mutex> lck(eventLoopMut);
-
-        eventLoopIsEndFlag = 0;
-
-        eventLoopIsStartFlag = 0;
-
-        // 发出 开始指令
         eventLoopFlag = 1;
-
-        // 等待 开始
-        while(eventLoopIsStartFlag == 0){
-            eventLoopIsStart.wait(lck);
+        while(1){
+            std::this_thread::sleep_for(std::chrono::milliseconds(1));
+            if(eventLoopStatus == 1){
+                break;
+            }
         }
-
         return 0;
     }
 
     int EyerThread::StopEventLoop()
     {
-        std::unique_lock<std::mutex> lck(eventLoopMut);
-
-        // 发出 停止指令
         eventLoopFlag = 0;
-
-        // 等待 停止
-        while(eventLoopIsEndFlag == 0){
-            eventLoopIsEnd.wait(lck);
+        while(1){
+            std::this_thread::sleep_for(std::chrono::milliseconds(1));
+            if(eventLoopStatus == 0){
+                break;
+            }
         }
-
-        eventMut.unlock();
         return 0;
     }
 
     int EyerThread::EventLoop()
     {
-        if(!eventLoopFlag){
+        if(!eventLoopFlag) {
             return -1;
         }
 
-        // eventLoopIsStartFlag = 1;
-        // eventLoopIsStart.notify_all();
+        eventLoopStatus = 1;
 
-        while(eventQueue.size() > 0){
-            EyerRunnable * event = eventQueue.front();
+        while(eventQueue.size()) {
+            EyerRunnable * runnable = eventQueue.front();
             eventQueue.pop();
-            event->Run();
+            if(runnable != nullptr){
+                runnable->Run();
+            }
         }
 
-        while(eventLoopFlag){
-            eventLoopIsStartFlag = 1;
-            eventLoopIsStart.notify_all();
+        while(1) {
             std::this_thread::sleep_for(std::chrono::milliseconds(1));
+            if(eventLoopFlag == 0){
+                break;
+            }
         }
 
-        eventLoopIsEndFlag = 1;
-        eventLoopIsEnd.notify_all();
+        eventLoopStatus = 0;
 
         return 0;
     }

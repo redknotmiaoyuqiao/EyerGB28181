@@ -48,7 +48,13 @@ add_library(
         BLOCK_TIME.hpp
         EyerTable.cpp
         EyerTable.hpp
-        EyerRand.hpp)
+        EyerRand.hpp
+        EyerObserverQueue.hpp
+        EyerObserver.cpp
+        EyerObserver.hpp
+        EyerSubject.cpp
+        EyerSubject.hpp
+)
 
 set(head_files 
         EyerString.hpp

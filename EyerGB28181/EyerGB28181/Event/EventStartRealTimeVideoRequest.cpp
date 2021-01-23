@@ -75,7 +75,7 @@ namespace Eyer
             return -3;
         }
 
-        EyerString sses = EyerRand::RandNumberStr(6);
+        EyerString ssrc = EyerRand::RandNumberStr(6);
 
         char body[500];
         int bodyLen = snprintf(body, 500,
@@ -93,9 +93,9 @@ namespace Eyer
                                context->serverId.str,
                                streamServerIp.str,
                                streamServerIp.str,
-                               streamServerPort, sses.str);
+                               streamServerPort, ssrc.str);
 
-        EyerLog("sses: %s\n", sses.str);
+        EyerLog("ssrc: %s\n", ssrc.str);
 
         osip_message_set_body(invite, body, bodyLen);
         osip_message_set_content_type(invite, "APPLICATION/SDP");

@@ -98,7 +98,7 @@ namespace Eyer
         char * dest = nullptr;
         size_t message_length = 0;
         osip_message_to_str(msg, &dest, &message_length);
-        EyerINFO("Catalog SIP Message: %s\n", dest);
+        // EyerINFO("Catalog SIP Message: %s\n", dest);
         osip_free(dest);
 
         eXosip_lock(excontext);

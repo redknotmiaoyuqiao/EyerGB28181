@@ -1,0 +1,1 @@
+[ 5] [2021-00-23 22:54:51] [/Users/yuqiaomiao/GitHub/EyerGB28181/EyerGB28181/EyerGB28181Jni/CInterface.cpp(10)] [JNI_OnLoad] JavaVM GetEnv Success

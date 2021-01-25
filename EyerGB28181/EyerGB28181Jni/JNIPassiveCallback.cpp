@@ -1,8 +1,4 @@
-#include <EyerJNI/EyerJNIEnvManager.hpp>
 #include "JNIPassiveCallback.hpp"
-
-#include "EyerJNI/EyerJNI.hpp"
-#include "EyerJNI/JNIHeader.hpp"
 
 namespace Eyer
 {
@@ -13,11 +9,12 @@ namespace Eyer
 
     JNIPassiveCallback::~JNIPassiveCallback()
     {
+
     }
 
-    int JNIPassiveCallback::DeviceRegister(EyerString _deviceId)
+    int JNIPassiveCallback::DeviceRegister  (EyerString deviceId)
     {
-        EyerLog("UserRegister UserRegister: %s\n", _deviceId.str);
+        EyerLog("JNIPassiveCallback DeviceRegister: %s\n", deviceId.str);
 
         JNIEnv * env = EyerJNIEnvManager::GetInstance()->AttachCurrentThread();
         if(env == nullptr){
@@ -30,22 +27,22 @@ namespace Eyer
             return - 1;
         }
 
-        jmethodID jmethodId = env->GetMethodID(classLoaderClass, "DeviceRegister", "(Ljava/lang/String;)I");
+        jmethodID jmethodId = env->GetMethodID(classLoaderClass, "deviceRegister", "(Ljava/lang/String;)I");
         if(jmethodId == nullptr){
             EyerLog("GetMethodID Fail\n");
             return -1;
         }
 
-        int ret = env->CallIntMethod(jPassiveCallback, jmethodId, env->NewStringUTF(_deviceId.str));
+        int ret = env->CallIntMethod(jPassiveCallback, jmethodId, env->NewStringUTF(deviceId.str));
 
         EyerJNIEnvManager::GetInstance()->DetachCurrentThread();
 
         return ret;
     }
 
-    int JNIPassiveCallback::DeviceHeart(Eyer::EyerString _deviceId)
+    int JNIPassiveCallback::DeviceHeart     (EyerString deviceId)
     {
-        EyerLog("DeviceHeart Device Id: %s\n", _deviceId.str);
+        EyerLog("JNIPassiveCallback DeviceHeart: %s\n", deviceId.str);
 
         JNIEnv * env = EyerJNIEnvManager::GetInstance()->AttachCurrentThread();
         if(env == nullptr){
@@ -58,16 +55,16 @@ namespace Eyer
             return - 1;
         }
 
-        jmethodID jmethodId = env->GetMethodID(classLoaderClass, "DeviceHeart", "(Ljava/lang/String;)I");
+        jmethodID jmethodId = env->GetMethodID(classLoaderClass, "deviceHeart", "(Ljava/lang/String;)I");
         if(jmethodId == nullptr){
             EyerLog("GetMethodID Fail\n");
             return -1;
         }
 
-        int ret = env->CallIntMethod(jPassiveCallback, jmethodId, env->NewStringUTF(_deviceId.str));
+        int ret = env->CallIntMethod(jPassiveCallback, jmethodId, env->NewStringUTF(deviceId.str));
 
         EyerJNIEnvManager::GetInstance()->DetachCurrentThread();
-        
+
         return ret;
     }
 }

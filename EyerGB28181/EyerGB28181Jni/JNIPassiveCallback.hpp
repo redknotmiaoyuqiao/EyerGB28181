@@ -1,20 +1,21 @@
 #ifndef EYERGB28181_JNIPASSIVECALLBACK_HPP
 #define EYERGB28181_JNIPASSIVECALLBACK_HPP
 
+#include "EyerJNI/EyerJNI.hpp"
 #include "EyerGB28181/EyerGB28181.hpp"
-#include "com_zzsin_eyer_gb28181_CInterface.h"
 
 namespace Eyer
 {
-    class JNIPassiveCallback : public PassiveCallback{
+    class JNIPassiveCallback : public PassiveCallback {
     public:
-        JNIPassiveCallback(jobject jPassiveCallback);
+        JNIPassiveCallback(jobject _jPassiveCallback);
         ~JNIPassiveCallback();
+
+        virtual int DeviceRegister  (EyerString deviceId);
+        virtual int DeviceHeart     (EyerString deviceId);
+
     public:
-        virtual int DeviceRegister(EyerString deviceId);
-        virtual int DeviceHeart(EyerString deviceId);
-    public:
-        jobject jPassiveCallback;
+        jobject jPassiveCallback = nullptr;
     };
 }
 

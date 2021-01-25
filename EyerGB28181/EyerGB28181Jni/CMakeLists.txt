@@ -5,17 +5,11 @@ include_directories (../EyerJNI)
 add_library(
         EyerGB28181Jni
         SHARED
-        CInterface.cpp
+        Version.cpp
+        JNILoad.cpp
+        JNIGBServer.cpp
         JNIPassiveCallback.cpp
         JNIPassiveCallback.hpp
-        CInterfaceDeviceList.cpp
-        JNICatalog.cpp
-        CJNITest.cpp
-        TestThread.cpp
-        TestThread.hpp
-        JNICatalogCallback.cpp
-        JNICatalogCallback.hpp
-        JNIStartRealtimeVideo.cpp
 )
 
 target_link_libraries (EyerGB28181Jni EyerGB28181)

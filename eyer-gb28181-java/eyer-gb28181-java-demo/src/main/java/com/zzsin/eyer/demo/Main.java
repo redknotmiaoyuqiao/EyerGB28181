@@ -1,5 +1,6 @@
 package com.zzsin.eyer.demo;
 
+import com.zzsin.eyer.gb28181.GBDeviceList;
 import com.zzsin.eyer.gb28181.GBServer;
 import com.zzsin.eyer.gb28181.callback.LoadCallback;
 import com.zzsin.eyer.gb28181.callback.PassiveCallback;
@@ -43,6 +44,7 @@ public class Main {
         gbServer.start();
 
         for(int i=0;i<60;i++){
+            GBDeviceList deviceList = gbServer.getDeviceList();
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

@@ -10,7 +10,8 @@ add_library(
         JNIGBServer.cpp
         JNIPassiveCallback.cpp
         JNIPassiveCallback.hpp
-)
+        JNICatalog.cpp
+        JNICatalogCallback.cpp JNICatalogCallback.hpp JNIGetDeviceList.cpp)
 
 target_link_libraries (EyerGB28181Jni EyerGB28181)
 target_link_libraries (EyerGB28181Jni EyerSIP)

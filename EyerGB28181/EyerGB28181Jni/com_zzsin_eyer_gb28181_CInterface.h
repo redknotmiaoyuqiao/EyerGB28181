@@ -55,6 +55,22 @@ JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver
 JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1set_1passive_1callback
   (JNIEnv *, jclass, jlong, jobject);
 
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_gbserver_get_device_list
+ * Signature: (JLcom/zzsin/eyer/gb28181/callback/GBDeviceList;)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1get_1device_1list
+  (JNIEnv *, jclass, jlong, jobject);
+
+/*
+ * Class:     com_zzsin_eyer_gb28181_CInterface
+ * Method:    eyer_gb_gbserver_catalog
+ * Signature: (JLjava/lang/String;Lcom/zzsin/eyer/gb28181/callback/CatalogCallback;)I
+ */
+JNIEXPORT jint JNICALL Java_com_zzsin_eyer_gb28181_CInterface_eyer_1gb_1gbserver_1catalog
+  (JNIEnv *, jclass, jlong, jstring, jobject);
+
 #ifdef __cplusplus
 }
 #endif

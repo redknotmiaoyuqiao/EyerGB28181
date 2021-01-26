@@ -1,5 +1,6 @@
 package com.zzsin.eyer.gb28181;
 
+import com.zzsin.eyer.gb28181.callback.CatalogCallback;
 import com.zzsin.eyer.gb28181.callback.LoadCallback;
 import com.zzsin.eyer.gb28181.callback.PassiveCallback;
 
@@ -30,6 +31,16 @@ public class GBServer extends JNIObject{
 
     public int setPassiveCallback(PassiveCallback passiveCallback){
         return CInterface.eyer_gb_gbserver_set_passive_callback(jniPtr, passiveCallback);
+    }
+
+    public GBDeviceList getDeviceList(){
+        GBDeviceList deviceList = new GBDeviceList();
+        CInterface.eyer_gb_gbserver_get_device_list(jniPtr, deviceList);
+        return deviceList;
+    }
+
+    public int catalog(String deviceId, CatalogCallback catalogCallback){
+        return CInterface.eyer_gb_gbserver_catalog(jniPtr, deviceId, catalogCallback);
     }
 
     public int start() {

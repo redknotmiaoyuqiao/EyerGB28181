@@ -26,12 +26,13 @@ namespace Eyer {
         bool operator > (const EyerString & s) const;
         bool operator < (const EyerString & s) const;
 
-        EyerString operator + (const EyerString & s);
+        const EyerString operator + (const EyerString & s) const;
+        const EyerString & operator += (const EyerString & s);
 
         int Replace(const EyerString & substr, const EyerString & replacement);
         int Split(EyerString * resArr, const EyerString & splitStr);
 
-
+        static EyerString Number(float num, EyerString format = "%f");
         static EyerString Number(int num, EyerString format = "%d");
 
         static EyerString Number(long num);

@@ -25,6 +25,8 @@ namespace Eyer
         };
         static GarbageCollector gc;
 
+        static int eyer_log_thread_flag;
+
         static EyerLogThread * instance;
         static EyerLogThread * GetInstance();
 

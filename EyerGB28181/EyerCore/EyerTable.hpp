@@ -8,6 +8,11 @@ namespace Eyer
     template <typename T>
     class EyerTable {
     public:
+        EyerTable() : EyerTable(0, 0)
+        {
+
+        }
+
         EyerTable(int _w, int _h)
         {
             Resize(_w, _h);
@@ -36,6 +41,20 @@ namespace Eyer
 
         int Set(int x, int y, T & t)
         {
+            if(x < 0){
+                return -1;
+            }
+            if(x >= w){
+                return -1;
+            }
+
+            if(y < 0){
+                return -1;
+            }
+            if(y >= h){
+                return -1;
+            }
+
             int index = y * w + x;
             vec[index] = t;
             return 0;

@@ -4,6 +4,9 @@ namespace Eyer
 {
     JavaVM * EyerJNIEnvManager::vm = nullptr;
 
+    jobject EyerJNIEnvManager::clazzLoaderObject = nullptr;
+    jmethodID EyerJNIEnvManager::findClassMethod = nullptr;
+
     EyerJNIEnvManager * EyerJNIEnvManager::instance = nullptr;
 
     EyerJNIEnvManager * EyerJNIEnvManager::GetInstance()
@@ -17,9 +20,9 @@ namespace Eyer
     JNIEnv * EyerJNIEnvManager::AttachCurrentThread()
     {
         JNIEnv * env = nullptr;
-        int status = Eyer::EyerJNIEnvManager::vm->GetEnv((void **) &env, JNI_VERSION_1_6);
+        int status = EyerJNIEnvManager::vm->GetEnv((void **) &env, JNI_VERSION_1_6);
         if (status < 0) {
-            Eyer::EyerJNIEnvManager::vm->AttachCurrentThread((void **)&env, NULL);
+            EyerJNIEnvManager::vm->AttachCurrentThread((JNIEnv **)&env, NULL);
         }
         if(env == nullptr) {
             return nullptr;
@@ -29,7 +32,13 @@ namespace Eyer
 
     int EyerJNIEnvManager::DetachCurrentThread()
     {
-        Eyer::EyerJNIEnvManager::vm->DetachCurrentThread();
+        EyerJNIEnvManager::vm->DetachCurrentThread();
         return 0;
+    }
+
+    jclass EyerJNIEnvManager::FindClazz(const char * name)
+    {
+        JNIEnv * env = AttachCurrentThread();
+        return static_cast<jclass>(env->CallObjectMethod(clazzLoaderObject, findClassMethod, env->NewStringUTF(name)));
     }
 }

@@ -4,14 +4,73 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "EyerLog.hpp"
+
 namespace Eyer{
-    EyerBuffer::EyerBuffer()
+    int EyerBuffer::ReAlloc(uint8_t ** targetBuf, int targetLen)
     {
+        // 计算剩余空间
+        int size = originBufLen - (buf - originBuf);
+        if(targetLen > size) {
+            // 重新分配空间
+            int targetBufLen = targetLen * 3;
+            *targetBuf = (uint8_t *)malloc(targetBufLen);
+
+            mallocTimes++;
+
+            return targetBufLen;
+        }
+
+        return 0;
+    }
+
+    int EyerBuffer::ReAlloc(int len)
+    {
+        uint8_t * targetBuf = nullptr;
+        int ret = ReAlloc(&targetBuf, len);
+        if(ret > 0){
+            if(originBuf != nullptr){
+                free(originBuf);
+                originBuf = nullptr;
+            }
+            originBuf = targetBuf;
+            originBufLen = ret;
+        }
+
+        buf = originBuf;
+        bufLen = len;
+
+        return len;
+    }
+
+    EyerBuffer::EyerBuffer(int size)
+    {
+        uint8_t * targetBuf = nullptr;
+        int ret = ReAlloc(&targetBuf, size);
+        if(ret > 0){
+            originBuf = targetBuf;
+            originBufLen = ret;
+        }
+
+        buf = originBuf;
+        bufLen = 0;
+    }
+
+    EyerBuffer::EyerBuffer(uint8_t * _buf, int _bufLen) : EyerBuffer(_bufLen)
+    {
+        memcpy(buf, _buf, _bufLen);
+        bufLen = _bufLen;
     }
 
     EyerBuffer::~EyerBuffer()
     {
         Clear();
+
+        if(originBuf != nullptr){
+            free(originBuf);
+            originBuf = nullptr;
+        }
+        originBufLen = 0;
     }
 
     EyerBuffer::EyerBuffer(const EyerBuffer & buffer) : EyerBuffer()
@@ -21,33 +80,49 @@ namespace Eyer{
 
     EyerBuffer & EyerBuffer::operator = (const EyerBuffer & buffer)
     {
-        if(buf != nullptr){
-            free(buf);
-            buf = nullptr;
+        uint8_t * targetBuf = nullptr;
+        int ret = ReAlloc(&targetBuf, buffer.bufLen);
+        if(ret > 0){
+            originBuf = targetBuf;
+            originBufLen = ret;
         }
 
-        bufLen = buffer.bufLen;
+        buf = originBuf;
 
-        buf = (unsigned char *)malloc(bufLen);
+        bufLen = buffer.bufLen;
         memcpy(buf, buffer.buf, bufLen);
 
         return *this;
     }
 
-    int EyerBuffer::Append(unsigned char * _buf, int _bufLen)
+    int EyerBuffer::Append(uint8_t * _buf, int _bufLen)
     {
-        unsigned char * tempBuf = (unsigned char *)malloc(bufLen + _bufLen);
+        uint8_t * targetBuf = nullptr;
+        int targetSize = bufLen + _bufLen;
+        int ret = ReAlloc(&targetBuf, targetSize);
+        if(ret > 0){
+            // 分配了新的内存
+            // 先拷贝旧的数据
+            memcpy(targetBuf, buf, bufLen);
+            // 再拷贝新进来的数据
+            memcpy(targetBuf + bufLen, _buf, _bufLen);
 
-        memcpy(tempBuf, buf, bufLen);
-        memcpy(tempBuf + bufLen, _buf, _bufLen);
+            if(originBuf != nullptr){
+                free(originBuf);
+                originBuf = nullptr;
+            }
 
-        if(buf != nullptr){
-            free(buf);
-            buf = nullptr;
+            originBuf = targetBuf;
+            originBufLen = ret;
+
+            buf = originBuf;
+            bufLen = targetSize;
         }
-
-        bufLen = bufLen + _bufLen;
-        buf = tempBuf;
+        else {
+            // 没有分配新的内存
+            memcpy(buf + bufLen, _buf, _bufLen);
+            bufLen = targetSize;
+        }
 
         return 0;
     }
@@ -64,57 +139,25 @@ namespace Eyer{
         }
 
         if(len > bufLen){
-            return 0;
+            len = bufLen;
         }
 
         memcpy(buffer, buf, len);
-
-        int distBufLen = bufLen - len;
-
-        unsigned char * tempBuf = (unsigned char *)malloc(distBufLen);
-        memcpy(tempBuf, buf + len, distBufLen);
-
-        if(buf != nullptr){
-            free(buf);
-            buf = nullptr;
-        }
-
-        bufLen = distBufLen;
-        buf = tempBuf;
+        buf = buf + len;
+        bufLen = bufLen - len;
 
         return len;
     }
 
     int EyerBuffer::CutOff(EyerBuffer & buffer, int len)
     {
-        if(len <= 0){
-            return 0;
-        }
+        buffer.ReAlloc(len);
 
-        if(len > bufLen){
-            return 0;
-        }
-
-        buffer.Clear();
-        buffer.Append(buf, len);
-
-        int distBufLen = bufLen - len;
-
-        unsigned char * tempBuf = (unsigned char *)malloc(distBufLen);
-        memcpy(tempBuf, buf + len, distBufLen);
-
-        if(buf != nullptr){
-            free(buf);
-            buf = nullptr;
-        }
-
-        bufLen = distBufLen;
-        buf = tempBuf;
-
-        return len;
+        int ret = CutOff(buffer.GetPtr(), len);
+        return ret;
     }
 
-    int EyerBuffer::GetBuffer(unsigned char * _buf)
+    int EyerBuffer::GetBuffer(uint8_t * _buf)
     {
         if(_buf == nullptr){
             return bufLen;
@@ -138,10 +181,7 @@ namespace Eyer{
 
     int EyerBuffer::Clear()
     {
-        if(buf != nullptr){
-            free(buf);
-            buf = nullptr;
-        }
+        buf = originBuf;
         bufLen = 0;
         return 0;
     }
@@ -162,6 +202,8 @@ namespace Eyer{
 
     int EyerBuffer::ReadFromDisk(EyerString & path)
     {
+        // TODO
+        /*
         FILE * f = fopen(path.str, "rb");
         if(f == nullptr){
             return -1;
@@ -177,15 +219,24 @@ namespace Eyer{
 
         fseek(f, 0L, SEEK_SET);
 
-        buf = (unsigned char *)malloc(bufLen);
+        buf = (uint8_t *)malloc(bufLen);
         fread(buf, bufLen, 1, f);
 
+        mallocTimes++;
+
         fclose(f);
+         */
         return 0;
     }
 
-    unsigned char * EyerBuffer::GetPtr()
+    uint8_t * EyerBuffer::GetPtr()
     {
         return buf;
+    }
+
+    int EyerBuffer::PrintfDebug()
+    {
+        EyerLog("Malloc Times: %d\n", mallocTimes);
+        return 0;
     }
 }

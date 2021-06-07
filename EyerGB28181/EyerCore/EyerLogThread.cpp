@@ -1,8 +1,12 @@
 #include "EyerLogThread.hpp"
 #include "EyerTime.hpp"
 
+#include "EyerLog.hpp"
+#include "eyer_log_thread_flag.hpp"
+
 namespace Eyer
 {
+    int EyerLogThread::eyer_log_thread_flag = 1;
     EyerLogThread * EyerLogThread::instance = nullptr;
 
     EyerLogThread::GarbageCollector EyerLogThread::gc;
@@ -11,14 +15,15 @@ namespace Eyer
     {
         if(EyerLogThread::instance == nullptr){
             EyerLogThread::instance = new EyerLogThread();
-            EyerLogThread::instance->Start();
+            if(eyer_log_thread_flag){
+                EyerLogThread::instance->Start();
+            }
         }
         return EyerLogThread::instance;
     }
 
     EyerLogThread::EyerLogThread()
     {
-        // logQueue.AddObserver(this);
     }
 
     EyerLogThread::~EyerLogThread()
@@ -148,7 +153,16 @@ namespace Eyer
 
     int EyerLogThread::PutLog(EyerLogBean * logBean)
     {
-        logQueue.Push(logBean);
+        if(eyer_log_thread_flag){
+            logQueue.Push(logBean);
+        }
+        else{
+            if(logBean != nullptr){
+                PrintLog(logBean);
+                delete logBean;
+            }
+        }
+
         return 0;
     }
 

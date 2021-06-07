@@ -1,20 +1,26 @@
-#ifndef EYERGB28181_EYERJNIENVMANAGER_HPP
-#define EYERGB28181_EYERJNIENVMANAGER_HPP
+#ifndef EYERCAMERAANDROID_EYERJNIENVMANAGER_HPP
+#define EYERCAMERAANDROID_EYERJNIENVMANAGER_HPP
 
-#include "JNIHeader.hpp"
+#include <jni.h>
 
 namespace Eyer
 {
-    class EyerJNIEnvManager {
+    class EyerJNIEnvManager
+    {
     public:
         static JavaVM * vm;
+
+        static jobject clazzLoaderObject;
+        static jmethodID findClassMethod;
 
         static EyerJNIEnvManager * instance;
         static EyerJNIEnvManager * GetInstance();
 
         JNIEnv * AttachCurrentThread();
         int DetachCurrentThread();
+
+        jclass FindClazz(const char * name);
     };
 }
 
-#endif //EYERGB28181_EYERJNIENVMANAGER_HPP
+#endif //EYERCAMERAANDROID_EYERJNIENVMANAGER_HPP

@@ -92,7 +92,7 @@ namespace Eyer {
         return false;
     }
 
-    EyerString EyerString::operator + (const EyerString & s){
+    const EyerString EyerString::operator + (const EyerString & s) const{
         EyerString outStr;
 
         if(IsEmpty() && s.IsEmpty()){
@@ -127,6 +127,12 @@ namespace Eyer {
         outStr.str[strLen] = '\0';
 
         return outStr;
+    }
+
+    const EyerString & EyerString::operator += (const EyerString & s)
+    {
+        *this = *this + s;
+        return *this;
     }
 
     bool EyerString::IsEmpty() const
@@ -185,6 +191,15 @@ namespace Eyer {
         }
 
         return splitVec.size();
+    }
+
+    EyerString EyerString::Number(float num, EyerString format)
+    {
+        char str[1024];
+
+        sprintf(str, format.str, num);
+
+        return str;
     }
 
     EyerString EyerString::Number(int num, EyerString format)

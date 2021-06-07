@@ -34,6 +34,8 @@
 #define EyerLog_10(format, ...) eyer_log_log(__FILE__, __FUNCTION__, __LINE__, 10, format, ##__VA_ARGS__)
 #define EyerLog(format, ...) eyer_log_log(__FILE__, __FUNCTION__, __LINE__, 5, format, ##__VA_ARGS__)
 
+#define EyerLogLevel(level, format, ...) eyer_log_log(__FILE__, __FUNCTION__, __LINE__, level, format, ##__VA_ARGS__)
+
 #define EyerINFO(format, ...) eyer_log_log(__FILE__, __FUNCTION__, __LINE__, 5, format, ##__VA_ARGS__)
 #define EyerWRANING(format, ...) eyer_log_log(__FILE__, __FUNCTION__, __LINE__, 10, format, ##__VA_ARGS__)
 #define EyerERROR(format, ...) eyer_log_log(__FILE__, __FUNCTION__, __LINE__, 20, format, ##__VA_ARGS__)
@@ -49,6 +51,8 @@ int     eyer_log_set_level      (int level);
 int     eyer_log_param          (int isLevel, int isTime, int isFile, int isLine, int isFunc);
 void    eyer_log_log            (const char * file, const char * function, int line, int level, const char * format, ...);
 int     eyer_log_clear          ();
+
+void    eyer_log_thread             (int thread);
 
 int     eyer_log_path           (const char * path);
 

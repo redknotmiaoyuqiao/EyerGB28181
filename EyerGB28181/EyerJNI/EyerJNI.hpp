@@ -1,25 +1,9 @@
-#ifndef EYERGB28181_EYERJNI_HPP
-#define EYERGB28181_EYERJNI_HPP
+#ifndef	EYER_LIB_JNI_UTIL_AV_H
+#define	EYER_LIB_JNI_UTIL_AV_H
 
+#include "EyerJNIEnv.hpp"
+#include "EyerJNIObject.hpp"
 #include "EyerJNIEnvManager.hpp"
-#include "EyerJNIClazzLoader.hpp"
+#include "EyerJNIByteArray.hpp"
 
-namespace Eyer
-{
-    class EyerJNI {
-
-    };
-}
-
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-char * jstringtochar(JNIEnv *env, jstring jstr);
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif //EYERGB28181_EYERJNI_HPP
+#endif //EYER_LIB_JNI_UTIL_AV_H

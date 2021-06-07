@@ -20,5 +20,11 @@
 #include "EyerRand.hpp"
 
 #include "EyerLogThread.hpp"
+#include "EyerBufferPlus.hpp"
+
+#include "EyerBitStream.hpp"
+
+#include "EyerSmartPtr.hpp"
+#include "EyerSharedCount.hpp"
 
 #endif

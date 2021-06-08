@@ -3,6 +3,7 @@
 
 #include "EyerThread/EyerThread.hpp"
 #include "EyerSIPServerThread.hpp"
+#include "EyerEventLoopThread.hpp"
 
 namespace Eyer
 {
@@ -17,6 +18,7 @@ namespace Eyer
 
     private:
         EyerSIPServerThread * sipServerThread = nullptr;
+        EyerEventLoopThread * eventLoopThread = nullptr;
     };
 }
 

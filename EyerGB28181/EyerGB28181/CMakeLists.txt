@@ -12,12 +12,15 @@ add_library(
         EyerSIPServerThread.hpp
         EyerSIPServerThread.cpp
 
+        EyerEventLoopThread.hpp
+        EyerEventLoopThread.cpp
 )
 
 set(head_files
         EyerGB28181.hpp
         EyerGBServer.hpp
         EyerSIPServerThread.hpp
+        EyerEventLoopThread.hpp
         )
 
 INSTALL(FILES ${head_files} DESTINATION include/EyerGB28181)

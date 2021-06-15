@@ -13,6 +13,9 @@ namespace Eyer
         ~EyerSIPServerThread();
 
         virtual void Run();
+
+    private:
+        int port = 5060;
     };
 }
 

@@ -2,12 +2,15 @@
 #define EYERGB28181_EYEREVENTLOOPTHREAD_HPP
 
 #include "EyerThread/EyerThread.hpp"
+#include "EyerCore/EyerCore.hpp"
 
 namespace Eyer
 {
     class EyerEventLoopThread : public EyerThread
     {
     public:
+        EyerEventLoopThread();
+        ~EyerEventLoopThread();
         virtual void Run();
     };
 }

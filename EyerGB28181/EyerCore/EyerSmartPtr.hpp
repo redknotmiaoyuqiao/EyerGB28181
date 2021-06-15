@@ -32,6 +32,15 @@ namespace Eyer
             }
         }
 
+        template <typename U>
+        EyerSmartPtr(const EyerSmartPtr<U> & smartPtr)
+        {
+            ptr = static_cast<T *>(smartPtr.ptr);
+            if(ptr != nullptr){
+                smartPtr.sharedCount->Add();
+                sharedCount = smartPtr.sharedCount;
+            }
+        }
 
         T & operator * () const {
             return * ptr;

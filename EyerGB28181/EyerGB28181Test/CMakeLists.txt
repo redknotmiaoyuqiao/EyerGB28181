@@ -5,6 +5,12 @@ add_executable(
 
 include_directories (../)
 
+
+target_link_libraries (EyerGB28181Test eXosip2)
+target_link_libraries (EyerGB28181Test osipparser2)
+target_link_libraries (EyerGB28181Test osip2)
+
+
 target_link_libraries (EyerGB28181Test EyerGB28181)
 target_link_libraries (EyerGB28181Test EyerCore)
 target_link_libraries (EyerGB28181Test EyerThread)

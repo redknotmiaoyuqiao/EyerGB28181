@@ -21,12 +21,10 @@ SET(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install/)
 include_directories (${CMAKE_SOURCE_DIR}/../Lib/libexosip2_install/include)
 include_directories (${CMAKE_SOURCE_DIR}/../Lib/libosip2_install/include)
 include_directories (${CMAKE_SOURCE_DIR}/../Lib/c_ares_install/include)
-include_directories (${CMAKE_SOURCE_DIR}/../Lib/tinyxml_install/include)
 
 link_directories    (${CMAKE_SOURCE_DIR}/../Lib/libexosip2_install/lib)
 link_directories    (${CMAKE_SOURCE_DIR}/../Lib/libosip2_install/lib)
 link_directories    (${CMAKE_SOURCE_DIR}/../Lib/c_ares_install/lib)
-link_directories    (${CMAKE_SOURCE_DIR}/../Lib/tinyxml_install/lib)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
